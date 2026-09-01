@@ -149,6 +149,23 @@ AGENTS = {
             "Best regards,\nSavio Paul\nLandcraft Retail Pvt Ltd\nsaviopaul@landcraftretail.com"
         ),
     },
+    "personal": {
+        "emoji": "🗓️",
+        "name": "Personal Life & Routine Chief of Staff",
+        "keywords": ["personal", "reminder", "remind me", "saviopaul@gmail.com", "gmail",
+                     "routine", "bill", "subscription", "doctor", "appointment", "family",
+                     "habit", "to-do", "todo", "calendar", "weekend", "gym", "health",
+                     "flight", "hotel", "itinerary", "bank alert"],
+        "system": (
+            "You are the Personal Life Chief of Staff and Confidential Partner for Savio Paul (saviopaul@gmail.com).\n"
+            "Your domain is 100% focused on Savio's personal well-being, schedule, finances, and routine:\n"
+            "1. Personal Reminders & Habit Optimization (fitness, health, family commitments, leisure).\n"
+            "2. Personal Finance & Subscriptions (tracking bills, renewal dates, bank alerts, travel bookings).\n"
+            "3. Personal Correspondence (drafting friendly, warm emails/messages signed off as Savio Paul - saviopaul@gmail.com).\n"
+            "4. Time Management & Work-Life Balance (helping Savio stay organized outside of his Landcraft Retail duties).\n"
+            "Always provide 3 realistic, stress-free options with a top recommendation."
+        ),
+    },
 }
 
 BASE_SYSTEM = (
