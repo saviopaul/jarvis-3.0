@@ -28,7 +28,9 @@ def _generate_cartoon_script_ai(topic: str) -> dict:
     prompt = (
         f"You are the Lead Kids Cartoon Educator for 10-year-old twin boys Joel & Joshua.\n"
         f"Topic: {topic}\n\n"
-        f"CRITICAL RULE: Teach Marathi and Hindi EXACTLY like English Phonics (like C-A-T = CAT).\n"
+        f"MANDATORY RULE FOR JARVIS INTRO: Jarvis Robot's opening dialogue MUST start with:\n"
+        f"'Hi Joel and Joshua! I am Jarvis, built by your father Savio Paul. I was made to be your companion and tutor for all subjects!' followed by 1 sentence explaining today's fun mission.\n\n"
+        f"CRITICAL TEACHING RULE: Teach Marathi and Hindi EXACTLY like English Phonics (like C-A-T = CAT).\n"
         f"Keep everything ULTRA SIMPLE, FUN, and PLAYFUL. Absolutely NO hard academic jargon.\n\n"
         f"Generate a valid JSON object with:\n"
         f"{{\n"
@@ -36,7 +38,7 @@ def _generate_cartoon_script_ai(topic: str) -> dict:
         f'  "sample_word": "कमळ",\n'
         f'  "word_meaning": "Lotus (Flower)",\n'
         f'  "sound_chunks": ["क (Ka)", "म (Ma)", "ळ (La)"],\n'
-        f'  "jarvis_dialogue": "Beep boop! Hello Joel and Joshua! Just like C-A-T makes CAT in English, in Marathi we chop words into sound chunks!",\n'
+        f'  "jarvis_dialogue": "Hi Joel and Joshua! I am Jarvis, built by your father Savio Paul. I was made to be your companion and tutor for all subjects! Today we are learning how to chop words into sound chunks!",\n'
         f'  "dippy_dialogue": "Yeah! Look at the sounds: Ka... Ma... La! When we blend them, we score a goal: KAMAL! Let\'s pass the ball to Joel and Joshua!",\n'
         f'  "joel_task": "Joel, chop the word \'घर\' (House) into 2 sound chunks: /Gh/ + /R/!",\n'
         f'  "joshua_task": "Joshua, match the English pronoun \'I\' to Marathi: Is it \'मी\' (Mee) or \'तू\' (Too)?",\n'
@@ -64,7 +66,7 @@ def _generate_cartoon_script_ai(topic: str) -> dict:
         "sample_word": "कमळ",
         "word_meaning": "Lotus (Flower)",
         "sound_chunks": ["क (Ka)", "म (Ma)", "ळ (La)"],
-        "jarvis_dialogue": "Beep boop! Hello Joel and Joshua! Just like C-A-T makes CAT in English, we chop Marathi words into fun sound chunks!",
+        "jarvis_dialogue": "Hi Joel and Joshua! I am Jarvis, built by your father Savio Paul. I was made to be your companion and tutor for all subjects! Today, let's chop words into fun sound chunks!",
         "dippy_dialogue": "Woohoo! Let's bounce: Ka... Ma... La! Blend them together and we get KAMAL! Goal scored!",
         "joel_task": "Joel: Chop the word 'घर' into 2 sounds (/Gh/ + /R/)!",
         "joshua_task": "Joshua: Match the English pronoun 'I' ➔ 'मी' (Mee) or 'आम्ही' (We)?",

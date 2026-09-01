@@ -89,15 +89,15 @@ def create_educational_video(topic: str, for_twins: bool = True) -> str:
     # Define 3 rich scenes
     scenes = [
         {
-            "badge": "JARVIS ACADEMY • MISSION 1",
+            "badge": "JARVIS ACADEMY • BUILT BY SAVIO PAUL",
             "title": f"The Mission: {topic[:38]}",
             "bg": (15, 45, 85), # Midnight Navy
             "bullets": [
-                f"🎯 Special Agent Mission for {audience}!",
-                "💡 Master Secret: Unlock the Super Memory Code",
+                "🤖 Built by Father Savio Paul as your Companion & Tutor!",
+                f"🎯 Special Learning Mission for {audience}!",
                 "⏱️ Pay attention to the 10-Second Time Bomb Challenge!"
             ],
-            "narration": f"Welcome Joel and Joshua to today's Jarvis Adventure! Today we are tackling {topic}. Watch carefully because a mystery challenge is waiting for you at the end!"
+            "narration": f"Hi Joel and Joshua! I am Jarvis, built by your father Savio Paul. I was made to be your companion and tutor for all subjects! Today we are tackling {topic}. Watch carefully because a mystery challenge is waiting for you at the end!"
         },
         {
             "badge": "10-SECOND TIME-BOMB CHALLENGE",

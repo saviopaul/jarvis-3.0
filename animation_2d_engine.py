@@ -109,16 +109,16 @@ def render_2d_cartoon_video(topic: str, for_twins: bool = True) -> str:
     fps = 10
     
     # ── SCENE 1: Introduction with Animated Jarvis Robot ──────────────────────
-    narration_1 = f"Hi Joel and Joshua! I am Jarvis! Today we are exploring the magical 2D science of {topic}! Look at our water droplet friend Dippy!"
+    narration_1 = f"Hi Joel and Joshua! I am Jarvis, built by your father Savio Paul. I was made to be your companion and tutor for all subjects! Today we are exploring {topic}!"
     audio_1 = os.path.join(temp_dir, "audio_1.mp3")
     gTTS(text=narration_1, lang='en', tld='co.in', slow=False).save(audio_1)
     dur_1 = AudioFileClip(audio_1).duration + 0.5
     frames_1_count = int(dur_1 * fps)
     
     scene1_frames = []
-    font_title = _get_font(44, bold=True)
-    font_speech = _get_font(30, bold=False)
-    font_badge = _get_font(26, bold=True)
+    font_title = _get_font(40, bold=True)
+    font_speech = _get_font(26, bold=False)
+    font_badge = _get_font(24, bold=True)
     
     for f in range(frames_1_count):
         img = Image.new("RGB", (width, height), (30, 64, 175)) # Rich Cartoon Blue Sky
@@ -139,14 +139,15 @@ def render_2d_cartoon_video(topic: str, for_twins: bool = True) -> str:
         draw_jarvis_robot(draw, 240, robot_y, scale=1.7, mouth_open=mouth_open)
         
         # Speech Bubble from Jarvis
-        draw.rounded_rectangle([360, 360, 1020, 480], radius=20, fill=(255, 255, 255), outline=(15, 23, 42), width=4)
-        draw.polygon([(360, 430), (330, 450), (360, 450)], fill=(255, 255, 255), outline=(15, 23, 42))
-        draw.text((380, 380), f"⚡ Hi Joel & Joshua! Let's Master:", fill=(30, 64, 175), font=font_badge)
-        draw.text((380, 415), f"✨ {topic[:40]}", fill=(15, 23, 42), font=font_speech)
+        draw.rounded_rectangle([340, 340, 1060, 500], radius=20, fill=(255, 255, 255), outline=(15, 23, 42), width=4)
+        draw.polygon([(340, 430), (310, 450), (340, 450)], fill=(255, 255, 255), outline=(15, 23, 42))
+        draw.text((360, 360), f"🤖 Hi Joel & Joshua! I am Jarvis, built by your father Savio Paul!", fill=(30, 64, 175), font=font_badge)
+        draw.text((360, 400), f"I was made to be your companion & tutor for all subjects! ✨", fill=(15, 23, 42), font=font_speech)
+        draw.text((360, 445), f"🎯 Today's Mission: {topic[:45]}", fill=(225, 29, 72), font=font_badge)
         
         # Bouncing Cartoon Water Droplet "Dippy"
         dippy_y = 520 + int(25 * abs(math.sin(f * 0.5)))
-        draw_water_drop_character(draw, 1100, dippy_y, scale=1.4, happy=True)
+        draw_water_drop_character(draw, 1120, dippy_y, scale=1.4, happy=True)
         
         # Title Header
         draw.rounded_rectangle([40, 20, width - 40, 80], radius=15, fill=(15, 23, 42, 220), outline=(250, 204, 21), width=3)

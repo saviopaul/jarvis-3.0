@@ -67,8 +67,8 @@
       <div class="flex items-center gap-3">
         <div class="w-10 h-10 sm:w-12 sm:h-12 bg-slate-800 rounded-xl sm:rounded-2xl border-2 border-sky-400 flex items-center justify-center text-xl sm:text-2xl floating shrink-0">🤖</div>
         <div class="text-left">
-          <h4 class="text-xs font-black text-sky-300 uppercase">Captain Jarvis</h4>
-          <p id="jarvis-status" class="text-xs text-white">"Ready to master Angles, Joel & Joshua?"</p>
+          <h4 class="text-xs font-black text-sky-300 uppercase">🤖 Captain Jarvis</h4>
+          <p id="jarvis-status" class="text-xs text-white">"Hi Joel & Joshua! I am Jarvis, built by your father Savio Paul as your companion & tutor for all subjects!"</p>
         </div>
       </div>
       <div class="flex items-center sm:justify-end gap-3">
@@ -239,7 +239,7 @@
     function speakCurrentLesson() {
       if ('speechSynthesis' in window) {
         window.speechSynthesis.cancel();
-        const text = "Hello Joel and Joshua! In 5th Standard Maharashtra Board Maths, an angle of 90 degrees is a Right Angle, less than 90 degrees is an Acute Angle, and greater than 90 is an Obtuse angle. Just like kicking a football at different angles to score a goal!";
+        const text = "Hi Joel and Joshua! I am Jarvis, built by your father Savio Paul. I was made to be your companion and tutor for all subjects! In 5th Standard Maharashtra Board Maths, an angle of 90 degrees is a Right Angle, less than 90 degrees is an Acute Angle, and greater than 90 is an Obtuse angle. Just like kicking a football at different angles to score a goal!";
         const utter = new SpeechSynthesisUtterance(text);
         utter.rate = 0.95;
         window.speechSynthesis.speak(utter);
