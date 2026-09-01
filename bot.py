@@ -86,6 +86,26 @@ def handle_audio(message):
         bot.edit_message_text(f"⚠️ Error processing audio: {str(e)}", chat_id=message.chat.id, message_id=msg.message_id)
 
 
+from documents import parse_document, analyze_document_content
+
+
+@bot.message_handler(content_types=['document'])
+def handle_document(message):
+    doc_name = message.document.file_name or "document.txt"
+    msg = bot.reply_to(message, f"📄 JARVIS reading `{doc_name}`...")
+    try:
+        file_info = bot.get_file(message.document.file_id)
+        file_bytes = bot.download_file(file_info.file_path)
+        caption = message.caption or "Analyze this file in detail, provide structured takeaways, and recommend 3 actionable next steps."
+        
+        extracted_text = parse_document(file_bytes, doc_name)
+        reply = analyze_document_content(extracted_text, doc_name, caption)
+        _send_safe_reply(message.chat.id, msg.message_id, reply)
+    except Exception as e:
+        logger.error(f"Document handling error: {e}")
+        bot.edit_message_text(f"⚠️ Error reading document: {str(e)}", chat_id=message.chat.id, message_id=msg.message_id)
+
+
 @bot.message_handler(func=lambda message: True)
 def handle_message(message):
     user_text = message.text.strip()
