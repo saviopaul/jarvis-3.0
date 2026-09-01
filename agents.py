@@ -387,7 +387,10 @@ def run_crew(user_message: str, life_context: str = "") -> str:
     results = []
     agent_names = []
 
-    for agent_id in agents_needed:
+    # Pick the top 1 primary specialist to avoid hitting Telegram limits and timeouts
+    primary_agents = agents_needed[:1]
+
+    for agent_id in primary_agents:
         agent = AGENTS[agent_id]
         agent_names.append(f"{agent['emoji']} {agent['name']}")
         try:
@@ -396,5 +399,5 @@ def run_crew(user_message: str, life_context: str = "") -> str:
         except Exception as e:
             results.append(f"{agent['emoji']} *{agent['name']}*: (unavailable — {str(e)})")
 
-    header = f"🤖 *JARVIS CREW ACTIVATED*\nSpecialists: {', '.join(agent_names)}\n\n"
+    header = f"🤖 *JARVIS SPECIALIST ACTIVATED: {agent_names[0]}*\n\n"
     return header + "\n\n---\n\n".join(results)

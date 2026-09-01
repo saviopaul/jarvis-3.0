@@ -128,11 +128,25 @@ def handle_document(message):
         bot.edit_message_text(f"⚠️ Error reading document: {str(e)}", chat_id=message.chat.id, message_id=msg.message_id)
 
 
+from website_engine import build_and_host_website
+from video_engine import create_educational_video
+
+
+@app.route("/sites/<slug>")
+def serve_site(slug):
+    file_path = os.path.join(os.path.dirname(__file__), "sites", f"{slug}.html")
+    if os.path.exists(file_path):
+        with open(file_path, "r", encoding="utf-8") as f:
+            return f.read(), 200, {"Content-Type": "text/html"}
+    return "<h1>404 - Website Not Found</h1><p>Jarvis has not built this site yet.</p>", 404
+
+
 @bot.message_handler(func=lambda message: True)
 def handle_message(message):
     user_text = message.text.strip()
+    msg_lower = user_text.lower()
 
-    # YouTube Link Detection
+    # 1. YouTube Link Transcript Analysis
     if ("youtube.com/watch" in user_text or "youtu.be/" in user_text) and len(user_text.split()) == 1:
         msg = bot.reply_to(message, "📹 JARVIS analyzing YouTube video...")
         try:
@@ -143,7 +157,44 @@ def handle_message(message):
             bot.edit_message_text(f"⚠️ YouTube error: {str(e)}", chat_id=message.chat.id, message_id=msg.message_id)
             return
 
-    # Provider Switch Approval Flow
+    # 2. Live Website Creation & Hosting Request
+    website_triggers = ["build a website", "create a website", "make a website", "build a landing page", "create a landing page", "design a webpage", "host a website"]
+    if any(trigger in msg_lower for trigger in website_triggers):
+        msg = bot.reply_to(message, "🌐 *JARVIS Web Architect:* Designing, coding, and hosting your live website...")
+        try:
+            site_info = build_and_host_website(user_text)
+            reply = (
+                f"✅ *YOUR LIVE WEBSITE IS READY!* 🚀\n\n"
+                f"🔗 *Live URL:* {site_info['live_url']}\n\n"
+                f"📁 *File Slug:* `{site_info['slug']}.html`\n"
+                f"⚡ Built with modern Tailwind CSS, mobile responsiveness, and interactive components."
+            )
+            _send_safe_reply(message.chat.id, msg.message_id, reply)
+            # Send HTML file
+            with open(site_info["file_path"], "rb") as doc:
+                bot.send_document(message.chat.id, doc, caption=f"📄 Source code for {site_info['slug']}")
+            return
+        except Exception as e:
+            logger.error(f"Website generation error: {e}")
+            bot.edit_message_text(f"⚠️ Website build error: {str(e)}", chat_id=message.chat.id, message_id=msg.message_id)
+            return
+
+    # 3. Automated MP4 Video Generation Request
+    video_triggers = ["create a video", "make a video", "generate a video", "animated video for joel", "render a video", "video for joshua", "make an animated video"]
+    if any(trigger in msg_lower for trigger in video_triggers):
+        msg = bot.reply_to(message, "🎬 *JARVIS Video Producer:* Rendering animated MP4 video with cartoon slides & audio narration...")
+        try:
+            video_path = create_educational_video(user_text, for_twins=True)
+            bot.edit_message_text("🚀 Video rendered successfully! Uploading MP4 to Telegram...", chat_id=message.chat.id, message_id=msg.message_id)
+            with open(video_path, "rb") as vid:
+                bot.send_video(message.chat.id, vid, caption=f"🎬 *Jarvis Adventure Episode* for Joel & Joshua!\nTopic: {user_text[:100]}", timeout=120)
+            return
+        except Exception as e:
+            logger.error(f"Video generation error: {e}")
+            bot.edit_message_text(f"⚠️ Video render error: {str(e)}", chat_id=message.chat.id, message_id=msg.message_id)
+            return
+
+    # 4. Provider Switch Approval Flow
     if is_awaiting_approval():
         if user_text.upper() in ["YES", "Y", "YES SWITCH", "SWITCH"]:
             bot.reply_to(message, approve_switch(), parse_mode="Markdown")
@@ -152,6 +203,7 @@ def handle_message(message):
             bot.reply_to(message, deny_switch(), parse_mode="Markdown")
             return
 
+    # 5. Standard Cognitive Swarm Processing
     msg = bot.reply_to(message, "🧠 JARVIS thinking...")
     try:
         result = process_message(user_text)
