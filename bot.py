@@ -255,17 +255,27 @@ def handle_message(message):
     # 4. Automated MP4 Video Generation Request
     video_triggers = ["create a video", "make a video", "generate a video", "animated video for joel", "render a video", "video for joshua", "make an animated video"]
     if any(trigger in msg_lower for trigger in video_triggers):
-        msg = bot.reply_to(message, "🎬 *JARVIS Video Producer:* Rendering animated MP4 video with cartoon slides & audio narration...")
-        try:
-            video_path = create_educational_video(user_text, for_twins=True)
-            bot.edit_message_text("🚀 Video rendered successfully! Uploading MP4 to Telegram...", chat_id=message.chat.id, message_id=msg.message_id)
-            with open(video_path, "rb") as vid:
-                bot.send_video(message.chat.id, vid, caption=f"🎬 *Jarvis Adventure Episode* for Joel & Joshua!\nTopic: {user_text[:100]}", timeout=120)
-            return
-        except Exception as e:
-            logger.error(f"Video generation error: {e}")
-            bot.edit_message_text(f"⚠️ Video render error: {str(e)}", chat_id=message.chat.id, message_id=msg.message_id)
-            return
+        msg = bot.reply_to(message, "🎬 *JARVIS Video Producer:* Rendering animated MP4 video with cartoon slides & audio narration (please wait ~20-30s)...")
+        
+        def _render_and_send():
+            try:
+                video_path = create_educational_video(user_text, for_twins=True)
+                try:
+                    bot.edit_message_text("🚀 Video rendered successfully! Uploading MP4 to Telegram...", chat_id=message.chat.id, message_id=msg.message_id)
+                except Exception:
+                    pass
+                with open(video_path, "rb") as vid:
+                    bot.send_video(message.chat.id, vid, caption=f"🎬 *Jarvis Adventure Episode* for Joel & Joshua!\nTopic: {user_text[:100]}", timeout=120)
+            except Exception as e:
+                logger.error(f"Video generation error: {e}")
+                try:
+                    bot.edit_message_text(f"⚠️ Video render error: {str(e)}", chat_id=message.chat.id, message_id=msg.message_id)
+                except Exception:
+                    pass
+                    
+        import threading
+        threading.Thread(target=_render_and_send, daemon=True).start()
+        return
 
     # 4. Provider Switch Approval Flow
     if is_awaiting_approval():

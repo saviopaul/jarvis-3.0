@@ -30,13 +30,18 @@ def _create_slide_image(title: str, body_lines: list, bg_color: tuple, badge: st
     
     # Try to load a nice font, fallback to default
     try:
-        font_badge = ImageFont.truetype("arial.ttf", 36)
-        font_title = ImageFont.truetype("arialbd.ttf", 52)
-        font_body = ImageFont.truetype("arial.ttf", 38)
+        font_badge = ImageFont.truetype("DejaVuSans-Bold.ttf", 36)
+        font_title = ImageFont.truetype("DejaVuSans-Bold.ttf", 48)
+        font_body = ImageFont.truetype("DejaVuSans.ttf", 34)
     except Exception:
-        font_badge = ImageFont.load_default()
-        font_title = ImageFont.load_default()
-        font_body = ImageFont.load_default()
+        try:
+            font_badge = ImageFont.truetype("arial.ttf", 36)
+            font_title = ImageFont.truetype("arialbd.ttf", 48)
+            font_body = ImageFont.truetype("arial.ttf", 34)
+        except Exception:
+            font_badge = ImageFont.load_default()
+            font_title = ImageFont.load_default()
+            font_body = ImageFont.load_default()
         
     # Draw Badge
     draw.text((60, 60), f"⭐ {badge.upper()} ⭐", fill=(255, 230, 0), font=font_badge)
