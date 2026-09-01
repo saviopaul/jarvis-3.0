@@ -109,6 +109,9 @@ def _call_ollama(user_message: str) -> str:
     return resp.json()["message"]["content"]
 
 
+from self_evolution import auto_learn_from_feedback, verify_zero_billing
+
+
 def process_message(user_message: str, chat_history: list = None) -> str | tuple:
     """
     Routes the message to the active AI provider.
@@ -116,6 +119,10 @@ def process_message(user_message: str, chat_history: list = None) -> str | tuple
     - Specialist requests (legal, code, design etc.) → CrewAI Swarm
     Returns either a string reply, or a tuple (reply, needs_approval=True)
     """
+    # ── Autonomous Self-Evolution / Auto-Learn Check ────────────────────────
+    learned_notice = auto_learn_from_feedback(user_message)
+    # ────────────────────────────────────────────────────────────────────────
+
     provider = get_active_provider()
 
     # Check if current provider is exhausted
@@ -133,6 +140,8 @@ def process_message(user_message: str, chat_history: list = None) -> str | tuple
             life_context = _get_context_text()
             reply = run_crew(user_message, life_context)
             increment_usage(provider["id"])
+            if learned_notice:
+                reply = f"{learned_notice}\n\n{reply}"
             return reply
         except Exception as e:
             # Fallback to regular brain if crew fails
@@ -142,6 +151,8 @@ def process_message(user_message: str, chat_history: list = None) -> str | tuple
     try:
         reply = _call_llm_with_fallback(user_message)
         increment_usage(provider["id"])
+        if learned_notice:
+            reply = f"{learned_notice}\n\n{reply}"
         return reply
     except Exception as e:
         return f"System Error: {str(e)}"
