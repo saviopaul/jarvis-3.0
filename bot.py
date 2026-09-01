@@ -141,6 +141,38 @@ def serve_site(slug):
     return "<h1>404 - Website Not Found</h1><p>Jarvis has not built this site yet.</p>", 404
 
 
+from code_sandbox import execute_python_code
+from mcp_hub import list_available_mcps
+
+
+@bot.message_handler(commands=['run', 'eval', 'python'])
+def handle_run_code(message):
+    code_text = message.text.replace("/run", "").replace("/eval", "").replace("/python", "").strip()
+    if not code_text:
+        bot.reply_to(message, "Usage: `/run print('Hello from Jarvis Sandbox!')`", parse_mode="Markdown")
+        return
+        
+    msg = bot.reply_to(message, "🖥️ *JARVIS Sandbox:* Executing code (Replit / Claude Code Engine)...", parse_mode="Markdown")
+    res = execute_python_code(code_text)
+    
+    if res["success"]:
+        output = res["stdout"] if res["stdout"] else "(Code executed successfully with no output)"
+        reply = f"✅ *EXECUTION SUCCESSFUL (0s)*\n\n```\n{output[:3500]}\n```"
+    else:
+        reply = f"❌ *EXECUTION ERROR (Exit Code {res['return_code']})*\n\n```\n{res['stderr'][:3500]}\n```"
+        
+    _send_safe_reply(message.chat.id, msg.message_id, reply)
+
+
+@bot.message_handler(commands=['mcps', 'tools'])
+def handle_list_mcps(message):
+    mcps = list_available_mcps()
+    lines = ["🛠️ *JARVIS CLAUDE-MCP REGISTERED TOOLS:*\n"]
+    for m in mcps:
+        lines.append(f"• `{m['name']}`: {m['description']}")
+    bot.reply_to(message, "\n".join(lines), parse_mode="Markdown")
+
+
 @bot.message_handler(func=lambda message: True)
 def handle_message(message):
     user_text = message.text.strip()
