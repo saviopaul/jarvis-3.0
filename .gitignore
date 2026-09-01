@@ -1,0 +1,10 @@
+.env
+venv/
+__pycache__/
+*.pyc
+*.pyo
+life_context.json
+provider_state.json
+usage_tracker.json
+*.broken_*
+healing_log.json

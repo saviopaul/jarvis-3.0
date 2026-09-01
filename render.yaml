@@ -1,0 +1,24 @@
+services:
+  - type: worker
+    name: jarvis-3-telegram-bot
+    env: docker
+    region: oregon
+    plan: free
+    envVars:
+      - key: TELEGRAM_TOKEN
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GITHUB_TOKEN
+        sync: false
+      - key: REDIS_URL
+        fromService:
+          type: redis
+          name: jarvis-memory
+          property: connectionString
+
+  - type: redis
+    name: jarvis-memory
+    region: oregon
+    plan: free
+    maxmemoryPolicy: noeviction
