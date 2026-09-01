@@ -119,10 +119,13 @@ BASE_SYSTEM = (
 
 def _call_groq_raw(system_prompt: str, user_message: str) -> str:
     """Direct Groq API call for specialist agents."""
+    groq_key = os.environ.get("GROQ_API_KEY")
+    if not groq_key:
+        raise ValueError("GROQ_API_KEY not set")
     url = "https://api.groq.com/openai/v1/chat/completions"
-    headers = {"Authorization": f"Bearer {GROQ_API_KEY}", "Content-Type": "application/json"}
+    headers = {"Authorization": f"Bearer {groq_key}", "Content-Type": "application/json"}
     payload = {
-        "model": "llama-3.1-8b-instant",
+        "model": "openai/gpt-oss-120b",
         "messages": [
             {"role": "system", "content": system_prompt + "\n\n" + BASE_SYSTEM},
             {"role": "user", "content": user_message}
@@ -130,28 +133,44 @@ def _call_groq_raw(system_prompt: str, user_message: str) -> str:
         "temperature": 0.3,
         "max_tokens": 1500,
     }
-    resp = requests.post(url, headers=headers, json=payload, timeout=30)
-    return resp.json()["choices"][0]["message"]["content"]
+    resp = requests.post(url, headers=headers, json=payload, timeout=25)
+    data = resp.json()
+    if "choices" in data and len(data["choices"]) > 0:
+        return data["choices"][0]["message"]["content"]
+    raise ValueError(f"Groq error: {data.get('error', {}).get('message', resp.text)}")
 
 
 def _call_gemini_raw(system_prompt: str, user_message: str) -> str:
     """Direct Gemini API call for specialist agents."""
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={GEMINI_API_KEY}"
+    gemini_key = os.environ.get("GEMINI_API_KEY")
+    if not gemini_key:
+        raise ValueError("GEMINI_API_KEY not set")
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={gemini_key}"
     payload = {
         "system_instruction": {"parts": {"text": system_prompt + "\n\n" + BASE_SYSTEM}},
         "contents": [{"parts": [{"text": user_message}]}]
     }
-    resp = requests.post(url, json=payload, timeout=30)
+    resp = requests.post(url, json=payload, timeout=25)
     result = resp.json()
-    return result["candidates"][0]["content"]["parts"][0]["text"]
+    if "candidates" in result and len(result["candidates"]) > 0:
+        return result["candidates"][0]["content"]["parts"][0]["text"]
+    raise ValueError(f"Gemini error: {result.get('error', {}).get('message', resp.text)}")
 
 
 def _call_agent(system_prompt: str, user_message: str) -> str:
-    """Calls the best available provider for a specialist agent."""
-    if GROQ_API_KEY:
-        return _call_groq_raw(system_prompt, user_message)
-    elif GEMINI_API_KEY:
-        return _call_gemini_raw(system_prompt, user_message)
+    """Calls the best available provider with automatic fallback."""
+    # Try Groq first
+    if os.environ.get("GROQ_API_KEY"):
+        try:
+            return _call_groq_raw(system_prompt, user_message)
+        except Exception:
+            pass
+    # Fallback to Gemini
+    if os.environ.get("GEMINI_API_KEY"):
+        try:
+            return _call_gemini_raw(system_prompt, user_message)
+        except Exception as e:
+            raise e
     return "No AI provider available."
 
 
