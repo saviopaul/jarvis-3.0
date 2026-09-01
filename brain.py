@@ -134,7 +134,7 @@ def process_message(user_message: str, chat_history: list = None) -> str | tuple
     # Detect if a specialist agent should handle this
     specialists_needed = detect_agents_needed(user_message)
     # Only activate the crew for non-trivial specialist tasks
-    SPECIALIST_TRIGGERS = ["lawyer", "web", "designer", "hardware", "server", "musician", "gofrugal", "email", "personal", "insurance", "education", "youtube_growth", "marathi", "hindi", "tester", "debugger", "playwright", "crawler", "bank_ocr", "psychologist", "viral_growth"]
+    SPECIALIST_TRIGGERS = ["lawyer", "web", "designer", "hardware", "server", "musician", "gofrugal", "email", "personal", "insurance", "education", "youtube_growth", "marathi", "hindi", "tester", "debugger", "playwright", "crawler", "bank_ocr", "psychologist", "viral_growth", "child_psychologist"]
     if any(s in specialists_needed for s in SPECIALIST_TRIGGERS):
         try:
             life_context = _get_context_text()
