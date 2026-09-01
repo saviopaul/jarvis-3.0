@@ -2,11 +2,11 @@
 cartoon_generator.py - Multi-Character 2D Cartoon Animation Studio (Jarvis & Dippy)
 
 Features:
-1. English-Style Phonics Sound & Word-Chopping Engine (क-म-ळ, घ-र, न-ल)
-2. Interactive Phonics Sound Buttons (Click to hear each sound chunk & blend!)
-3. Super Simple English ➔ Marathi/Hindi Pronoun Matching (I = मी/मैं, You = तू, We = आम्ही/हम)
-4. Dual Character Interaction (Jarvis Robot ↔ Dippy the Droplet) with distinct voice acting
-5. 60 FPS Vector Motion Graphics & Procedural Audio Synth
+1. 100% Fully Responsive Layout (Mobile phones, Android/iPads, Laptops, 4K Desktops)
+2. English-Style Phonics Sound & Word-Chopping Engine (क-म-ळ, घ-र, न-ल)
+3. Interactive Touch-Friendly Sound Buttons (Click/Tap to hear each chunk & blend!)
+4. Dual Character Dialogue (Jarvis Robot ↔ Dippy the Droplet) with distinct voice acting
+5. 60 FPS Vector Motion Graphics & Procedural Web Audio Synth
 """
 
 import os
@@ -75,8 +75,8 @@ def _generate_cartoon_script_ai(topic: str) -> dict:
 
 def generate_interactive_2d_cartoon_webpage(topic: str) -> dict:
     """
-    Generates a rich 60 FPS 2D cartoon animation webpage with interactive
-    Phonics sound buttons, word-chopping game, and dual character dialogue.
+    Generates a rich 60 FPS 2D cartoon animation webpage with 100% responsive
+    mobile/tablet/desktop layouts, touch-friendly Phonics sound buttons, and dual character dialogue.
     """
     session_id = uuid.uuid4().hex[:8]
     slug = f"cartoon-{session_id}"
@@ -95,40 +95,39 @@ def generate_interactive_2d_cartoon_webpage(topic: str) -> dict:
     secret_code = script_data.get("secret_code", "7 - 9 - 2")
     cliffhanger = script_data.get("cliffhanger", "Magic Matra power unlocked tomorrow!")
     
-    # Generate Sound Buttons HTML
     sound_buttons_html = ""
     for idx, chunk in enumerate(sound_chunks):
         letter_only = chunk.split()[0]
         sound_buttons_html += f"""
-        <button onclick="playPhonicSound('{letter_only}')" class="bg-amber-400 hover:bg-yellow-300 text-slate-950 font-black px-5 py-3 rounded-2xl text-lg shadow-lg hover:scale-110 active:scale-95 transition transform border-2 border-white flex flex-col items-center">
-          <span class="text-2xl font-black">{letter_only}</span>
-          <span class="text-xs font-bold text-slate-800">Sound #{idx+1}</span>
+        <button onclick="playPhonicSound('{letter_only}')" class="bg-amber-400 hover:bg-yellow-300 active:scale-95 text-slate-950 font-black px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl sm:rounded-2xl text-base sm:text-lg shadow-lg transition transform border-2 border-white flex flex-col items-center flex-1 min-w-[75px]">
+          <span class="text-xl sm:text-2xl font-black">{letter_only}</span>
+          <span class="text-[10px] sm:text-xs font-bold text-slate-800">Sound #{idx+1}</span>
         </button>
         """
 
     html_content = f"""<!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Jarvis & Dippy: {clean_title}</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     @keyframes float {{
       0%, 100% {{ transform: translateY(0px) rotate(0deg); }}
-      50% {{ transform: translateY(-16px) rotate(3deg); }}
+      50% {{ transform: translateY(-10px) rotate(2deg); }}
     }}
     @keyframes bounce-char {{
       0%, 100% {{ transform: translateY(0px) scale(1); }}
-      50% {{ transform: translateY(-26px) scale(1.08); }}
+      50% {{ transform: translateY(-16px) scale(1.05); }}
     }}
     @keyframes pulse-glow {{
-      0%, 100% {{ transform: scale(1); filter: drop-shadow(0 0 15px #38bdf8); }}
-      50% {{ transform: scale(1.06); filter: drop-shadow(0 0 30px #facc15); }}
+      0%, 100% {{ transform: scale(1); filter: drop-shadow(0 0 10px #38bdf8); }}
+      50% {{ transform: scale(1.03); filter: drop-shadow(0 0 20px #facc15); }}
     }}
     @keyframes mouth-talk {{
-      0%, 100% {{ height: 4px; }}
-      50% {{ height: 18px; }}
+      0%, 100% {{ height: 3px; }}
+      50% {{ height: 14px; }}
     }}
     @keyframes cloud-move {{
       0% {{ transform: translateX(-150px); }}
@@ -139,37 +138,37 @@ def generate_interactive_2d_cartoon_webpage(topic: str) -> dict:
     .pulsing {{ animation: pulse-glow 2s infinite; }}
     .talking-mouth {{ animation: mouth-talk 0.3s infinite; }}
     .moving-cloud-1 {{ animation: cloud-move 20s linear infinite; }}
-    .moving-cloud-2 {{ animation: cloud-move 30s linear infinite 4s; }}
     .speaking-highlight {{
-      box-shadow: 0 0 35px #facc15, 0 0 10px #ffffff;
+      box-shadow: 0 0 25px #facc15, 0 0 8px #ffffff;
       border-color: #facc15 !important;
-      transform: scale(1.03);
+      transform: scale(1.02);
       transition: all 0.3s ease;
     }}
+    button {{ touch-action: manipulation; }}
   </style>
 </head>
-<body class="bg-gradient-to-b from-sky-400 via-indigo-700 to-slate-950 min-h-screen text-white font-sans overflow-x-hidden flex flex-col items-center justify-between p-4">
+<body class="bg-gradient-to-b from-sky-400 via-indigo-700 to-slate-950 min-h-screen text-white font-sans p-2 sm:p-4 md:p-6 flex flex-col items-center justify-between antialiased">
 
-  <!-- TOP HEADER -->
-  <header class="w-full max-w-5xl bg-slate-900/90 backdrop-blur border-2 border-yellow-400 rounded-2xl p-4 my-3 flex items-center justify-between shadow-2xl">
+  <!-- TOP RESPONSIVE HEADER -->
+  <header class="w-full max-w-5xl bg-slate-900/95 backdrop-blur border-2 border-yellow-400 rounded-2xl sm:rounded-3xl p-3 sm:p-5 my-2 flex flex-col sm:flex-row items-center justify-between shadow-2xl gap-3 text-center sm:text-left">
     <div class="flex items-center gap-3">
-      <span class="text-4xl animate-bounce">🪓</span>
+      <span class="text-3xl sm:text-4xl animate-bounce">🪓</span>
       <div>
-        <h1 class="text-xl md:text-2xl font-black text-yellow-300 tracking-wide">JARVIS PHONICS & WORD-CHOPPING ACADEMY</h1>
-        <p class="text-xs md:text-sm text-sky-200">Starring Super Twins: <strong class="text-white font-black">Joel & Joshua</strong> ⚽</p>
+        <h1 class="text-base sm:text-xl md:text-2xl font-black text-yellow-300 tracking-wide">JARVIS PHONICS ACADEMY</h1>
+        <p class="text-xs sm:text-sm text-sky-200">Starring Super Twins: <strong class="text-white font-black">Joel & Joshua</strong> ⚽</p>
       </div>
     </div>
-    <div class="bg-emerald-400 text-slate-950 font-black px-4 py-1.5 rounded-full text-xs shadow-lg animate-pulse">
+    <div class="bg-emerald-400 text-slate-950 font-black px-3 py-1 sm:px-4 sm:py-1.5 rounded-full text-xs shadow-lg animate-pulse inline-block">
       ENGLISH-STYLE PHONICS
     </div>
   </header>
 
   <!-- 2D CARTOON STAGE -->
-  <main class="w-full max-w-5xl bg-slate-950/80 rounded-3xl border-4 border-white/20 p-6 relative overflow-hidden shadow-2xl flex flex-col items-center justify-between">
+  <main class="w-full max-w-5xl bg-slate-950/85 rounded-2xl sm:rounded-3xl border-2 sm:border-4 border-white/20 p-3 sm:p-6 shadow-2xl flex flex-col items-center justify-between my-2 relative">
     
     <!-- BACKGROUND CLOUDS -->
     <div class="absolute top-4 left-0 moving-cloud-1 opacity-70 pointer-events-none">
-      <svg width="120" height="60" viewBox="0 0 120 60" fill="white">
+      <svg width="100" height="50" viewBox="0 0 120 60" fill="white">
         <circle cx="30" cy="35" r="25"/>
         <circle cx="60" cy="25" r="30"/>
         <circle cx="90" cy="35" r="25"/>
@@ -177,43 +176,43 @@ def generate_interactive_2d_cartoon_webpage(topic: str) -> dict:
     </div>
 
     <!-- MISSION BANNER -->
-    <div class="bg-indigo-900/90 border-2 border-sky-400 px-8 py-2.5 rounded-full text-center shadow-xl pulsing z-10">
-      <h2 class="text-lg md:text-xl font-bold text-sky-200">Mission: <span class="text-yellow-300 font-black">{clean_title}</span> 🌟</h2>
+    <div class="bg-indigo-900/90 border-2 border-sky-400 px-4 sm:px-8 py-1.5 sm:py-2.5 rounded-full text-center shadow-xl pulsing z-10 my-1">
+      <h2 class="text-xs sm:text-base md:text-lg font-bold text-sky-200">Mission: <span class="text-yellow-300 font-black">{clean_title}</span> 🌟</h2>
     </div>
 
-    <!-- 2D CHARACTERS ROW -->
-    <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-6 my-5 z-10 relative">
+    <!-- 2D CHARACTERS ROW (RESPONSIVE GRID) -->
+    <div class="w-full grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-6 my-3 sm:my-5 z-10 relative">
       
       <!-- JARVIS ROBOT CARD -->
-      <div id="jarvis-card" class="bg-slate-900/90 border-4 border-sky-500 rounded-3xl p-5 flex items-center gap-4 shadow-2xl transition-all">
+      <div id="jarvis-card" class="bg-slate-900/90 border-2 sm:border-4 border-sky-500 rounded-2xl sm:rounded-3xl p-3 sm:p-5 flex items-center gap-3 sm:gap-4 shadow-xl transition-all">
         <div class="flex flex-col items-center floating shrink-0">
           <div class="relative">
-            <div class="w-2 h-6 bg-sky-400 mx-auto rounded-t"></div>
-            <div class="w-4 h-4 bg-yellow-400 rounded-full mx-auto -mt-1 ring-2 ring-white animate-ping"></div>
-            <div class="w-22 h-20 bg-slate-800 border-4 border-sky-400 rounded-2xl flex flex-col items-center justify-center relative shadow-xl p-2">
-              <div class="flex gap-2.5 mb-2">
-                <div class="w-3.5 h-3.5 bg-sky-400 rounded-full ring-2 ring-white shadow-[0_0_8px_#38bdf8]"></div>
-                <div class="w-3.5 h-3.5 bg-sky-400 rounded-full ring-2 ring-white shadow-[0_0_8px_#38bdf8]"></div>
+            <div class="w-1.5 h-4 sm:h-5 bg-sky-400 mx-auto rounded-t"></div>
+            <div class="w-3 h-3 sm:w-3.5 sm:h-3.5 bg-yellow-400 rounded-full mx-auto -mt-1 ring-2 ring-white animate-ping"></div>
+            <div class="w-16 h-14 sm:w-20 sm:h-18 bg-slate-800 border-2 sm:border-4 border-sky-400 rounded-xl sm:rounded-2xl flex flex-col items-center justify-center relative shadow-xl p-1 sm:p-2">
+              <div class="flex gap-2 mb-1.5">
+                <div class="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-sky-400 rounded-full ring-2 ring-white shadow-[0_0_6px_#38bdf8]"></div>
+                <div class="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-sky-400 rounded-full ring-2 ring-white shadow-[0_0_6px_#38bdf8]"></div>
               </div>
-              <div id="jarvis-mouth" class="w-6 bg-red-500 rounded-full border border-white h-1.5"></div>
+              <div id="jarvis-mouth" class="w-4 sm:w-5 bg-red-500 rounded-full border border-white h-1"></div>
             </div>
           </div>
-          <span class="mt-2 text-xs font-black text-sky-300 bg-slate-800 border border-sky-500 px-2 py-0.5 rounded-full">🤖 Jarvis Robot</span>
+          <span class="mt-1 text-[10px] sm:text-xs font-black text-sky-300 bg-slate-800 border border-sky-500 px-1.5 py-0.5 rounded-full">🤖 Jarvis</span>
         </div>
 
-        <div class="bg-sky-950/80 border-2 border-sky-400 rounded-2xl p-3.5 flex-1 shadow-inner">
-          <h4 class="text-xs font-black text-sky-300 uppercase tracking-wider mb-1">🤖 Captain Jarvis:</h4>
-          <p id="jarvis-text" class="text-xs md:text-sm font-semibold text-white leading-relaxed">
+        <div class="bg-sky-950/80 border border-sky-400 rounded-xl sm:rounded-2xl p-2.5 sm:p-3.5 flex-1 shadow-inner text-left">
+          <h4 class="text-[10px] sm:text-xs font-black text-sky-300 uppercase tracking-wider mb-0.5">🤖 Captain Jarvis:</h4>
+          <p id="jarvis-text" class="text-xs sm:text-sm font-semibold text-white leading-tight sm:leading-relaxed">
             "{jarvis_dialogue}"
           </p>
         </div>
       </div>
 
       <!-- DIPPY DROPLET CARD -->
-      <div id="dippy-card" class="bg-slate-900/90 border-4 border-cyan-500 rounded-3xl p-5 flex items-center gap-4 shadow-2xl transition-all">
+      <div id="dippy-card" class="bg-slate-900/90 border-2 sm:border-4 border-cyan-500 rounded-2xl sm:rounded-3xl p-3 sm:p-5 flex items-center gap-3 sm:gap-4 shadow-xl transition-all">
         <div class="flex flex-col items-center bouncing shrink-0">
-          <div class="relative w-20 h-24 flex items-center justify-center">
-            <svg viewBox="0 0 100 120" class="w-18 h-22 drop-shadow-xl">
+          <div class="relative w-16 h-18 sm:w-20 sm:h-22 flex items-center justify-center">
+            <svg viewBox="0 0 100 120" class="w-14 h-16 sm:w-18 sm:h-20 drop-shadow-xl">
               <path d="M50 0 C50 0 0 60 0 85 C0 105 22 120 50 120 C78 120 100 105 100 85 C100 60 50 0 50 0 Z" fill="#38bdf8" stroke="white" stroke-width="4"/>
               <circle cx="35" cy="75" r="10" fill="white"/>
               <circle cx="65" cy="75" r="10" fill="white"/>
@@ -224,12 +223,12 @@ def generate_interactive_2d_cartoon_webpage(topic: str) -> dict:
               <path id="dippy-mouth" d="M40 92 Q50 106 60 92" stroke="#0f172a" stroke-width="4" fill="none" stroke-linecap="round"/>
             </svg>
           </div>
-          <span class="mt-2 text-xs font-black text-cyan-300 bg-slate-800 border border-cyan-500 px-2 py-0.5 rounded-full">💧 Dippy Droplet</span>
+          <span class="mt-1 text-[10px] sm:text-xs font-black text-cyan-300 bg-slate-800 border border-cyan-500 px-1.5 py-0.5 rounded-full">💧 Dippy</span>
         </div>
 
-        <div class="bg-cyan-950/80 border-2 border-cyan-400 rounded-2xl p-3.5 flex-1 shadow-inner">
-          <h4 class="text-xs font-black text-cyan-300 uppercase tracking-wider mb-1">💧 Dippy Replies:</h4>
-          <p id="dippy-text" class="text-xs md:text-sm font-semibold text-white leading-relaxed">
+        <div class="bg-cyan-950/80 border border-cyan-400 rounded-xl sm:rounded-2xl p-2.5 sm:p-3.5 flex-1 shadow-inner text-left">
+          <h4 class="text-[10px] sm:text-xs font-black text-cyan-300 uppercase tracking-wider mb-0.5">💧 Dippy Replies:</h4>
+          <p id="dippy-text" class="text-xs sm:text-sm font-semibold text-white leading-tight sm:leading-relaxed">
             "{dippy_dialogue}"
           </p>
         </div>
@@ -237,69 +236,67 @@ def generate_interactive_2d_cartoon_webpage(topic: str) -> dict:
 
     </div>
 
-    <!-- INTERACTIVE WORD-CHOPPING PHONICS LAB -->
-    <div class="w-full bg-indigo-950/90 border-4 border-yellow-400 rounded-3xl p-5 my-3 text-center shadow-2xl z-10">
-      <h3 class="text-base md:text-lg font-black text-yellow-300 uppercase tracking-wider mb-2">
-        🪓 WORD-CHOPPING PHONICS LAB: <span class="text-white text-xl bg-indigo-800 px-3 py-1 rounded-xl border border-sky-400">{sample_word} ({word_meaning})</span>
+    <!-- TOUCH-FRIENDLY WORD-CHOPPING PHONICS LAB -->
+    <div class="w-full bg-indigo-950/90 border-2 sm:border-4 border-yellow-400 rounded-2xl sm:rounded-3xl p-3 sm:p-5 my-2 text-center shadow-2xl z-10">
+      <h3 class="text-xs sm:text-sm md:text-base font-black text-yellow-300 uppercase tracking-wider mb-1 sm:mb-2">
+        🪓 WORD-CHOPPING LAB: <span class="text-white text-sm sm:text-lg bg-indigo-800 px-2.5 py-0.5 rounded-lg border border-sky-400">{sample_word} ({word_meaning})</span>
       </h3>
-      <p class="text-xs text-sky-200 mb-4">Click each sound chunk to hear it, then click <strong>BLEND & SCORE GOAL</strong>!</p>
+      <p class="text-[10px] sm:text-xs text-sky-200 mb-3">Tap each sound chunk to hear it, then tap <strong>BLEND & SCORE GOAL</strong>!</p>
       
       <!-- Sound Buttons Row -->
-      <div class="flex flex-wrap gap-4 items-center justify-center mb-4">
+      <div class="flex flex-wrap gap-2 sm:gap-4 items-center justify-center mb-3">
         {sound_buttons_html}
       </div>
 
-      <!-- Blend & Play Button -->
-      <div class="flex gap-3 justify-center">
-        <button onclick="playBlendedWord('{sample_word}')" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black px-6 py-3 rounded-full text-sm md:text-base shadow-xl hover:scale-105 active:scale-95 transition flex items-center gap-2 border-2 border-white">
+      <!-- Blend Button -->
+      <div class="flex justify-center">
+        <button onclick="playBlendedWord('{sample_word}')" class="w-full sm:w-auto bg-emerald-500 hover:bg-emerald-400 active:scale-95 text-slate-950 font-black px-4 sm:px-6 py-2.5 sm:py-3 rounded-full text-xs sm:text-base shadow-xl transition flex items-center justify-center gap-2 border-2 border-white">
           <span>⚽ BLEND & SCORE GOAL: {sample_word}!</span>
         </button>
       </div>
     </div>
 
-    <!-- 10-SECOND TIME-BOMB STRIKER CHALLENGE -->
-    <div id="challenge-box" class="w-full bg-red-950/90 border-4 border-red-500 rounded-3xl p-5 my-2 text-center z-10 hidden shadow-2xl">
-      <h3 class="text-xl md:text-2xl font-black text-yellow-300 animate-pulse">💣 10-SECOND TIME-BOMB CHALLENGE! 💣</h3>
-      <div class="text-4xl md:text-5xl font-mono font-black text-red-400 my-2" id="timer-count">10s</div>
+    <!-- 10-SECOND TIME-BOMB (RESPONSIVE GRID) -->
+    <div id="challenge-box" class="w-full bg-red-950/90 border-2 sm:border-4 border-red-500 rounded-2xl sm:rounded-3xl p-3 sm:p-5 my-2 text-center z-10 hidden shadow-2xl">
+      <h3 class="text-base sm:text-xl font-black text-yellow-300 animate-pulse">💣 10-SECOND TIME-BOMB CHALLENGE! 💣</h3>
+      <div class="text-3xl sm:text-4xl font-mono font-black text-red-400 my-1 sm:my-2" id="timer-count">10s</div>
       
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-left my-3">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-left my-2">
         <!-- Joel's Card -->
-        <div class="bg-blue-900/90 p-4 rounded-2xl border-2 border-sky-400 shadow-md">
-          <h4 class="font-black text-yellow-300 text-sm md:text-base mb-1 flex items-center gap-2">👦 JOEL'S STRIKER ZONE (LEFT):</h4>
-          <p class="text-xs md:text-sm text-sky-100 font-semibold leading-relaxed">{joel_task}</p>
+        <div class="bg-blue-900/90 p-3 sm:p-4 rounded-xl sm:rounded-2xl border-2 border-sky-400 shadow-md">
+          <h4 class="font-black text-yellow-300 text-xs sm:text-sm mb-1 flex items-center gap-1.5">👦 JOEL'S STRIKER ZONE:</h4>
+          <p class="text-xs sm:text-sm text-sky-100 font-semibold leading-snug">{joel_task}</p>
         </div>
         <!-- Joshua's Card -->
-        <div class="bg-emerald-900/90 p-4 rounded-2xl border-2 border-emerald-400 shadow-md">
-          <h4 class="font-black text-yellow-300 text-sm md:text-base mb-1 flex items-center gap-2">👦 JOSHUA'S STRIKER ZONE (RIGHT):</h4>
-          <p class="text-xs md:text-sm text-emerald-100 font-semibold leading-relaxed">{joshua_task}</p>
+        <div class="bg-emerald-900/90 p-3 sm:p-4 rounded-xl sm:rounded-2xl border-2 border-emerald-400 shadow-md">
+          <h4 class="font-black text-yellow-300 text-xs sm:text-sm mb-1 flex items-center gap-1.5">👦 JOSHUA'S STRIKER ZONE:</h4>
+          <p class="text-xs sm:text-sm text-emerald-100 font-semibold leading-snug">{joshua_task}</p>
         </div>
       </div>
 
       <!-- Victory Reveal Banner -->
-      <div id="victory-banner" class="hidden mt-3 p-4 bg-emerald-800 border-2 border-yellow-300 rounded-2xl shadow-xl">
-        <h4 class="text-lg md:text-xl font-black text-yellow-300">🏆 GOAL SCORED! BRAIN CODE: [{secret_code}]</h4>
-        <p class="text-xs md:text-sm text-emerald-100 mt-1 font-bold">🕺 Moonwalk Victory Dance! ⚔️ {cliffhanger}</p>
+      <div id="victory-banner" class="hidden mt-2 p-3 bg-emerald-800 border-2 border-yellow-300 rounded-xl shadow-xl">
+        <h4 class="text-sm sm:text-base font-black text-yellow-300">🏆 GOAL SCORED! BRAIN CODE: [{secret_code}]</h4>
+        <p class="text-xs text-emerald-100 mt-0.5 font-bold">🕺 Moonwalk Victory Dance! ⚔️ {cliffhanger}</p>
       </div>
     </div>
 
-    <!-- MAIN SHOW BUTTONS -->
-    <div class="flex flex-wrap gap-4 items-center justify-center mt-3 z-10">
-      <button onclick="playDualCharacterShow()" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black px-6 py-3 rounded-full text-sm md:text-base flex items-center gap-2 shadow-2xl hover:scale-105 transition">
+    <!-- MAIN CONTROL BUTTONS -->
+    <div class="flex flex-wrap gap-2 sm:gap-4 items-center justify-center mt-2 z-10 w-full">
+      <button onclick="playDualCharacterShow()" class="flex-1 sm:flex-initial bg-emerald-500 hover:bg-emerald-400 active:scale-95 text-slate-950 font-black px-4 sm:px-6 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm flex items-center justify-center gap-2 shadow-2xl transition">
         <span>🎬 Play Jarvis & Dippy Show</span>
       </button>
-      <button onclick="startChallenge()" class="bg-yellow-400 hover:bg-yellow-300 text-slate-950 font-black px-6 py-3 rounded-full text-sm md:text-base flex items-center gap-2 shadow-2xl hover:scale-105 transition">
-        <span>⏱️ Start 10s Time-Bomb Challenge</span>
+      <button onclick="startChallenge()" class="flex-1 sm:flex-initial bg-yellow-400 hover:bg-yellow-300 active:scale-95 text-slate-950 font-black px-4 sm:px-6 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm flex items-center justify-center gap-2 shadow-2xl transition">
+        <span>⏱️ Start 10s Countdown</span>
       </button>
     </div>
 
   </main>
 
-  <!-- MULTI-VOICE SYNTHESIS & SOUND SCRIPT -->
   <script>
     const jarvisSpeech = "{jarvis_dialogue}";
     const dippySpeech = "{dippy_dialogue}";
 
-    // Web Audio Synthesizer
     function playBeep(freq = 440, type = 'sine', duration = 0.15) {{
       try {{
         const ctx = new (window.AudioContext || window.webkitAudioContext)();
@@ -320,7 +317,7 @@ def generate_interactive_2d_cartoon_webpage(topic: str) -> dict:
       if ('speechSynthesis' in window) {{
         window.speechSynthesis.cancel();
         const utter = new SpeechSynthesisUtterance(letter);
-        utter.lang = 'mr-IN'; // Marathi phonetic accent
+        utter.lang = 'mr-IN';
         utter.rate = 0.85;
         window.speechSynthesis.speak(utter);
       }}
@@ -346,7 +343,6 @@ def generate_interactive_2d_cartoon_webpage(topic: str) -> dict:
       const dippyCard = document.getElementById("dippy-card");
       const jarvisMouth = document.getElementById("jarvis-mouth");
 
-      // ── STEP 1: JARVIS SPEAKS (Deep Robot) ──
       jarvisCard.classList.add("speaking-highlight");
       dippyCard.classList.remove("speaking-highlight");
       jarvisMouth.classList.add("talking-mouth");
@@ -360,7 +356,6 @@ def generate_interactive_2d_cartoon_webpage(topic: str) -> dict:
         jarvisMouth.classList.remove("talking-mouth");
         jarvisCard.classList.remove("speaking-highlight");
 
-        // ── STEP 2: DIPPY RESPONDS (High Cartoon) ──
         setTimeout(() => {{
           dippyCard.classList.add("speaking-highlight");
           playBeep(880, 'triangle', 0.2);
@@ -390,7 +385,7 @@ def generate_interactive_2d_cartoon_webpage(topic: str) -> dict:
       let count = 10;
       const countElem = document.getElementById("timer-count");
       countElem.innerText = "10s";
-      countElem.className = "text-4xl md:text-5xl font-mono font-black text-red-400 my-2";
+      countElem.className = "text-3xl sm:text-4xl font-mono font-black text-red-400 my-1 sm:my-2";
       
       playBeep(520, 'square', 0.2);
 
@@ -402,9 +397,8 @@ def generate_interactive_2d_cartoon_webpage(topic: str) -> dict:
         }} else {{
           clearInterval(interval);
           countElem.innerText = "💥 TIME UP! 💥";
-          countElem.className = "text-3xl font-black text-yellow-300 my-2";
+          countElem.className = "text-2xl sm:text-3xl font-black text-yellow-300 my-1";
           victory.classList.remove("hidden");
-          // Victory Fanfare
           playBeep(784, 'triangle', 0.3);
           setTimeout(() => playBeep(987, 'triangle', 0.3), 150);
           setTimeout(() => playBeep(1318, 'triangle', 0.5), 300);
