@@ -27,6 +27,28 @@ def send_welcome(message):
         "Talk to me about anything — work, life, code, or just venting."
     )
 
+def _send_safe_reply(chat_id: int, msg_id: int, text: str):
+    """Safely edits the thinking message, or sends multiple chunks if text > 4000 chars."""
+    MAX_LEN = 3900
+    chunks = [text[i:i + MAX_LEN] for i in range(0, len(text), MAX_LEN)] if len(text) > MAX_LEN else [text]
+    
+    # Edit the first message with chunk 0
+    try:
+        bot.edit_message_text(chunks[0], chat_id=chat_id, message_id=msg_id, parse_mode="Markdown")
+    except Exception:
+        try:
+            bot.edit_message_text(chunks[0], chat_id=chat_id, message_id=msg_id)  # plain text fallback
+        except Exception as e:
+            logger.error(f"Failed to edit message: {e}")
+
+    # Send remaining chunks as new messages
+    for chunk in chunks[1:]:
+        try:
+            bot.send_message(chat_id=chat_id, text=chunk, parse_mode="Markdown")
+        except Exception:
+            bot.send_message(chat_id=chat_id, text=chunk)
+
+
 @bot.message_handler(func=lambda message: True)
 def handle_message(message):
     user_text = message.text.strip()
@@ -40,18 +62,20 @@ def handle_message(message):
             bot.reply_to(message, deny_switch(), parse_mode="Markdown")
             return
 
-    msg = bot.reply_to(message, "JARVIS thinking...")
+    msg = bot.reply_to(message, "🧠 JARVIS thinking...")
     try:
         result = process_message(user_text)
         if isinstance(result, tuple):
             reply_text, _ = result
-            bot.edit_message_text(reply_text, chat_id=message.chat.id, message_id=msg.message_id, parse_mode="Markdown")
         else:
-            bot.edit_message_text(result, chat_id=message.chat.id, message_id=msg.message_id)
+            reply_text = result
+
+        _send_safe_reply(message.chat.id, msg.message_id, reply_text)
+
     except Exception as e:
         logger.error(f"Error: {e}")
         try:
-            bot.edit_message_text("Encountered an issue. Self-healing initiated...", chat_id=message.chat.id, message_id=msg.message_id)
+            bot.edit_message_text("⚠️ Encountered an issue. Self-healing initiated...", chat_id=message.chat.id, message_id=msg.message_id)
         except Exception:
             pass
         self_heal(e, __file__)

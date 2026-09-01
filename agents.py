@@ -145,7 +145,7 @@ def _call_gemini_raw(system_prompt: str, user_message: str) -> str:
     gemini_key = os.environ.get("GEMINI_API_KEY")
     if not gemini_key:
         raise ValueError("GEMINI_API_KEY not set")
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={gemini_key}"
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={gemini_key}"
     payload = {
         "system_instruction": {"parts": {"text": system_prompt + "\n\n" + BASE_SYSTEM}},
         "contents": [{"parts": [{"text": user_message}]}]

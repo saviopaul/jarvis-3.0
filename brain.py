@@ -30,29 +30,69 @@ SYSTEM_INSTRUCTION = (
 
 def _call_gemini(user_message: str, chat_history: list) -> str:
     api_key = os.environ.get("GEMINI_API_KEY")
-    client = genai.Client(api_key=api_key)
-    config = {"system_instruction": SYSTEM_INSTRUCTION, "tools": ALL_TOOLS, "temperature": 0.2}
-    if chat_history is None:
-        chat_history = []
-    chat = client.chats.create(model="gemini-1.5-flash", config=config, history=chat_history)
-    response = chat.send_message(user_message)
-    return response.text
+    if not api_key:
+        raise ValueError("GEMINI_API_KEY not set")
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={api_key}"
+    payload = {
+        "system_instruction": {"parts": {"text": SYSTEM_INSTRUCTION}},
+        "contents": [{"parts": [{"text": user_message}]}]
+    }
+    resp = http_requests.post(url, json=payload, timeout=25)
+    data = resp.json()
+    if "candidates" in data and len(data["candidates"]) > 0:
+        return data["candidates"][0]["content"]["parts"][0]["text"]
+    raise ValueError(f"Gemini error: {data.get('error', {}).get('message', resp.text)}")
 
 
 def _call_groq(user_message: str) -> str:
     api_key = os.environ.get("GROQ_API_KEY")
+    if not api_key:
+        raise ValueError("GROQ_API_KEY not set")
     url = "https://api.groq.com/openai/v1/chat/completions"
     headers = {"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"}
     payload = {
-        "model": "llama-3.1-8b-instant",
+        "model": "qwen/qwen3.6-27b",
         "messages": [
             {"role": "system", "content": SYSTEM_INSTRUCTION},
             {"role": "user", "content": user_message}
         ],
-        "temperature": 0.2
+        "temperature": 0.3,
+        "max_tokens": 1500
     }
-    resp = http_requests.post(url, headers=headers, json=payload, timeout=30)
-    return resp.json()["choices"][0]["message"]["content"]
+    resp = http_requests.post(url, headers=headers, json=payload, timeout=25)
+    data = resp.json()
+    if "choices" in data and len(data["choices"]) > 0:
+        content = data["choices"][0]["message"]["content"]
+        # Remove reasoning tags if present
+        if "</think>" in content:
+            content = content.split("</think>")[-1].strip()
+        return content
+    raise ValueError(f"Groq error: {data.get('error', {}).get('message', resp.text)}")
+
+
+def _call_llm_with_fallback(user_message: str) -> str:
+    """Tries Gemini 2.5 Flash first (most accurate), falls back to Groq, then Ollama."""
+    # 1. Try Gemini 2.5 Flash
+    if os.environ.get("GEMINI_API_KEY"):
+        try:
+            return _call_gemini(user_message, [])
+        except Exception:
+            pass
+
+    # 2. Try Groq (Qwen 3.6)
+    if os.environ.get("GROQ_API_KEY"):
+        try:
+            return _call_groq(user_message)
+        except Exception:
+            pass
+
+    # 3. Try Ollama (local)
+    try:
+        return _call_ollama(user_message)
+    except Exception:
+        pass
+
+    return "Sorry, I am temporarily unable to connect to the AI providers. Please check your API keys."
 
 
 def _call_ollama(user_message: str) -> str:
@@ -100,17 +140,8 @@ def process_message(user_message: str, chat_history: list = None) -> str | tuple
     # ────────────────────────────────────────────────────────────────────────
 
     try:
-        if provider["id"] == "gemini":
-            reply = _call_gemini(user_message, chat_history or [])
-        elif provider["id"] == "groq":
-            reply = _call_groq(user_message)
-        elif provider["id"] == "ollama":
-            reply = _call_ollama(user_message)
-        else:
-            reply = "No available AI provider configured."
-
+        reply = _call_llm_with_fallback(user_message)
         increment_usage(provider["id"])
         return reply
-
     except Exception as e:
         return f"System Error: {str(e)}"
