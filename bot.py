@@ -59,7 +59,7 @@ def handle_photo(message):
         # Get highest resolution photo
         file_info = bot.get_file(message.photo[-1].file_id)
         file_bytes = bot.download_file(file_info.file_path)
-        caption = message.caption or "Analyze this screenshot/image in detail and provide insights or solutions."
+        caption = message.caption or "Perform high-accuracy OCR: Transcribe all visible text, numbers, and tables verbatim so I can copy it, followed by key analysis and 3 recommendations."
         
         reply = analyze_media(file_bytes, "image/jpeg", caption)
         _send_safe_reply(message.chat.id, msg.message_id, reply)

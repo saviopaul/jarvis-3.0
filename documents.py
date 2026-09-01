@@ -1,25 +1,28 @@
 """
-documents.py - Universal Document Parser for Jarvis 3.0
+documents.py - Universal Document Parser & Scanned File OCR Engine
 
-Parses and extracts text/data from:
-- PDF (.pdf)
+Parses, OCRs, and extracts text/data from:
+- Scanned & Digital PDFs (.pdf) via native Gemini Vision OCR + PyPDF
+- Scanned Images & Photos (.jpg, .jpeg, .png, .webp, .tiff)
 - Word Documents (.docx)
 - Excel Spreadsheets (.xlsx, .xls)
 - CSV / TSV (.csv, .tsv)
-- Text, Code, JSON, Markdown (.txt, .md, .py, .js, .json, .html, .log, .yaml)
+- Code & Text (.txt, .md, .py, .js, .json, .html, .sql, .yaml)
 """
 
 import os
 import io
 import csv
 import json
+import base64
 import logging
 import requests
 
 logger = logging.getLogger(__name__)
 
+
 def parse_document(file_bytes: bytes, file_name: str) -> str:
-    """Extracts text content from various document formats."""
+    """Extracts text content from various document formats (digital or scanned)."""
     ext = os.path.splitext(file_name.lower())[1]
     
     try:
@@ -35,7 +38,7 @@ def parse_document(file_bytes: bytes, file_name: str) -> str:
             rows = [", ".join(row) for row in list(reader)[:150]]  # Top 150 rows
             return f"CSV/TSV Data Preview ({file_name}):\n" + "\n".join(rows)
 
-        # 3. PDF Files
+        # 3. PDF Files (Digital + Scanned OCR)
         elif ext == ".pdf":
             try:
                 import pypdf
@@ -45,10 +48,15 @@ def parse_document(file_bytes: bytes, file_name: str) -> str:
                     extracted = page.extract_text()
                     if extracted:
                         text += f"\n--- Page {idx+1} ---\n" + extracted
-                return text if text.strip() else "PDF contains scanned images with no selectable text."
+                
+                # If digital text extraction was successful and has substance
+                if len(text.strip()) > 60:
+                    return text
             except Exception as e:
-                logger.error(f"PDF extraction error: {e}")
-                return f"Error reading PDF: {str(e)}"
+                logger.warning(f"PyPDF extraction error: {e}, falling back to Gemini Vision OCR")
+
+            # Fallback: Scanned PDF -> Perform Gemini Native Multimodal PDF OCR
+            return _ocr_pdf_with_gemini(file_bytes, file_name)
 
         # 4. Word Documents (.docx)
         elif ext == ".docx":
@@ -67,7 +75,7 @@ def parse_document(file_bytes: bytes, file_name: str) -> str:
                 import openpyxl
                 wb = openpyxl.load_workbook(io.BytesIO(file_bytes), data_only=True)
                 output = f"Excel Spreadsheet ({file_name}):\n"
-                for sheet_name in wb.sheetnames[:5]:  # Up to 5 sheets
+                for sheet_name in wb.sheetnames[:5]:
                     sheet = wb[sheet_name]
                     output += f"\n📊 Sheet: {sheet_name}\n"
                     for row in sheet.iter_rows(values_only=True, max_row=100):
@@ -87,23 +95,67 @@ def parse_document(file_bytes: bytes, file_name: str) -> str:
         return f"Could not extract text from {file_name}: {str(e)}"
 
 
+def _ocr_pdf_with_gemini(file_bytes: bytes, file_name: str) -> str:
+    """Uses Gemini 2.5 Flash native PDF vision OCR to extract text from scanned PDFs."""
+    gemini_key = os.environ.get("GEMINI_API_KEY")
+    if not gemini_key:
+        return "Scanned PDF detected, but GEMINI_API_KEY is not configured for OCR."
+        
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={gemini_key}"
+    b64_data = base64.b64encode(file_bytes).decode("utf-8")
+    
+    prompt = (
+        f"You are the Lead High-Accuracy OCR & Document Transcription Engine.\n"
+        f"This PDF '{file_name}' contains scanned or image-based pages.\n"
+        f"1. Transcribe ALL visible text, tables, figures, numbers, and handwritten notes verbatim.\n"
+        f"2. Maintain table layouts and column alignments.\n"
+        f"3. Provide a clean, copyable transcription block."
+    )
+    
+    payload = {
+        "contents": [
+            {
+                "parts": [
+                    {"text": prompt},
+                    {
+                        "inline_data": {
+                            "mime_type": "application/pdf",
+                            "data": b64_data
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+    
+    try:
+        resp = requests.post(url, json=payload, timeout=50)
+        data = resp.json()
+        if "candidates" in data and len(data["candidates"]) > 0:
+            return data["candidates"][0]["content"]["parts"][0]["text"]
+        return f"OCR processing failed: {data.get('error', {}).get('message', resp.text)}"
+    except Exception as e:
+        return f"Scanned PDF OCR error: {str(e)}"
+
+
 def analyze_document_content(doc_text: str, file_name: str, caption_prompt: str = "") -> str:
-    """Sends extracted document text to Gemini 2.5 Flash for deep analysis and insights."""
+    """Sends extracted document text to Gemini 2.5 Flash for deep analysis and copyable formatting."""
     gemini_key = os.environ.get("GEMINI_API_KEY")
     if not gemini_key:
         return "Error: GEMINI_API_KEY not configured for document processing."
 
     default_prompt = (
-        f"You are Jarvis 3.0, the user's trusted AI partner and analyst.\n"
-        f"Carefully analyze this uploaded document ({file_name}).\n"
-        f"Provide a structured summary, key metrics/findings, anomalies or patterns, "
-        f"and 3 actionable next steps or recommendations."
+        f"You are Jarvis 3.0, the user's trusted AI partner and document intelligence analyst.\n"
+        f"Analyze this uploaded document ({file_name}).\n"
+        f"1. 📋 VERBATIM EXTRACTED CONTENT (Ready to copy in 1 click in a clean format).\n"
+        f"2. 📊 STRUCTURED TABLE / SUMMARY OF METRICS.\n"
+        f"3. 💡 KEY TAKEAWAYS & 3 ACTIONABLE RECOMMENDATIONS."
     )
     prompt = caption_prompt if caption_prompt.strip() else default_prompt
 
     system_instruction = (
-        "You are Jarvis 3.0, an expert document analyst, accountant, engineer, and advisor. "
-        "Analyze documents accurately and concisely. Always provide 3 strategic options with a clear recommendation."
+        "You are Jarvis 3.0, an expert document analyst, OCR transcriber, accountant, and engineer. "
+        "Extract text with 100% fidelity. Always provide a copyable content block and 3 strategic recommendations."
     )
 
     url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={gemini_key}"
@@ -122,7 +174,7 @@ def analyze_document_content(doc_text: str, file_name: str, caption_prompt: str 
         resp = requests.post(url, json=payload, timeout=40)
         data = resp.json()
         if "candidates" in data and len(data["candidates"]) > 0:
-            return f"📄 *DOCUMENT ANALYSIS ({file_name})*\n\n" + data["candidates"][0]["content"]["parts"][0]["text"]
+            return f"📄 *DOCUMENT & OCR INTELLIGENCE ({file_name})*\n\n" + data["candidates"][0]["content"]["parts"][0]["text"]
         return f"Document text extracted ({len(doc_text)} chars), but analysis failed."
     except Exception as e:
         return f"Document analysis error: {str(e)}"
