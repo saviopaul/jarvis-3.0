@@ -87,13 +87,19 @@ def handle_audio(message):
             try:
                 from gtts import gTTS
                 import io
-                # Generate voice for the first 300 characters of response
-                clean_text = reply.replace("*", "").replace("#", "").replace("`", "")[:400]
-                tts = gTTS(text=clean_text, lang='en', slow=False)
-                audio_fp = io.BytesIO()
-                tts.write_to_fp(audio_fp)
-                audio_fp.seek(0)
-                bot.send_voice(chat_id=message.chat.id, voice=audio_fp)
+                import re
+                # Clean up markdown formatting, links, and code blocks for smooth speech
+                clean_text = re.sub(r'```.*?```', '', reply, flags=re.DOTALL)
+                clean_text = re.sub(r'[*#_`>\[\]\(\)]', '', clean_text)
+                clean_text = re.sub(r'http\S+', '', clean_text)
+                clean_text = ' '.join(clean_text.split())[:500]
+                
+                if clean_text:
+                    tts = gTTS(text=clean_text, lang='en', tld='co.in', slow=False)
+                    audio_fp = io.BytesIO()
+                    tts.write_to_fp(audio_fp)
+                    audio_fp.seek(0)
+                    bot.send_voice(chat_id=message.chat.id, voice=audio_fp)
             except Exception as e_tts:
                 logger.error(f"TTS voice reply error: {e_tts}")
 
