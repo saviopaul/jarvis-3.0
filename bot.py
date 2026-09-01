@@ -49,9 +49,57 @@ def _send_safe_reply(chat_id: int, msg_id: int, text: str):
             bot.send_message(chat_id=chat_id, text=chunk)
 
 
+from multimodal import analyze_media, extract_youtube_transcript
+
+
+@bot.message_handler(content_types=['photo'])
+def handle_photo(message):
+    msg = bot.reply_to(message, "👁️ JARVIS inspecting image...")
+    try:
+        # Get highest resolution photo
+        file_info = bot.get_file(message.photo[-1].file_id)
+        file_bytes = bot.download_file(file_info.file_path)
+        caption = message.caption or "Analyze this screenshot/image in detail and provide insights or solutions."
+        
+        reply = analyze_media(file_bytes, "image/jpeg", caption)
+        _send_safe_reply(message.chat.id, msg.message_id, reply)
+    except Exception as e:
+        logger.error(f"Photo handling error: {e}")
+        bot.edit_message_text(f"⚠️ Error analyzing photo: {str(e)}", chat_id=message.chat.id, message_id=msg.message_id)
+
+
+@bot.message_handler(content_types=['voice', 'audio'])
+def handle_audio(message):
+    msg = bot.reply_to(message, "🎙️ JARVIS listening to audio...")
+    try:
+        file_id = message.voice.file_id if message.voice else message.audio.file_id
+        mime_type = "audio/ogg" if message.voice else "audio/mp3"
+        
+        file_info = bot.get_file(file_id)
+        file_bytes = bot.download_file(file_info.file_path)
+        caption = message.caption or "Transcribe what is said, understand the intent, and reply back thoughtfully."
+        
+        reply = analyze_media(file_bytes, mime_type, caption)
+        _send_safe_reply(message.chat.id, msg.message_id, reply)
+    except Exception as e:
+        logger.error(f"Audio handling error: {e}")
+        bot.edit_message_text(f"⚠️ Error processing audio: {str(e)}", chat_id=message.chat.id, message_id=msg.message_id)
+
+
 @bot.message_handler(func=lambda message: True)
 def handle_message(message):
     user_text = message.text.strip()
+
+    # YouTube Link Detection
+    if ("youtube.com/watch" in user_text or "youtu.be/" in user_text) and len(user_text.split()) == 1:
+        msg = bot.reply_to(message, "📹 JARVIS analyzing YouTube video...")
+        try:
+            summary = extract_youtube_transcript(user_text)
+            _send_safe_reply(message.chat.id, msg.message_id, summary)
+            return
+        except Exception as e:
+            bot.edit_message_text(f"⚠️ YouTube error: {str(e)}", chat_id=message.chat.id, message_id=msg.message_id)
+            return
 
     # Provider Switch Approval Flow
     if is_awaiting_approval():

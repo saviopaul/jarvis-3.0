@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acme Innovations – Business Landing Page Sample</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563EB',
+                        secondary: '#1E40AF',
+                        accent: '#F59E0B'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="font-sans antialiased text-gray-900 bg-gray-50">
+
+    <!-- NAVIGATION -->
+    <header class="sticky top-0 bg-white/90 backdrop-blur-md shadow-sm z-50">
+        <nav class="max-w-7xl mx-auto flex items-center justify-between p-4 md:px-8">
+            <a href="#" class="text-2xl font-black tracking-tight text-primary flex items-center gap-2">
+                <i class="fa-solid fa-cube text-primary"></i> ACME
+            </a>
+            <ul class="hidden md:flex items-center space-x-8 text-sm font-semibold text-gray-600">
+                <li><a href="#features" class="hover:text-primary transition">Features</a></li>
+                <li><a href="#solutions" class="hover:text-primary transition">Solutions</a></li>
+                <li><a href="#testimonials" class="hover:text-primary transition">Testimonials</a></li>
+                <li><a href="#pricing" class="hover:text-primary transition">Pricing</a></li>
+            </ul>
+            <div class="flex items-center gap-4">
+                <a href="#" class="hidden sm:block text-sm font-semibold text-gray-700 hover:text-primary transition">Sign In</a>
+                <a href="#cta" class="px-5 py-2.5 rounded-xl bg-primary text-white text-sm font-semibold hover:bg-secondary shadow-lg shadow-primary/25 transition">Get Started</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative pt-20 pb-28 overflow-hidden bg-gradient-to-b from-blue-50/50 via-white to-gray-50">
+        <div class="max-w-5xl mx-auto text-center px-4">
+            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-blue-100/80 text-primary mb-6">
+                <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span> Built automatically by Jarvis 3.0 Swarm
+            </span>
+            <h1 class="text-4xl md:text-6xl font-black text-gray-900 tracking-tight leading-tight mb-6">
+                Scale Your Business Operations with <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-indigo-600">Intelligent Automation</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-10 leading-relaxed">
+                Connect your inventory, customer communications, and workflow into a single unified dashboard that operates 24/7 without friction.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#contact" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-primary text-white font-bold hover:bg-secondary shadow-xl shadow-primary/30 transition flex items-center justify-center gap-2">
+                    Start 14-Day Free Trial <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
+                <a href="#demo" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-white text-gray-700 font-bold hover:bg-gray-100 border border-gray-200 shadow-sm transition flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-play text-xs text-primary"></i> Watch 2-Min Demo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3-COLUMN FEATURE GRID -->
+    <section id="features" class="py-20 bg-white border-y border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 md:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-wider text-primary mb-2">Core Capabilities</h2>
+                <h3 class="text-3xl font-extrabold text-gray-900">Engineered for Maximum Speed & Reliability</h3>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="p-8 rounded-2xl bg-gray-50 hover:bg-blue-50/40 border border-gray-100 hover:border-blue-200 transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-blue-100 text-primary flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Real-Time Sync</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Instant live updates across all your channels and POS systems with zero delay or data loss.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="p-8 rounded-2xl bg-gray-50 hover:bg-blue-50/40 border border-gray-100 hover:border-blue-200 transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-blue-100 text-primary flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Enterprise Security</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        End-to-end encryption, automated backups, and strict compliance protection for your customer data.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="p-8 rounded-2xl bg-gray-50 hover:bg-blue-50/40 border border-gray-100 hover:border-blue-200 transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-blue-100 text-primary flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Predictive Insights</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        AI-driven forecasting that detects bottlenecks and highlights revenue opportunities automatically.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIAL / TRUST STRIP -->
+    <section class="py-16 bg-gray-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <div class="flex justify-center gap-1 text-accent mb-4">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <blockquote class="text-xl md:text-2xl font-medium leading-relaxed mb-6">
+                "Implementing this platform cut our weekly operational turnaround time by over 40%. It's the cleanest, most dependable system we've deployed."
+            </blockquote>
+            <p class="text-sm font-semibold text-gray-400">— Head of Operations, Enterprise Client</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-10 bg-gray-950 text-gray-500 text-xs text-center border-t border-gray-800">
+        <p>&copy; 2026 ACME Corp. Generated by Jarvis 3.0 Multi-Agent OS.</p>
+    </footer>
+
+</body>
+</html>
