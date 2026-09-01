@@ -252,26 +252,33 @@ def handle_message(message):
             bot.edit_message_text(f"⚠️ Website build error: {str(e)}", chat_id=message.chat.id, message_id=msg.message_id)
             return
 
-    # 4. Automated MP4 Video Generation Request
-    video_triggers = ["create a video", "make a video", "generate a video", "animated video for joel", "render a video", "video for joshua", "make an animated video"]
+    # 4. Automated 2D Cartoon Animation & MP4 Video Request
+    video_triggers = ["animation", "2d animation", "cartoon", "animated video", "cartoon video", "create a video", "make a video", "generate a video", "animated video for joel", "render a video", "video for joshua", "make an animated video"]
     if any(trigger in msg_lower for trigger in video_triggers):
-        msg = bot.reply_to(message, "🎬 *JARVIS Video Producer:* Rendering animated MP4 video with cartoon slides & audio narration (please wait ~20-30s)...")
+        from cartoon_generator import generate_interactive_2d_cartoon_webpage
+        from animation_2d_engine import render_2d_cartoon_video
         
+        # 1. Generate Live 2D Cartoon Interactive Player
+        try:
+            cartoon_site = generate_interactive_2d_cartoon_webpage(user_text)
+            reply = (
+                f"🎬 *YOUR 2D CARTOON ANIMATION IS LIVE!* 🚀\n\n"
+                f"🔗 *Interactive 60 FPS Cartoon Player:* {cartoon_site['live_url']}\n\n"
+                f"✨ Features 2D animated Jarvis Robot & Dippy characters, spoken audio, and 10s challenge!\n"
+                f"⏳ Rendering MP4 video file in background (uploading in ~20s)..."
+            )
+            bot.reply_to(message, reply, parse_mode="Markdown")
+        except Exception as e:
+            logger.error(f"Cartoon web player error: {e}")
+
+        # 2. Render and Upload MP4 Video in Background
         def _render_and_send():
             try:
-                video_path = create_educational_video(user_text, for_twins=True)
-                try:
-                    bot.edit_message_text("🚀 Video rendered successfully! Uploading MP4 to Telegram...", chat_id=message.chat.id, message_id=msg.message_id)
-                except Exception:
-                    pass
+                video_path = render_2d_cartoon_video(user_text, for_twins=True)
                 with open(video_path, "rb") as vid:
-                    bot.send_video(message.chat.id, vid, caption=f"🎬 *Jarvis Adventure Episode* for Joel & Joshua!\nTopic: {user_text[:100]}", timeout=120)
+                    bot.send_video(message.chat.id, vid, caption=f"🎬 *2D Cartoon Episode* for Joel & Joshua!\nTopic: {user_text[:100]}", timeout=120)
             except Exception as e:
-                logger.error(f"Video generation error: {e}")
-                try:
-                    bot.edit_message_text(f"⚠️ Video render error: {str(e)}", chat_id=message.chat.id, message_id=msg.message_id)
-                except Exception:
-                    pass
+                logger.error(f"2D Video render error: {e}")
                     
         import threading
         threading.Thread(target=_render_and_send, daemon=True).start()
