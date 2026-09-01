@@ -134,11 +134,33 @@ from video_engine import create_educational_video
 
 @app.route("/sites/<slug>")
 def serve_site(slug):
+    os.makedirs(os.path.join(os.path.dirname(__file__), "sites"), exist_ok=True)
     file_path = os.path.join(os.path.dirname(__file__), "sites", f"{slug}.html")
     if os.path.exists(file_path):
         with open(file_path, "r", encoding="utf-8") as f:
             return f.read(), 200, {"Content-Type": "text/html"}
-    return "<h1>404 - Website Not Found</h1><p>Jarvis has not built this site yet.</p>", 404
+            
+    # Auto-Regenerate on the fly if file was purged by container restart
+    if slug.startswith("cartoon-"):
+        from cartoon_generator import generate_interactive_2d_cartoon_webpage
+        res = generate_interactive_2d_cartoon_webpage("Joel & Joshua Marathi & Science Adventure")
+        if os.path.exists(res["file_path"]):
+            with open(res["file_path"], "r", encoding="utf-8") as f:
+                content = f.read()
+            with open(file_path, "w", encoding="utf-8") as f:
+                f.write(content)
+            return content, 200, {"Content-Type": "text/html"}
+    else:
+        from website_engine import build_and_host_website
+        res = build_and_host_website(slug.replace("-", " "))
+        if os.path.exists(res["file_path"]):
+            with open(res["file_path"], "r", encoding="utf-8") as f:
+                content = f.read()
+            with open(file_path, "w", encoding="utf-8") as f:
+                f.write(content)
+            return content, 200, {"Content-Type": "text/html"}
+            
+    return "<h1>Jarvis Web Engine</h1><p>Generating your live site, please refresh in 3 seconds...</p>", 200, {"Content-Type": "text/html"}
 
 
 from code_sandbox import execute_python_code
