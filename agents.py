@@ -505,12 +505,22 @@ def _call_agent(system_prompt: str, user_message: str) -> str:
     return "No AI provider available."
 
 
+def get_all_agents() -> dict:
+    """Returns static specialists merged with dynamically self-upgraded agents."""
+    from self_evolution import load_dynamic_agents
+    all_agents = dict(AGENTS)
+    dynamic = load_dynamic_agents()
+    all_agents.update(dynamic)
+    return all_agents
+
+
 def detect_agents_needed(user_message: str) -> list:
     """Detects which specialist agents should handle this message."""
     msg = user_message.lower()
     needed = []
-    for agent_id, agent in AGENTS.items():
-        if any(kw in msg for kw in agent["keywords"]):
+    all_agents = get_all_agents()
+    for agent_id, agent in all_agents.items():
+        if any(kw in msg for kw in agent.get("keywords", [])):
             needed.append(agent_id)
     return needed
 
@@ -521,6 +531,7 @@ def run_crew(user_message: str, life_context: str = "") -> str:
     Returns a consolidated expert response.
     """
     agents_needed = detect_agents_needed(user_message)
+    all_agents = get_all_agents()
 
     if not agents_needed:
         return None  # No specialist needed, use regular brain
@@ -535,7 +546,7 @@ def run_crew(user_message: str, life_context: str = "") -> str:
     primary_agents = agents_needed[:1]
 
     for agent_id in primary_agents:
-        agent = AGENTS[agent_id]
+        agent = all_agents[agent_id]
         agent_names.append(f"{agent['emoji']} {agent['name']}")
         try:
             reply = _call_agent(agent["system"], full_message)

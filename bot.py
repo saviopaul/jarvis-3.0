@@ -175,6 +175,30 @@ def handle_list_mcps(message):
 
 from deep_research import run_deep_research
 from fullstack_builder import build_fullstack_project
+from self_evolution import autonomous_self_upgrade, load_dynamic_agents
+
+
+@bot.message_handler(commands=['upgrade', 'evolve', 'add_agent'])
+def handle_self_upgrade(message):
+    req = message.text.replace("/upgrade", "").replace("/evolve", "").replace("/add_agent", "").strip()
+    if not req:
+        bot.reply_to(message, "Usage: `/upgrade Add an Ayurvedic Nutritionist & Diet Coach Specialist`", parse_mode="Markdown")
+        return
+        
+    msg = bot.reply_to(message, "🧬 *JARVIS Auto-Evolution:* Designing persona, registering triggers, and synthesizing zero-cost skills...", parse_mode="Markdown")
+    try:
+        agent_data = autonomous_self_upgrade(req)
+        kws = ", ".join([f"`{k}`" for k in agent_data["keywords"][:6]])
+        reply = (
+            f"⚡ *AUTONOMOUS SELF-UPGRADE COMPLETE!* 🚀\n\n"
+            f"{agent_data['emoji']} *New Specialist Active:* **{agent_data['name']}**\n"
+            f"🎯 *Trigger Keywords:* {kws}\n\n"
+            f"💡 *How to use:* Simply mention any of these keywords in your messages to activate your new specialist immediately!"
+        )
+        _send_safe_reply(message.chat.id, msg.message_id, reply)
+    except Exception as e:
+        logger.error(f"Self upgrade error: {e}")
+        bot.edit_message_text(f"⚠️ Upgrade error: {str(e)}", chat_id=message.chat.id, message_id=msg.message_id)
 
 
 @bot.message_handler(commands=['research', 'search', 'investigate'])
@@ -197,6 +221,26 @@ def handle_deep_research(message):
 def handle_message(message):
     user_text = message.text.strip()
     msg_lower = user_text.lower()
+
+    # 0. Autonomous Self-Upgrade Request Trigger
+    upgrade_triggers = ["upgrade yourself", "add a new specialist", "create a new specialist", "evolve a new skill", "add an agent for", "create an agent for", "add a specialist for"]
+    if any(trigger in msg_lower for trigger in upgrade_triggers):
+        msg = bot.reply_to(message, "🧬 *JARVIS Auto-Evolution:* Designing persona, registering triggers, and synthesizing zero-cost skills...")
+        try:
+            agent_data = autonomous_self_upgrade(user_text)
+            kws = ", ".join([f"`{k}`" for k in agent_data["keywords"][:6]])
+            reply = (
+                f"⚡ *AUTONOMOUS SELF-UPGRADE COMPLETE!* 🚀\n\n"
+                f"{agent_data['emoji']} *New Specialist Active:* **{agent_data['name']}**\n"
+                f"🎯 *Trigger Keywords:* {kws}\n\n"
+                f"💡 *How to use:* Mention any of these keywords to activate this specialist immediately at ₹0 cost!"
+            )
+            _send_safe_reply(message.chat.id, msg.message_id, reply)
+            return
+        except Exception as e:
+            logger.error(f"Self upgrade error: {e}")
+            bot.edit_message_text(f"⚠️ Upgrade error: {str(e)}", chat_id=message.chat.id, message_id=msg.message_id)
+            return
 
     # 1. YouTube Link Transcript Analysis
     if ("youtube.com/watch" in user_text or "youtu.be/" in user_text) and len(user_text.split()) == 1:
