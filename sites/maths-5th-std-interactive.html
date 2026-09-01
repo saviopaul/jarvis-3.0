@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5th Standard Maharashtra Board Interactive Maths Studio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-14px) rotate(2deg); }
+    }
+    @keyframes bounce-char {
+      0%, 100% { transform: translateY(0px) scale(1); }
+      50% { transform: translateY(-20px) scale(1.06); }
+    }
+    @keyframes pulse-glow {
+      0%, 100% { transform: scale(1); filter: drop-shadow(0 0 15px #38bdf8); }
+      50% { transform: scale(1.05); filter: drop-shadow(0 0 25px #facc15); }
+    }
+    .floating { animation: float 3s ease-in-out infinite; }
+    .bouncing { animation: bounce-char 1.6s ease-in-out infinite; }
+    .pulsing { animation: pulse-glow 2s infinite; }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-slate-900 via-indigo-950 to-slate-950 min-h-screen text-white font-sans p-4 flex flex-col items-center">
+
+  <!-- TOP HEADER -->
+  <header class="w-full max-w-5xl bg-slate-900/90 backdrop-blur border-2 border-yellow-400 rounded-3xl p-5 my-3 flex flex-wrap items-center justify-between shadow-2xl gap-4">
+    <div class="flex items-center gap-4">
+      <span class="text-4xl animate-bounce">📐</span>
+      <div>
+        <h1 class="text-xl md:text-2xl font-black text-yellow-300 tracking-wide">5th STD MAHARASHTRA BOARD MATHS STUDIO</h1>
+        <p class="text-xs md:text-sm text-sky-200">English Medium Interactive Curriculum • For <strong class="text-white font-black">Joel & Joshua</strong> ⚽</p>
+      </div>
+    </div>
+    <div class="bg-emerald-400 text-slate-950 font-black px-4 py-1.5 rounded-full text-xs shadow-lg animate-pulse">
+      STATE BOARD BALBHARATI
+    </div>
+  </header>
+
+  <!-- INTERACTIVE CHAPTER SELECTOR -->
+  <nav class="w-full max-w-5xl flex flex-wrap gap-2 justify-center my-3 z-10">
+    <button onclick="loadLesson('angles')" class="tab-btn bg-indigo-700 hover:bg-indigo-600 text-white font-black px-5 py-2.5 rounded-2xl text-xs md:text-sm shadow-lg border-2 border-sky-400 active:scale-95 transition">
+      📐 Chapter 6: Angles & Protractor
+    </button>
+    <button onclick="loadLesson('fractions')" class="tab-btn bg-slate-800 hover:bg-indigo-600 text-sky-200 font-bold px-5 py-2.5 rounded-2xl text-xs md:text-sm shadow border border-slate-700 active:scale-95 transition">
+      🦋 Chapter 5: Butterfly Fractions
+    </button>
+    <button onclick="loadLesson('roman')" class="tab-btn bg-slate-800 hover:bg-indigo-600 text-sky-200 font-bold px-5 py-2.5 rounded-2xl text-xs md:text-sm shadow border border-slate-700 active:scale-95 transition">
+      🏛️ Chapter 1: Roman Numerals
+    </button>
+    <button onclick="loadLesson('perimeter')" class="tab-btn bg-slate-800 hover:bg-indigo-600 text-sky-200 font-bold px-5 py-2.5 rounded-2xl text-xs md:text-sm shadow border border-slate-700 active:scale-95 transition">
+      ⚽ Chapter 12: Football Perimeter & Area
+    </button>
+  </nav>
+
+  <!-- INTERACTIVE LESSON SCREEN -->
+  <main class="w-full max-w-5xl bg-slate-900/90 rounded-3xl border-4 border-white/20 p-6 shadow-2xl flex flex-col items-center justify-between my-2 relative">
+    
+    <!-- TOP CARTOON HOSTS -->
+    <div class="w-full flex items-center justify-between bg-slate-950/70 p-4 rounded-2xl border border-sky-500/40 mb-6">
+      <div class="flex items-center gap-3">
+        <div class="w-12 h-12 bg-slate-800 rounded-2xl border-2 border-sky-400 flex items-center justify-center text-2xl floating">🤖</div>
+        <div>
+          <h4 class="text-xs font-black text-sky-300 uppercase">Captain Jarvis</h4>
+          <p id="jarvis-status" class="text-xs text-white">"Ready to master 5th Standard Angles, Joel & Joshua?"</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <div class="text-right">
+          <h4 class="text-xs font-black text-cyan-300 uppercase">Dippy Droplet</h4>
+          <p id="dippy-status" class="text-xs text-white">"Angles are like kicking a football into the top corner!"</p>
+        </div>
+        <div class="w-12 h-12 bg-sky-500 rounded-full border-2 border-white flex items-center justify-center text-2xl bouncing">💧</div>
+      </div>
+    </div>
+
+    <!-- DYNAMIC INTERACTIVE LAB AREA -->
+    <div id="lesson-content" class="w-full bg-indigo-950/80 border-2 border-yellow-400 rounded-2xl p-6 text-center shadow-inner">
+      <!-- Angles Default -->
+      <h3 class="text-xl md:text-2xl font-black text-yellow-300 mb-2">📐 CHAPTER 6: ANGLES (RIGHT, ACUTE, OBTUSE)</h3>
+      <p class="text-sm text-sky-200 mb-4">Move the Angle Slider to see how angles change like clock hands or football kicks!</p>
+      
+      <!-- Interactive Angle Visualizer -->
+      <div class="flex flex-col items-center my-4">
+        <svg id="angle-svg" width="260" height="200" viewBox="0 0 260 200" class="bg-slate-950 border-2 border-sky-400 rounded-2xl shadow-xl">
+          <!-- Vertex -->
+          <circle cx="130" cy="160" r="6" fill="#facc15"/>
+          <!-- Base Arm (Always Horizontal) -->
+          <line x1="130" y1="160" x2="230" y2="160" stroke="#38bdf8" stroke-width="5" stroke-linecap="round"/>
+          <!-- Rotating Arm -->
+          <line id="rotating-arm" x1="130" y1="160" x2="130" y2="60" stroke="#f43f5e" stroke-width="5" stroke-linecap="round"/>
+          <text x="130" y="190" fill="#94a3b8" font-size="12" text-anchor="middle" font-weight="bold">Vertex B</text>
+        </svg>
+
+        <div class="mt-4 flex items-center gap-4">
+          <label class="text-sm font-bold text-yellow-300">Angle: <span id="angle-val" class="text-xl font-black text-white">90°</span></label>
+          <input type="range" id="angle-slider" min="10" max="170" value="90" oninput="updateAngle(this.value)" class="w-64 accent-yellow-400">
+        </div>
+        <div id="angle-type-badge" class="mt-2 bg-emerald-500 text-slate-950 font-black px-4 py-1 rounded-full text-sm shadow">
+          RIGHT ANGLE (Exactly 90° - Perfect L-Shape)
+        </div>
+      </div>
+    </div>
+
+    <!-- 10-SECOND TIME-BOMB MATHS CHALLENGE -->
+    <div id="math-challenge" class="w-full bg-red-950/90 border-4 border-red-500 rounded-3xl p-5 my-4 text-center shadow-2xl">
+      <h3 class="text-xl font-black text-yellow-300 animate-pulse">💣 10-SECOND MATHS PENALTY SHOOTOUT! 💣</h3>
+      <div class="text-4xl font-mono font-black text-red-400 my-2" id="timer-count">10s</div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-left my-3">
+        <div class="bg-blue-900/90 p-4 rounded-2xl border-2 border-sky-400 shadow-md">
+          <h4 class="font-black text-yellow-300 text-sm mb-1">👦 JOEL'S QUESTION (LEFT):</h4>
+          <p id="joel-q" class="text-xs md:text-sm text-sky-100 font-semibold leading-relaxed">
+            An angle measures 45°. Is it Acute, Right, or Obtuse?
+          </p>
+          <div class="flex gap-2 mt-2">
+            <button onclick="checkAnswer(true, 'Joel')" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black px-3 py-1 rounded-lg text-xs">Acute (&lt;90°)</button>
+            <button onclick="checkAnswer(false, 'Joel')" class="bg-rose-500 hover:bg-rose-400 text-white font-bold px-3 py-1 rounded-lg text-xs">Obtuse (&gt;90°)</button>
+          </div>
+        </div>
+        <div class="bg-emerald-900/90 p-4 rounded-2xl border-2 border-emerald-400 shadow-md">
+          <h4 class="font-black text-yellow-300 text-sm mb-1">👦 JOSHUA'S QUESTION (RIGHT):</h4>
+          <p id="joshua-q" class="text-xs md:text-sm text-emerald-100 font-semibold leading-relaxed">
+            At 3:00 PM on the clock, what angle do the two hands form?
+          </p>
+          <div class="flex gap-2 mt-2">
+            <button onclick="checkAnswer(true, 'Joshua')" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black px-3 py-1 rounded-lg text-xs">Right Angle (90°)</button>
+            <button onclick="checkAnswer(false, 'Joshua')" class="bg-rose-500 hover:bg-rose-400 text-white font-bold px-3 py-1 rounded-lg text-xs">Acute Angle</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Result Banner -->
+      <div id="quiz-result" class="hidden mt-3 p-3 bg-emerald-800 border-2 border-yellow-300 rounded-xl text-center">
+        <h4 class="text-lg font-black text-yellow-300">⚽ GOAL! PENALTY SCORED! 🏆</h4>
+        <p class="text-xs text-emerald-100 font-bold">Brain Code Unlocked: [ 9 - 4 - 2 ] • Moonwalk celebration time! 🕺</p>
+      </div>
+    </div>
+
+    <!-- VOICE NARRATION & TIMERS -->
+    <div class="flex flex-wrap gap-4 items-center justify-center mt-2 z-10">
+      <button onclick="speakCurrentLesson()" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black px-6 py-3 rounded-full text-sm shadow-xl hover:scale-105 transition flex items-center gap-2">
+        <span>🔊 Hear Jarvis Explain This Chapter</span>
+      </button>
+      <button onclick="startTimer()" class="bg-yellow-400 hover:bg-yellow-300 text-slate-950 font-black px-6 py-3 rounded-full text-sm shadow-xl hover:scale-105 transition flex items-center gap-2">
+        <span>⏱️ Start 10s Countdown</span>
+      </button>
+    </div>
+
+  </main>
+
+  <script>
+    let currentAngle = 90;
+
+    function playSynthBeep(freq = 440, duration = 0.15) {
+      try {
+        const ctx = new (window.AudioContext || window.webkitAudioContext)();
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.frequency.value = freq;
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start();
+        gain.gain.exponentialRampToValueAtTime(0.00001, ctx.currentTime + duration);
+        osc.stop(ctx.currentTime + duration);
+      } catch (e) {}
+    }
+
+    function updateAngle(val) {
+      currentAngle = val;
+      document.getElementById("angle-val").innerText = val + "°";
+      const badge = document.getElementById("angle-type-badge");
+      
+      // Calculate rotating arm coordinate
+      const rad = (180 - val) * (Math.PI / 180);
+      const armLen = 100;
+      const x2 = 130 + armLen * Math.cos(rad);
+      const y2 = 160 - armLen * Math.sin(rad);
+
+      const arm = document.getElementById("rotating-arm");
+      arm.setAttribute("x2", x2);
+      arm.setAttribute("y2", y2);
+
+      if (val < 90) {
+        badge.className = "mt-2 bg-sky-400 text-slate-950 font-black px-4 py-1 rounded-full text-sm shadow";
+        badge.innerText = "ACUTE ANGLE (Less than 90° - Sharp & Cute)";
+      } else if (val == 90) {
+        badge.className = "mt-2 bg-emerald-500 text-slate-950 font-black px-4 py-1 rounded-full text-sm shadow";
+        badge.innerText = "RIGHT ANGLE (Exactly 90° - Perfect L-Shape)";
+      } else {
+        badge.className = "mt-2 bg-amber-400 text-slate-950 font-black px-4 py-1 rounded-full text-sm shadow";
+        badge.innerText = "OBTUSE ANGLE (Greater than 90° - Wide Open)";
+      }
+    }
+
+    function checkAnswer(isCorrect, student) {
+      const res = document.getElementById("quiz-result");
+      res.classList.remove("hidden");
+      if (isCorrect) {
+        playSynthBeep(880, 0.3);
+        setTimeout(() => playSynthBeep(1100, 0.4), 150);
+        res.className = "mt-3 p-3 bg-emerald-800 border-2 border-yellow-300 rounded-xl text-center";
+        res.innerHTML = `<h4 class="text-lg font-black text-yellow-300">⚽ GOAL! Super Strike by ${student}! 🏆</h4><p class="text-xs text-emerald-100 font-bold">Brain Code: [ 9 - 4 - 2 ] • Moonwalk victory celebration! 🕺</p>`;
+      } else {
+        playSynthBeep(240, 0.3);
+        res.className = "mt-3 p-3 bg-rose-900 border-2 border-red-400 rounded-xl text-center";
+        res.innerHTML = `<h4 class="text-base font-black text-yellow-300">⚠️ Blocked by the Goalkeeper! Try again, ${student}!</h4>`;
+      }
+    }
+
+    function startTimer() {
+      let count = 10;
+      const countElem = document.getElementById("timer-count");
+      countElem.innerText = "10s";
+      const interval = setInterval(() => {
+        count--;
+        if (count > 0) {
+          countElem.innerText = count + "s";
+          playSynthBeep(440 + (10 - count) * 40, 0.1);
+        } else {
+          clearInterval(interval);
+          countElem.innerText = "💥 TIME UP! SHOOT NOW! 💥";
+        }
+      }, 1000);
+    }
+
+    function speakCurrentLesson() {
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+        const text = "Hello Joel and Joshua! In 5th Standard Maharashtra Board Maths, an angle of 90 degrees is a Right Angle, less than 90 degrees is an Acute Angle, and greater than 90 is an Obtuse angle. Just like kicking a football at different angles to score a goal!";
+        const utter = new SpeechSynthesisUtterance(text);
+        utter.rate = 0.95;
+        window.speechSynthesis.speak(utter);
+      }
+    }
+
+    function loadLesson(type) {
+      const container = document.getElementById("lesson-content");
+      if (type === 'fractions') {
+        container.innerHTML = `
+          <h3 class="text-xl md:text-2xl font-black text-yellow-300 mb-2">🦋 CHAPTER 5: BUTTERFLY METHOD FOR FRACTIONS</h3>
+          <p class="text-sm text-sky-200 mb-4">Adding 1/2 + 1/3 is easy with the Butterfly Cross-Multiply trick!</p>
+          <div class="bg-slate-950 p-5 rounded-2xl border-2 border-sky-400 inline-block text-left text-sm space-y-2">
+            <p class="text-yellow-300 font-bold">Step 1: Cross-multiply Left Wing (1 × 3 = 3)</p>
+            <p class="text-cyan-300 font-bold">Step 2: Cross-multiply Right Wing (1 × 2 = 2)</p>
+            <p class="text-white font-bold">Step 3: Multiply Bottom Numbers (2 × 3 = 6)</p>
+            <p class="text-emerald-400 text-lg font-black mt-2">Answer = (3 + 2) / 6 = 5/6! 🎯</p>
+          </div>
+        `;
+      } else if (type === 'roman') {
+        container.innerHTML = `
+          <h3 class="text-xl md:text-2xl font-black text-yellow-300 mb-2">🏛️ CHAPTER 1: ROMAN NUMERALS SECRET CODE</h3>
+          <p class="text-sm text-sky-200 mb-4">Match the ancient numbers with clock values!</p>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+            <div class="bg-slate-950 p-3 rounded-xl border border-yellow-400"><span class="text-2xl font-black text-yellow-300">I = 1</span></div>
+            <div class="bg-slate-950 p-3 rounded-xl border border-yellow-400"><span class="text-2xl font-black text-yellow-300">V = 5</span></div>
+            <div class="bg-slate-950 p-3 rounded-xl border border-yellow-400"><span class="text-2xl font-black text-yellow-300">X = 10</span></div>
+            <div class="bg-slate-950 p-3 rounded-xl border border-yellow-400"><span class="text-2xl font-black text-yellow-300">L = 50</span></div>
+          </div>
+        `;
+      } else if (type === 'perimeter') {
+        container.innerHTML = `
+          <h3 class="text-xl md:text-2xl font-black text-yellow-300 mb-2">⚽ CHAPTER 12: FOOTBALL PITCH PERIMETER & AREA</h3>
+          <p class="text-sm text-sky-200 mb-4">Perimeter is running along the boundary lines of the pitch!</p>
+          <div class="bg-slate-950 p-5 rounded-2xl border-2 border-emerald-400 inline-block text-left text-sm space-y-2">
+            <p class="text-sky-300 font-bold">⚽ Pitch Length = 100m | Width = 50m</p>
+            <p class="text-yellow-300 font-bold">Perimeter Formula = 2 × (Length + Width) = 2 × (100 + 50) = 300 meters!</p>
+            <p class="text-emerald-400 text-base font-black">Area = Length × Width = 100 × 50 = 5,000 sq.m! 🏆</p>
+          </div>
+        `;
+      } else {
+        location.reload();
+      }
+    }
+  </script>
+</body>
+</html>
