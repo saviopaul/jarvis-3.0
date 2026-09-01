@@ -58,8 +58,12 @@ def handle_message(message):
 
 @app.route(f"/{token}", methods=["POST"])
 def webhook():
-    update = telebot.types.Update.de_json(request.stream.read().decode("utf-8"))
-    bot.process_new_updates([update])
+    try:
+        json_string = request.get_data().decode("utf-8")
+        update = telebot.types.Update.de_json(json_string)
+        bot.process_new_updates([update])
+    except Exception as e:
+        logger.error(f"Webhook update error: {e}")
     return "OK", 200
 
 @app.route("/health", methods=["GET"])
