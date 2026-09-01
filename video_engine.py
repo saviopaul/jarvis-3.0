@@ -19,44 +19,58 @@ VIDEOS_DIR = os.path.join(os.path.dirname(__file__), "videos")
 os.makedirs(VIDEOS_DIR, exist_ok=True)
 
 
+def _get_font(size: int, bold: bool = False):
+    """Loads appropriate system font across Windows and Linux Docker."""
+    font_candidates = [
+        "C:/Windows/Fonts/arialbd.ttf" if bold else "C:/Windows/Fonts/arial.ttf",
+        "C:/Windows/Fonts/segoeui.ttf",
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf" if bold else "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+        "DejaVuSans-Bold.ttf" if bold else "DejaVuSans.ttf",
+        "arial.ttf"
+    ]
+    for candidate in font_candidates:
+        try:
+            return ImageFont.truetype(candidate, size)
+        except Exception:
+            continue
+    try:
+        return ImageFont.load_default(size=size)
+    except Exception:
+        return ImageFont.load_default()
+
+
 def _create_slide_image(title: str, body_lines: list, bg_color: tuple, badge: str, output_path: str):
-    """Generates a vibrant 1280x720 graphic slide."""
+    """Generates a vibrant, high-contrast 1280x720 graphic slide."""
     width, height = 1280, 720
     image = Image.new("RGB", (width, height), bg_color)
     draw = ImageDraw.Draw(image)
     
-    # Draw decorative border
-    draw.rectangle([20, 20, width - 20, height - 20], outline=(255, 255, 255), width=6)
+    # Outer Glow / Double Border
+    draw.rectangle([15, 15, width - 15, height - 15], outline=(255, 255, 255), width=5)
+    draw.rectangle([25, 25, width - 25, height - 25], outline=(255, 215, 0), width=2)
     
-    # Try to load a nice font, fallback to default
-    try:
-        font_badge = ImageFont.truetype("DejaVuSans-Bold.ttf", 36)
-        font_title = ImageFont.truetype("DejaVuSans-Bold.ttf", 48)
-        font_body = ImageFont.truetype("DejaVuSans.ttf", 34)
-    except Exception:
-        try:
-            font_badge = ImageFont.truetype("arial.ttf", 36)
-            font_title = ImageFont.truetype("arialbd.ttf", 48)
-            font_body = ImageFont.truetype("arial.ttf", 34)
-        except Exception:
-            font_badge = ImageFont.load_default()
-            font_title = ImageFont.load_default()
-            font_body = ImageFont.load_default()
-        
-    # Draw Badge
-    draw.text((60, 60), f"⭐ {badge.upper()} ⭐", fill=(255, 230, 0), font=font_badge)
+    font_badge = _get_font(34, bold=True)
+    font_title = _get_font(52, bold=True)
+    font_body = _get_font(38, bold=False)
     
-    # Draw Title
-    draw.text((60, 130), title, fill=(255, 255, 255), font=font_title)
+    # Badge Pill Header
+    draw.rounded_rectangle([50, 45, 650, 105], radius=15, fill=(0, 0, 0, 180), outline=(255, 215, 0), width=3)
+    draw.text((70, 55), f"⭐ {badge.upper()} ⭐", fill=(255, 230, 0), font=font_badge)
     
-    # Draw Divider
-    draw.line([(60, 210), (width - 60, 210)], fill=(255, 255, 255), width=4)
+    # Title
+    draw.text((55, 135), title, fill=(255, 255, 255), font=font_title)
     
-    # Draw Body Content
-    y = 260
+    # Glowing Divider Line
+    draw.line([(55, 215), (width - 55, 215)], fill=(255, 215, 0), width=5)
+    
+    # Content Card Background
+    draw.rounded_rectangle([50, 245, width - 50, height - 50], radius=20, fill=(10, 25, 47, 200), outline=(255, 255, 255), width=2)
+    
+    # Body Bullets
+    y = 280
     for line in body_lines:
-        draw.text((60, y), line, fill=(240, 240, 240), font=font_body)
-        y += 65
+        draw.text((80, y), line, fill=(245, 245, 245), font=font_body)
+        y += 75
         
     image.save(output_path, "PNG")
 
@@ -70,40 +84,40 @@ def create_educational_video(topic: str, for_twins: bool = True) -> str:
     temp_dir = os.path.join(VIDEOS_DIR, session_id)
     os.makedirs(temp_dir, exist_ok=True)
     
-    audience = "Joel & Joshua (10-year-old twin boys)" if for_twins else "Kids"
+    audience = "Joel & Joshua" if for_twins else "Kids"
     
-    # Define 3 scenes
+    # Define 3 rich scenes
     scenes = [
         {
-            "badge": "JARVIS ACADEMY • EPISODE 1",
-            "title": f"The Mission: {topic[:35]}",
-            "bg": (26, 82, 118), # Deep Blue
+            "badge": "JARVIS ACADEMY • MISSION 1",
+            "title": f"The Mission: {topic[:38]}",
+            "bg": (15, 45, 85), # Midnight Navy
             "bullets": [
-                f"🎯 Explorer Mission for {audience}!",
-                "💡 Secret Discovery: Learn the Master Trick",
-                "⏱️ Watch closely to unlock the Secret Brain Code!"
+                f"🎯 Special Agent Mission for {audience}!",
+                "💡 Master Secret: Unlock the Super Memory Code",
+                "⏱️ Pay attention to the 10-Second Time Bomb Challenge!"
             ],
             "narration": f"Welcome Joel and Joshua to today's Jarvis Adventure! Today we are tackling {topic}. Watch carefully because a mystery challenge is waiting for you at the end!"
         },
         {
-            "badge": "INTERACTIVE BRAIN CHALLENGE",
-            "title": "Pause & Solve: The 10s Time-Bomb!",
-            "bg": (120, 40, 31), # Deep Crimson / Red
+            "badge": "10-SECOND TIME-BOMB CHALLENGE",
+            "title": "Pause & Solve: Time Bomb Ticking!",
+            "bg": (115, 20, 20), # Crimson Red
             "bullets": [
                 "💣 TIME BOMB TICKING: 10 SECONDS!",
-                "👉 Joel, solve the left side!",
-                "👉 Joshua, solve the right side!",
-                "💥 Press Pause on your screen right now!"
+                "👉 Joel: Solve the Left Side equation!",
+                "👉 Joshua: Solve the Right Side equation!",
+                "💥 Hit PAUSE on your screen right now!"
             ],
             "narration": "Challenge Alert! Pause this video right now. Joel, take the left side; Joshua, take the right side. You have 10 seconds before the time bomb explodes. Ready, set, pause!"
         },
         {
-            "badge": "EPIC CLIFFHANGER",
-            "title": "Mystery Unlocked • Next Episode!",
-            "bg": (20, 90, 50), # Deep Emerald Green
+            "badge": "EPIC CLIFFHANGER • NEXT EPISODE",
+            "title": "Mystery Solved • Code: [ 7 - 9 - 2 ]",
+            "bg": (15, 80, 45), # Emerald Green
             "bullets": [
-                "🏆 VICTORY! Brain Code: [ 7 - 9 - 2 ]",
-                "⚔️ Warning: The Boss Monster is approaching!",
+                "🏆 VICTORY! Brain Code: [ 7 - 9 - 2 ] Unlocked!",
+                "⚔️ ALERT: The Boss Monster is waking up!",
                 "🍿 Subscribe & tune in tomorrow for Episode 2!"
             ],
             "narration": "Boom! You solved it! Your Secret Brain Code is 7, 9, 2. But wait, what is that sound? The Boss Monster is waking up! Find out what happens in Episode 2 tomorrow!"
@@ -116,7 +130,7 @@ def create_educational_video(topic: str, for_twins: bool = True) -> str:
         img_path = os.path.join(temp_dir, f"slide_{i}.png")
         audio_path = os.path.join(temp_dir, f"audio_{i}.mp3")
         
-        # 1. Draw Slide Image
+        # 1. Draw High-Res Slide Image
         _create_slide_image(scene["title"], scene["bullets"], scene["bg"], scene["badge"], img_path)
         
         # 2. Generate Audio with gTTS
