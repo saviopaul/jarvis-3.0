@@ -173,6 +173,26 @@ def handle_list_mcps(message):
     bot.reply_to(message, "\n".join(lines), parse_mode="Markdown")
 
 
+from deep_research import run_deep_research
+from fullstack_builder import build_fullstack_project
+
+
+@bot.message_handler(commands=['research', 'search', 'investigate'])
+def handle_deep_research(message):
+    query = message.text.replace("/research", "").replace("/search", "").replace("/investigate", "").strip()
+    if not query:
+        bot.reply_to(message, "Usage: `/research How to build an automated Telegram crypto alert bot`", parse_mode="Markdown")
+        return
+        
+    msg = bot.reply_to(message, "🔍 *JARVIS Deep Research:* Searching the web, parsing documentation, and synthesizing blueprint...", parse_mode="Markdown")
+    try:
+        report = run_deep_research(query)
+        _send_safe_reply(message.chat.id, msg.message_id, report)
+    except Exception as e:
+        logger.error(f"Deep research error: {e}")
+        bot.edit_message_text(f"⚠️ Research error: {str(e)}", chat_id=message.chat.id, message_id=msg.message_id)
+
+
 @bot.message_handler(func=lambda message: True)
 def handle_message(message):
     user_text = message.text.strip()
@@ -189,7 +209,28 @@ def handle_message(message):
             bot.edit_message_text(f"⚠️ YouTube error: {str(e)}", chat_id=message.chat.id, message_id=msg.message_id)
             return
 
-    # 2. Live Website Creation & Hosting Request
+    # 2. Full-Stack Project / Bot / Tool Building Request
+    fullstack_triggers = ["build a full stack app", "create a full stack", "build a bot", "create a bot", "build an agent", "create an agent", "build a python tool", "package a project"]
+    if any(trigger in msg_lower for trigger in fullstack_triggers):
+        msg = bot.reply_to(message, "🏗️ *JARVIS Staff Architect:* Generating full-stack multi-file code repository & packaging ZIP archive...")
+        try:
+            project_info = build_fullstack_project(user_text)
+            files_preview = "\n".join([f"• `{f}`" for f in project_info["files_list"][:10]])
+            reply = (
+                f"✅ *FULL-STACK PROJECT GENERATED!* 📦\n\n"
+                f"📁 *Files Generated ({project_info['files_count']}):*\n{files_preview}\n\n"
+                f"⚡ Complete production code packaged into `.zip` below. Extract & run with 1 command!"
+            )
+            _send_safe_reply(message.chat.id, msg.message_id, reply)
+            with open(project_info["zip_path"], "rb") as zfile:
+                bot.send_document(message.chat.id, zfile, caption=f"📦 {project_info['zip_filename']}")
+            return
+        except Exception as e:
+            logger.error(f"Fullstack build error: {e}")
+            bot.edit_message_text(f"⚠️ Build error: {str(e)}", chat_id=message.chat.id, message_id=msg.message_id)
+            return
+
+    # 3. Live Website Creation & Hosting Request
     website_triggers = ["build a website", "create a website", "make a website", "build a landing page", "create a landing page", "design a webpage", "host a website"]
     if any(trigger in msg_lower for trigger in website_triggers):
         msg = bot.reply_to(message, "🌐 *JARVIS Web Architect:* Designing, coding, and hosting your live website...")
@@ -211,7 +252,7 @@ def handle_message(message):
             bot.edit_message_text(f"⚠️ Website build error: {str(e)}", chat_id=message.chat.id, message_id=msg.message_id)
             return
 
-    # 3. Automated MP4 Video Generation Request
+    # 4. Automated MP4 Video Generation Request
     video_triggers = ["create a video", "make a video", "generate a video", "animated video for joel", "render a video", "video for joshua", "make an animated video"]
     if any(trigger in msg_lower for trigger in video_triggers):
         msg = bot.reply_to(message, "🎬 *JARVIS Video Producer:* Rendering animated MP4 video with cartoon slides & audio narration...")
