@@ -70,7 +70,7 @@ def handle_photo(message):
 
 @bot.message_handler(content_types=['voice', 'audio'])
 def handle_audio(message):
-    msg = bot.reply_to(message, "🎙️ JARVIS listening to audio...")
+    msg = bot.reply_to(message, "🎙️ JARVIS listening to your voice note...")
     try:
         file_id = message.voice.file_id if message.voice else message.audio.file_id
         mime_type = "audio/ogg" if message.voice else "audio/mp3"
@@ -81,6 +81,22 @@ def handle_audio(message):
         
         reply = analyze_media(file_bytes, mime_type, caption)
         _send_safe_reply(message.chat.id, msg.message_id, reply)
+
+        # Voice reply generation (if it was a voice message)
+        if message.voice:
+            try:
+                from gtts import gTTS
+                import io
+                # Generate voice for the first 300 characters of response
+                clean_text = reply.replace("*", "").replace("#", "").replace("`", "")[:400]
+                tts = gTTS(text=clean_text, lang='en', slow=False)
+                audio_fp = io.BytesIO()
+                tts.write_to_fp(audio_fp)
+                audio_fp.seek(0)
+                bot.send_voice(chat_id=message.chat.id, voice=audio_fp)
+            except Exception as e_tts:
+                logger.error(f"TTS voice reply error: {e_tts}")
+
     except Exception as e:
         logger.error(f"Audio handling error: {e}")
         bot.edit_message_text(f"⚠️ Error processing audio: {str(e)}", chat_id=message.chat.id, message_id=msg.message_id)
