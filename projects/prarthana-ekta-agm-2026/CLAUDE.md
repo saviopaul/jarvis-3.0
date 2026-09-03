@@ -10,6 +10,7 @@ Track the Annual General Meeting of Prarthana-Ekta SRA Co-op. Hsg. Society Ltd. 
 - Non-occupancy charges: society demands one month's rent from letting-out owners; legal cap is 10% of service charges (GoM order 1 Aug 2001 u/s 79A, Mont Blanc CHS 2007, SC 2010, Bye-law 43). Added to grievance note Sec. 3A and letter point (d). Building is ~18 years old (regd. 2007), so SRA lock-in has expired; caveat removed.
 - Secretary reported as intimidating; added Sec. 4A (police + Registrar track, ground rules: written comms only, no personal remarks, gather member support).
 - Ground-floor layout: G-4 = user; opposite flat = Chairman (has extended grill); G-6 = member on left of lift; shops G-1/G-2 (ownership to confirm); G-3 = former children's recreation centre now let to a company by society; adjoining unit occupied by ex-member, society collects rent. Added Sec. 2A (Chairman conflict of interest) and 2B (society-let premises: resolutions, agreements, accounting, SRA change of use, tax) and letter point (e).
+- Chairman is cordial but intent unknown. Strategy: informal ask first, confirm on WhatsApp, judge follow-through by 15 Sep, then send soft letter (a-c) or full letter (a-e). Always file accounts observations by 25 Sep regardless.
 
 ## Key deadlines
 - 25 Sep 2026 – written observations on accounts due to Secretary.
@@ -26,3 +27,4 @@ Track the Annual General Meeting of Prarthana-Ekta SRA Co-op. Hsg. Society Ltd. 
 - 2026-09-03: Added non-occupancy-charge section (10% cap) and letter point (d) (v1.2).
 - 2026-09-03: SRA lock-in caveat removed (building 18 yrs old); added intimidation-handling section 4A and incident-log item (v1.3).
 - 2026-09-03: Ground-floor facts added; Chairman conflict-of-interest and society-let premises sections; letter and tracker updated (v1.4).
+- 2026-09-03: Added Chairman-approach strategy (test before filing, soft vs full letter) (v1.5).

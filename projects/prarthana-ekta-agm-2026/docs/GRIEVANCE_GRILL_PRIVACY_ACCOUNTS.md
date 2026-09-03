@@ -58,6 +58,23 @@ The flat opposite G-4 is the Chairman's. That converts the grill issue from "une
 - Ask in writing: did the committee pass a resolution permitting the Chairman's grill, when, and did the Chairman abstain? If there is no resolution, his grill is an unauthorised encroachment by the society's own Chairman. If there is one and he voted, it is void for interest.
 - Demand: either the same permission for G-4 and G-6 in writing, or removal of the Chairman's grill within 30 days. Put both options in the AGM resolution so the general body must choose.
 
+### Approach: test the Chairman before you file
+
+The Chairman is cordial in person but his intent is unknown. Treat him as a possible ally and let his response decide the tone.
+
+| Step | What to do | What it tells you |
+|---|---|---|
+| 1. Informal ask (this week) | Speak to him one-to-one. Say you want the same grill he has, a privacy screen, and monthly accounts on the group. Ask him to table these at the AGM as committee proposals. Do not mention the Secretary, the rent issue, or legal sections. | If he agrees and follows through, you get the result without a fight. |
+| 2. Confirm in writing (within 2 days) | Send him a short, friendly WhatsApp or email: "As discussed, requesting the committee to place these three points before the AGM." Keep a screenshot. | Creates a record without threatening anyone. |
+| 3. Watch for follow-through (by 15 Sep) | Has he put it on the agenda, replied in writing, or gone quiet? | Silence or deflection ("Secretary decides") = he will not help. |
+| 4. Then choose the letter version | **Soft version:** letter points (a) to (c) only, addressed to the committee, no mention of his grill as a violation. **Full version:** all points (a) to (e) including the conflict-of-interest question and the G-3 rent questions. | The full version is your escalation, not your opening move. |
+
+**Rules while testing him**
+- Never say anything to the Chairman about the Secretary that you would not put in writing. Assume it is repeated.
+- Do not hand over your evidence file or mention the Registrar. Keep the leverage until you need it.
+- If he offers a verbal "yes", ask for it in the AGM minutes. A verbal yes from a Chairman who cannot control his Secretary is worth nothing.
+- Whatever he says, still submit the written accounts observations (points (c), (d), (e)) by 25 Sep. They are neutral in tone and protect your right to raise them at the AGM.
+
 ## 2B. Society-let premises: G-3 recreation centre and the unit next to it
 
 **Why this matters:** SRA rehab buildings must provide amenities (balwadi, welfare/recreation centre, society office) free of cost under DCPR 2034 Reg. 33(10), Appendix IV. They vest in the society **for the residents' use**. Letting them commercially is a change of use that needs SRA permission, a general-body resolution, and full accounting.
