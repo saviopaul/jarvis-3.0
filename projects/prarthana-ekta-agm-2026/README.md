@@ -25,6 +25,7 @@ projects/prarthana-ekta-agm-2026/
     ├── AGENDA_TRACKER.md         # agenda items, decisions, action items
     ├── PRE_AGM_CHECKLIST.md      # what to do before the meeting
     ├── OBSERVATION_LETTER.md     # template to raise accounts queries (due 25 Sep)
+    ├── GRIEVANCE_GRILL_PRIVACY_ACCOUNTS.md # grill parity, passage privacy, monthly accounts – legal note + letter
     └── MINUTES_TEMPLATE.md       # minutes + attendance/quorum record
 ```
 
