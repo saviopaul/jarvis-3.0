@@ -118,6 +118,26 @@ The Chairman is cordial in person but his intent is unknown. Treat him as a poss
 - If he offers a verbal "yes", ask for it in the AGM minutes. A verbal yes from a Chairman who cannot control his Secretary is worth nothing.
 - Whatever he says, still submit the written accounts observations (points (c), (d), (e)) by 25 Sep. They are neutral in tone and protect your right to raise them at the AGM.
 
+### Community strategy: stay the neighbour, not the complainant
+
+Most members have known each other since the chawl days. You bought a saleable flat and lived here six years as a tenant, so you are known but not "one of them". A member who attacks parking and the committee in one go will be isolated, and every later request will fail on numbers. Use three tiers and never move to the next unless the earlier one is refused.
+
+| Tier | Ask | How to frame it | Who benefits (your allies) |
+|---|---|---|---|
+| 1. Ask now, low friction | Written grill request (Step zero); flush privacy screen at your window; monthly accounts on the group | "Small request for my family's privacy" and "everyone should see where the money goes" | Every member wants to see accounts; G-6 wants the same privacy |
+| 2. Frame as a gain for all | Organised two-wheeler parking with allotment and a fair monthly charge; the kids' recreation centre income shown in accounts and part of it spent on children | "Parking should be fair and bring income to the society" and "the children's centre was ours; the rent should benefit our children" | Parents; members without bikes; members who pay dues honestly |
+| 3. Hold in reserve | Chairman's conflict of interest; SRA change-of-use; Registrar; police | Use only if Tier 1 and 2 are refused in writing or you are obstructed | Nobody needs to know these exist until then |
+
+**Rules for the chawl-era members**
+- Never say "remove the bikes". Say "let us organise parking so it is fair and the society earns from it". The bike owners are the majority; they will accept an allotment and a small charge, not an eviction.
+- Never mention the Chairman's grill in the group or the AGM unless your grill is refused in writing. Then say only: "I asked for the same as the opposite flat."
+- Do not raise the SRA or the Registrar in any meeting. Those words end friendships and mark you as the outsider who brings authorities in.
+- Ask, do not demand. Sit through the whole AGM, vote on their items, share the lunch. Offer something: help put accounts on a simple monthly sheet, or maintain the society WhatsApp notice. You are the person who can do this for them.
+- Let the G-6 member or another chawl-era member move the parking resolution if possible. Second it; do not lead it.
+- Accept a partial win. A privacy screen and monthly accounts this year, organised parking next year, is a good outcome.
+
+**What you are really buying:** a quiet house and a committee that answers letters. The legal file exists so that you never have to use it.
+
 ## 2B. Society-let premises: G-3 recreation centre and the unit next to it
 
 **Why this matters:** SRA rehab buildings must provide amenities (balwadi, welfare/recreation centre, society office) free of cost under DCPR 2034 Reg. 33(10), Appendix IV. They vest in the society **for the residents' use**. Letting them commercially is a change of use that needs SRA permission, a general-body resolution, and full accounting.
