@@ -19,6 +19,7 @@ Prepared: 03 Sep 2026 | For: AGM 27 Sep 2026, agenda item 4 (other issues) and i
 | F8 | The society demands one month's rent (or similar) from owners who let out their flats. | Demand letter / bill / group message showing the demand |
 | F9 | Ground floor: 3 saleable flats (G-4 mine, opposite = Chairman, G-6 member); 2 shops (G-1, G-2, ownership to confirm, possibly Chairman's side). | SRA-sanctioned ground-floor plan, share register |
 | F10 | G-3 was the children's recreation centre (SRA amenity). It is now let to a company and the society collects rent. | Lease/leave-licence copy, AGM resolution (if any), rent receipts |
+| F12 | Members park two-wheelers in the wide passage below the Chairman's window. The wide side is therefore blocked, and foot traffic to the lift is pushed through my narrow side. | Photos of the parked bikes at different times; count of bikes; SRA plan showing whether that area is marked as parking |
 | F11 | A further unit next to G-3 is occupied by a former member (who sold his flat) and the society collects rent for it. | Allotment/lease papers, AGM resolution, rent receipts |
 
 ## 2. Legal position (honest summary)
@@ -40,6 +41,15 @@ A grill projecting beyond the flat's external wall sits on common area. Under th
 |---|---|
 | 1.5 m or more | Parity argument holds. Press option A: same permission as the Chairman. |
 | Below 1.5 m | A grill projection will not be approved by any authority. Drop A. Press option C (flush privacy screen, frosted film, relocation of shoe racks) plus the accounts points. Keep the Chairman's grill in reserve as leverage, not as your model. |
+
+**The bike parking turns the width argument around.** The wide passage below the Chairman's window is used as two-wheeler parking. That means:
+
+1. The committee cannot refuse your grill on "passage width" while allowing the wide passage to be filled with bikes. Its concern for clear width is selective, and selective enforcement is the discrimination you need to show.
+2. Parking in a common passage needs a general-body resolution, an allotment list and parking charges under the bye-laws (Model Bye-laws 78 to 84). Ask for all three. If they do not exist, the parking is as unauthorised as any grill.
+3. Unless the SRA-sanctioned plan marks that area as parking, two-wheelers in a common passage obstruct the fire-escape route, the very ground the committee would use against you.
+4. The bikes are the real cause of your privacy problem: the wide route is blocked, so every resident and visitor is funnelled past your window.
+
+**The resolution to move at the AGM (item 4):** "The wide passage on the Chairman's side shall be kept as the main pedestrian route to the lift. Two-wheelers shall be relocated to the area designated by the general body, and parking shall be allotted and charged as per the bye-laws. A flush privacy screen shall be fitted along the window of G-4 at society cost." This gives you privacy without needing a grill, and it is hard to vote against because it is framed as fire safety and fairness, not as a personal demand.
 
 **Recommended:** Measure first. If the width allows, ask for **A with C as the fallback**. If it does not, go straight to **C** and do not stake your credibility on a grill the plan cannot support. Frame the demand as "uniform policy for all ground-floor flats plus a privacy screen", not "let me do what he did". If the committee refuses both, pursue B formally.
 
@@ -185,7 +195,7 @@ Dear Sir/Madam,
 
 3. I therefore request the committee to place the following before the general body and record its decision in the minutes:
    (a) A uniform policy on window grills for all ground-floor flats, with the same maximum projection for every flat, subject to the SRA-sanctioned plan; or, if no projection is permissible, removal of all existing projections within a fixed time.
-   (b) Installation, at society cost, of a fixed privacy screen along my window on the passage side, and relocation of common shoe racks and other items away from my entrance.
+   (b) Designation of the wider passage on the opposite side as the main pedestrian route to the lift, relocation of the two-wheelers presently parked there to an area approved by the general body with parking allotted and charged as per Bye-laws 78 to 84, installation at society cost of a flush privacy screen along my window on the passage side, and relocation of common shoe racks and other items away from my entrance.
    (c) Circulation of a monthly income and expenditure statement to all members on the society notice board and WhatsApp group, in line with the transparency directives under Sec. 79A of the MCS Act and my right under Sec. 32.
    (d) Withdrawal of any demand for one month's rent or any amount beyond non-occupancy charges of 10% of service charges from members who let out their flats, as per the Government order dated 1 August 2001 under Sec. 79A, upheld in *Mont Blanc CHS v. State of Maharashtra* (Bombay High Court, 2007) and by the Supreme Court in 2010, and Model Bye-law 43. Any excess already collected to be refunded or adjusted.
    (e) Under agenda item 1, disclosure of: the general-body resolutions approving the letting of G-3 (formerly the children's recreation centre) and the adjoining society premises; copies of the leave-and-licence agreements; the monthly rent and deposits; the ledger head and bank account in which this income is credited; SRA permission for change of use of the recreation centre; and the income-tax and GST treatment of this rental income. I request these documents under Sec. 32 of the MCS Act before the meeting.
@@ -208,6 +218,7 @@ Encl.: photos and measurements of both passages; copy of earlier request dated _
 - [ ] Keep a dated log of complaints and responses
 - [ ] Collect any bill, receipt or message showing the one-month-rent demand
 - [ ] Start an incident log for any threats or obstruction: date, time, words, witnesses
+- [ ] Photograph the bikes below the Chairman's window (morning, evening, weekend); count them; ask in writing for the parking allotment list, resolution and charges
 - [ ] Photograph G-3 signboard/company name and the adjoining unit; note who occupies each
 - [ ] Ask G-6 member to co-sign the letter (same interest in uniform grill policy)
 - [ ] Check share register / SRA plan for ownership of shops G-1 and G-2

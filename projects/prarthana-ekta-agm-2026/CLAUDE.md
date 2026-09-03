@@ -13,6 +13,7 @@ Track the Annual General Meeting of Prarthana-Ekta SRA Co-op. Hsg. Society Ltd. 
 - Chairman is cordial but intent unknown. Strategy: informal ask first, confirm on WhatsApp, judge follow-through by 15 Sep, then send soft letter (a-c) or full letter (a-e). Always file accounts observations by 25 Sep regardless.
 - No written grill request ever made; refusal was informal (welder told to stop, Treasurer declined verbally). Step zero added: formal Bye-law 48 permission request to be sent by 06 Sep so the reply period runs before the AGM. User was a tenant in the building for 6 years before buying G-4.
 - Chairman's passage is ~3-4x wider than user's. Caveat added: if user's side falls below ~1.5 m clear width after a grill, parity (option A) fails on fire-safety grounds; then push option C (flush privacy screen, no projection). Measurements pending.
+- Two-wheelers are parked in the wide passage below the Chairman's window: defeats any width-based refusal, needs bye-law 78-84 resolution/allotment/charges, and is the cause of foot traffic past G-4. Main AGM resolution now: wide side = pedestrian route, relocate bikes, flush privacy screen at society cost. Letter point (b) updated.
 
 ## Key deadlines
 - 25 Sep 2026 – written observations on accounts due to Secretary.
@@ -32,3 +33,4 @@ Track the Annual General Meeting of Prarthana-Ekta SRA Co-op. Hsg. Society Ltd. 
 - 2026-09-03: Added Chairman-approach strategy (test before filing, soft vs full letter) (v1.5).
 - 2026-09-03: Added Step zero (written Bye-law 48 permission request template), corrected facts F3/F6, tracker action A0 (v1.6).
 - 2026-09-03: Width-ratio reality check and 1.5 m minimum-passage test added; option C reworded to flush screen (v1.7).
+- 2026-09-03: Bike-parking fact F12, width-argument reversal, AGM resolution wording, letter point (b) updated (v1.8).
