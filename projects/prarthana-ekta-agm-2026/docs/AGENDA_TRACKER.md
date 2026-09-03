@@ -4,7 +4,7 @@ Meeting: 27 Sep 2026, 10:30 a.m. | Status legend: ⬜ pending · 🟡 in progres
 
 | # | Agenda item | Documents needed | My position / questions | Decision at AGM | Status |
 |---|---|---|---|---|---|
-| 1 | Receive & adopt Annual Report and Audited Financial Statement FY 2025-26 | Annual report, audited balance sheet, P&L, auditor's report | | | ⬜ |
+| 1 | Receive & adopt Annual Report and Audited Financial Statement FY 2025-26 | Annual report, audited balance sheet, P&L, auditor's report; lease agreements for G-3 and adjoining unit | Question rental income from G-3 (ex-recreation centre) and adjoining unit: resolution, agreements, ledger, SRA change-of-use, tax (grievance note Sec. 2B) | | 🟡 |
 | 2 | Appoint statutory auditors for FY 2026-27 | Auditor name, fee quote, previous years' fees | | | ⬜ |
 | 3 | Revised professional fees for Accounting & society general works | Current fee, proposed fee, justification | | | ⬜ |
 | 4 | Any other issue with permission of the chair | GRIEVANCE_GRILL_PRIVACY_ACCOUNTS.md: uniform grill policy, privacy screen, monthly accounts | Demand parity + privacy screen; fallback: complaint to Dy. Registrar | | 🟡 |

@@ -1,6 +1,6 @@
 # Grievance Note – Window Grill, Passage Privacy, Monthly Accounts, Non-Occupancy Charges
 
-Member: ______________________ Flat No. ______ (Ground floor)
+Member: ______________________ Flat No. G-4 (Ground floor)
 Prepared: 03 Sep 2026 | For: AGM 27 Sep 2026, agenda item 4 (other issues) and item 1 (accounts)
 
 > This is a working note, not legal advice. Confirm section and bye-law numbers against the society's **registered bye-laws** and with an advocate or the Deputy Registrar before filing.
@@ -9,14 +9,17 @@ Prepared: 03 Sep 2026 | For: AGM 27 Sep 2026, agenda item 4 (other issues) and i
 
 | # | Fact | Evidence to attach |
 |---|---|---|
-| F1 | My flat is on the ground floor; the only entry to the building and the lift lobby runs along my window/passage. | Site sketch, photos |
+| F1 | My flat G-4 is on the ground floor; the only entry to the building and the lift lobby runs along my window/passage. | Site sketch, photos |
 | F2 | The passage on my side is narrower than the passage on the opposite side. | Measurements (metres) of both sides, photos |
-| F3 | The member opposite has extended his window grill into the passage. My request to do the same was refused / not answered. | Copy of my written request + date, any reply |
-| F4 | The left-of-lift side serves one flat and enjoys the wider common space. | Photos |
+| F3 | The flat opposite G-4 belongs to the **Chairman**, who has extended his own window grill into the passage. My request to do the same was refused / not answered. | Copy of my written request + date, any reply; photo of Chairman's grill |
+| F4 | The left-of-lift side serves one flat (G-6) and enjoys the wider common space. | Photos |
 | F5 | Residents and visitors pass directly along my window, affecting privacy and security. | Photos, timings |
 | F6 | The Secretary lives directly above my flat and enjoys the wider side. | – |
 | F7 | Monthly income/expense statements are not circulated to members. | Society group screenshots |
 | F8 | The society demands one month's rent (or similar) from owners who let out their flats. | Demand letter / bill / group message showing the demand |
+| F9 | Ground floor: 3 saleable flats (G-4 mine, opposite = Chairman, G-6 member); 2 shops (G-1, G-2, ownership to confirm, possibly Chairman's side). | SRA-sanctioned ground-floor plan, share register |
+| F10 | G-3 was the children's recreation centre (SRA amenity). It is now let to a company and the society collects rent. | Lease/leave-licence copy, AGM resolution (if any), rent receipts |
+| F11 | A further unit next to G-3 is occupied by a former member (who sold his flat) and the society collects rent for it. | Allotment/lease papers, AGM resolution, rent receipts |
 
 ## 2. Legal position (honest summary)
 
@@ -46,6 +49,29 @@ Verify numbers against your registered bye-laws (2014 Model Bye-laws for co-oper
 | Committee's duty to act in accordance with Act, Rules and bye-laws; personal liability of officers | MCS Act Sec. 78/78A (Registrar's power to remove committee/officer), Sec. 83 (inquiry) | If the Secretary's conduct continues after written complaints |
 | Disputes between member and society | MCS Act Sec. 91 (Co-operative Court) | Last resort if Registrar route fails |
 | Unauthorised projections / fire-escape obstruction | MMC Act 1888 Sec. 351; Maharashtra Fire Prevention Act 2006 | Leverage: if grills are not regularised for all, all must go |
+
+## 2A. Conflict of interest: the Chairman's own grill
+
+The flat opposite G-4 is the Chairman's. That converts the grill issue from "unequal treatment" into **abuse of office**:
+
+- An office bearer cannot grant himself a benefit on common property that he denies to another member. Committee members must not take part in any decision in which they have a personal interest (Model Bye-laws on disqualification for interest; MCS Act Sec. 78 for removal of an office bearer who acts against the interests of the society).
+- Ask in writing: did the committee pass a resolution permitting the Chairman's grill, when, and did the Chairman abstain? If there is no resolution, his grill is an unauthorised encroachment by the society's own Chairman. If there is one and he voted, it is void for interest.
+- Demand: either the same permission for G-4 and G-6 in writing, or removal of the Chairman's grill within 30 days. Put both options in the AGM resolution so the general body must choose.
+
+## 2B. Society-let premises: G-3 recreation centre and the unit next to it
+
+**Why this matters:** SRA rehab buildings must provide amenities (balwadi, welfare/recreation centre, society office) free of cost under DCPR 2034 Reg. 33(10), Appendix IV. They vest in the society **for the residents' use**. Letting them commercially is a change of use that needs SRA permission, a general-body resolution, and full accounting.
+
+| Question to put in writing (and under agenda item 1) | Why |
+|---|---|
+| Which general-body meeting approved letting G-3 and the other unit, and on what terms? | Bye-laws: letting society property needs general-body sanction |
+| Copies of the registered leave-and-licence agreements, monthly rent, deposit, and tenure | Sec. 32 right to inspect and obtain copies |
+| Where does the rent appear in the audited FY 2025-26 accounts? Bank account and ledger head | Unaccounted rent = misappropriation; Sec. 83 inquiry, Sec. 88 recovery from officers |
+| Was SRA permission obtained for change of use of the recreation centre? | Without it the letting is irregular and the society is exposed to SRA notice |
+| Is TDS being deducted by the company tenant and is the society filing income-tax returns on this rent? Rent from non-members is taxable; GST applies above the threshold | Tax exposure falls on the society, i.e. on all members |
+| Why is a former member (no longer a member after selling) occupying society premises, and under what agreement? | Occupation by a non-member needs a licence approved by the general body |
+
+**Use this as leverage, not just as a grievance.** A committee that cannot produce the resolutions and agreements will not want an inquiry. Raise it under item 1 (accounts) before item 4, so the grill and privacy points land on a committee already on the back foot.
 
 ## 3A. Non-occupancy charges: the society cannot demand one month's rent
 
@@ -99,21 +125,22 @@ Bhatt Lane, Poisar, Kandivali (West), Mumbai – 400 067
 
 Date: ____ September 2026
 
-**Subject: (1) Uniform policy on window grills for ground-floor flats, (2) privacy and safety of the entry passage adjoining Flat No. ____, (3) monthly statement of accounts, (4) non-occupancy charges – for discussion at the AGM on 27 September 2026**
+**Subject: (1) Uniform policy on window grills for ground-floor flats, (2) privacy and safety of the entry passage adjoining Flat No. G-4, (3) monthly statement of accounts, (4) non-occupancy charges, (5) letting of G-3 recreation centre and adjoining society premises – observations for the AGM on 27 September 2026**
 
 Dear Sir/Madam,
 
-1. I am the member of Flat No. ____ on the ground floor. The sole entry to the building and the lift lobby passes along my window. The passage on my side measures approx. ____ m, against approx. ____ m on the opposite side.
+1. I am the member of Flat No. G-4 on the ground floor. The sole entry to the building and the lift lobby passes along my window. The passage on my side measures approx. ____ m, against approx. ____ m on the opposite side.
 
-2. The member of Flat No. ____ opposite has extended his window grill into the common passage. My request dated ________ for a similar grill was refused / has not been answered. Under Bye-law 48 the committee must treat all members alike. Selective permission is arbitrary and contrary to the Act and bye-laws.
+2. The flat opposite mine, belonging to the Hon. Chairman, has a window grill extended into the common passage. My request dated ________ for a similar grill was refused / has not been answered. Under Bye-law 48 the committee must treat all members alike, and an office bearer may not participate in a decision in which he is personally interested. Kindly state the committee resolution under which the Chairman's grill was permitted and whether he abstained from that decision.
 
 3. I therefore request the committee to place the following before the general body and record its decision in the minutes:
    (a) A uniform policy on window grills for all ground-floor flats, with the same maximum projection for every flat, subject to the SRA-sanctioned plan; or, if no projection is permissible, removal of all existing projections within a fixed time.
    (b) Installation, at society cost, of a fixed privacy screen along my window on the passage side, and relocation of common shoe racks and other items away from my entrance.
    (c) Circulation of a monthly income and expenditure statement to all members on the society notice board and WhatsApp group, in line with the transparency directives under Sec. 79A of the MCS Act and my right under Sec. 32.
    (d) Withdrawal of any demand for one month's rent or any amount beyond non-occupancy charges of 10% of service charges from members who let out their flats, as per the Government order dated 1 August 2001 under Sec. 79A, upheld in *Mont Blanc CHS v. State of Maharashtra* (Bombay High Court, 2007) and by the Supreme Court in 2010, and Model Bye-law 43. Any excess already collected to be refunded or adjusted.
+   (e) Under agenda item 1, disclosure of: the general-body resolutions approving the letting of G-3 (formerly the children's recreation centre) and the adjoining society premises; copies of the leave-and-licence agreements; the monthly rent and deposits; the ledger head and bank account in which this income is credited; SRA permission for change of use of the recreation centre; and the income-tax and GST treatment of this rental income. I request these documents under Sec. 32 of the MCS Act before the meeting.
 
-4. Please treat this as my written observation under Note 2 of the AGM notice, and as a request under Bye-law 48 for decision within the prescribed period. Kindly acknowledge receipt.
+4. Please treat points (c), (d) and (e) as my written observations on the statement of accounts under Note 2 of the AGM notice, and as a request under Bye-law 48 for decision within the prescribed period. Kindly acknowledge receipt.
 
 Yours faithfully,
 
@@ -130,3 +157,6 @@ Encl.: photos and measurements of both passages; copy of earlier request dated _
 - [ ] Keep a dated log of complaints and responses
 - [ ] Collect any bill, receipt or message showing the one-month-rent demand
 - [ ] Start an incident log for any threats or obstruction: date, time, words, witnesses
+- [ ] Photograph G-3 signboard/company name and the adjoining unit; note who occupies each
+- [ ] Ask G-6 member to co-sign the letter (same interest in uniform grill policy)
+- [ ] Check share register / SRA plan for ownership of shops G-1 and G-2
