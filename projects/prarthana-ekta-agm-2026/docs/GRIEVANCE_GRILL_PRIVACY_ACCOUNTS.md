@@ -61,7 +61,7 @@ Verify numbers against your registered bye-laws (2014 Model Bye-laws for co-oper
 
 **What the society may lawfully ask of a letting-out owner:** prior intimation, copy of the registered leave-and-licence agreement, police verification of the tenant, tenant's undertaking to follow bye-laws, and the 10% non-occupancy charge on the monthly bill.
 
-**Caution for SRA buildings:** SRA rehab tenements carry a 10-year lock-in on transfer from the date of allotment, and SRA circulars restrict letting out rehab tenements during that period. If your building is still inside the lock-in, the committee may use that to object to the tenancy itself rather than the charge. Check the allotment date and the SRA condition before pressing this point.
+**SRA lock-in: not applicable.** The building is about 18 years old (registered 2007), so the 10-year SRA restriction on transfer and letting of rehab tenements has long expired. Owners may let out freely, subject only to the intimation and documents above. The committee has no SRA ground to object to a tenancy or to charge beyond 10%.
 
 **Action:** if you or another owner paid more than 10%, demand a refund in writing with the above citations; if refused, complain to the Deputy Registrar under Sec. 79A.
 
@@ -72,6 +72,23 @@ Verify numbers against your registered bye-laws (2014 Model Bye-laws for co-oper
 3. **If ignored, complaint to the Deputy Registrar, Co-operative Societies** (the ward office covering Kandivali West, usually R/South ward) under Sec. 79A directives and Sec. 83, attaching your letters and the minutes. Ask for a direction that the committee apply the alteration rule uniformly and circulate accounts.
 4. **Parallel technical complaint** to SRA's engineering section or BMC R/South ward under Sec. 351 about projections on the common passage, if parity is refused. Note: this can remove the neighbour's grill rather than allow yours.
 5. **Removing the Secretary**: the general body cannot sack the Secretary directly. Routes are: a no-confidence motion under MCS Act Sec. 73-1D (moved by committee members through the Registrar), or Registrar action under Sec. 78 for failure to perform duties. Both need a documented trail of ignored written complaints. Personal remarks about the Secretary weaken the case; stick to conduct and records.
+
+## 4A. If the Secretary intimidates or threatens members
+
+Keep this track separate from the society dispute. Society law deals with mismanagement; threats and abuse are police matters, and a police record also strengthens the Registrar complaint.
+
+| Situation | Action |
+|---|---|
+| Verbal threats, abuse, or intimidation | Note date, time, words used, witnesses. File a written complaint at Kandivali (Charkop or Samta Nagar, as applicable) police station under Bharatiya Nyaya Sanhita 2023: Sec. 351 (criminal intimidation), Sec. 352 (intentional insult to provoke breach of peace), Sec. 356 (defamation) as applicable. Ask for an acknowledged copy or NC number. |
+| Physical obstruction, damage to your grill, screen, or property | Police complaint under BNS Sec. 324 (mischief) and Sec. 329 (criminal trespass); photographs and CCTV request to the society in writing. |
+| Refusal to accept your letters | Send by Registered Post AD or Speed Post to the society's registered address; the postal receipt is proof of service. Email/WhatsApp a copy to the committee too. |
+| Repeated harassment | Combine police records with the Registrar complaint under MCS Act Sec. 78 (removal of officer) and Sec. 83 (inquiry). Ask the Registrar for an interim direction restraining the Secretary from obstructing members. |
+
+**Ground rules that protect your case**
+- Communicate in writing only. Do not argue in person or on the group.
+- Never use words like "goon" or "uneducated" in letters, the group, or the AGM. Describe conduct and dates instead. Defamation counter-complaints are the usual response from a hostile committee.
+- Bring one or two neutral members with you to the AGM and to any meeting with the committee.
+- Build support: the members on the left of the lift and other ground-floor members share the same interest in a uniform policy and monthly accounts. A resolution passes on numbers, not on law.
 
 ## 5. Letter template to the committee (submit before 25 Sep 2026)
 
@@ -111,4 +128,5 @@ Encl.: photos and measurements of both passages; copy of earlier request dated _
 - [ ] Locate your earlier grill request and any reply
 - [ ] Get a copy of the SRA-sanctioned floor plan from the society or SRA (shows passage widths)
 - [ ] Keep a dated log of complaints and responses
-- [ ] Collect any bill, receipt or message showing the one-month-rent demand, and the SRA allotment date of the building
+- [ ] Collect any bill, receipt or message showing the one-month-rent demand
+- [ ] Start an incident log for any threats or obstruction: date, time, words, witnesses
