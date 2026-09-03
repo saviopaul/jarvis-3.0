@@ -1,4 +1,4 @@
-# Grievance Note – Window Grill, Passage Privacy, Monthly Accounts
+# Grievance Note – Window Grill, Passage Privacy, Monthly Accounts, Non-Occupancy Charges
 
 Member: ______________________ Flat No. ______ (Ground floor)
 Prepared: 03 Sep 2026 | For: AGM 27 Sep 2026, agenda item 4 (other issues) and item 1 (accounts)
@@ -16,6 +16,7 @@ Prepared: 03 Sep 2026 | For: AGM 27 Sep 2026, agenda item 4 (other issues) and i
 | F5 | Residents and visitors pass directly along my window, affecting privacy and security. | Photos, timings |
 | F6 | The Secretary lives directly above my flat and enjoys the wider side. | – |
 | F7 | Monthly income/expense statements are not circulated to members. | Society group screenshots |
+| F8 | The society demands one month's rent (or similar) from owners who let out their flats. | Demand letter / bill / group message showing the demand |
 
 ## 2. Legal position (honest summary)
 
@@ -46,6 +47,24 @@ Verify numbers against your registered bye-laws (2014 Model Bye-laws for co-oper
 | Disputes between member and society | MCS Act Sec. 91 (Co-operative Court) | Last resort if Registrar route fails |
 | Unauthorised projections / fire-escape obstruction | MMC Act 1888 Sec. 351; Maharashtra Fire Prevention Act 2006 | Leverage: if grills are not regularised for all, all must go |
 
+## 3A. Non-occupancy charges: the society cannot demand one month's rent
+
+**Rule:** A housing society may charge a member who lets out their flat only **non-occupancy charges capped at 10% of the service charges** (service charges exclude municipal taxes, sinking fund, repair fund, water and electricity). Nothing else: no month's rent, no percentage of rent, no deposit, no "donation".
+
+| Authority | What it says |
+|---|---|
+| Government of Maharashtra order dated 1 Aug 2001 under Sec. 79A, MCS Act 1960 | Non-occupancy charges shall not exceed 10% of service charges |
+| Bombay High Court, *Mont Blanc Co-op. Hsg. Society v. State of Maharashtra* (2007) | Upheld the 10% cap; society cannot charge more |
+| Supreme Court, 2010 (appeal against Mont Blanc dismissed) | Cap is final law |
+| Model Bye-law 43 (2014 Model Bye-laws) | Restates the 10% cap and lists what a member must submit when letting out |
+| Sec. 79A directive on excess charges | Any amount collected beyond the cap is recoverable; committee can be held personally liable |
+
+**What the society may lawfully ask of a letting-out owner:** prior intimation, copy of the registered leave-and-licence agreement, police verification of the tenant, tenant's undertaking to follow bye-laws, and the 10% non-occupancy charge on the monthly bill.
+
+**Caution for SRA buildings:** SRA rehab tenements carry a 10-year lock-in on transfer from the date of allotment, and SRA circulars restrict letting out rehab tenements during that period. If your building is still inside the lock-in, the committee may use that to object to the tenancy itself rather than the charge. Check the allotment date and the SRA condition before pressing this point.
+
+**Action:** if you or another owner paid more than 10%, demand a refund in writing with the above citations; if refused, complain to the Deputy Registrar under Sec. 79A.
+
 ## 4. Escalation ladder (follow in order, keep acknowledged copies)
 
 1. **Written request to the committee** (template in Section 5) asking for (a) uniform grill policy, (b) privacy screen and relocation of common shoe racks, (c) monthly statements. Deliver by hand and take a signed acknowledgement, or send by Registered Post AD.
@@ -63,7 +82,7 @@ Bhatt Lane, Poisar, Kandivali (West), Mumbai – 400 067
 
 Date: ____ September 2026
 
-**Subject: (1) Uniform policy on window grills for ground-floor flats, (2) privacy and safety of the entry passage adjoining Flat No. ____, (3) monthly statement of accounts – for discussion at the AGM on 27 September 2026**
+**Subject: (1) Uniform policy on window grills for ground-floor flats, (2) privacy and safety of the entry passage adjoining Flat No. ____, (3) monthly statement of accounts, (4) non-occupancy charges – for discussion at the AGM on 27 September 2026**
 
 Dear Sir/Madam,
 
@@ -75,6 +94,7 @@ Dear Sir/Madam,
    (a) A uniform policy on window grills for all ground-floor flats, with the same maximum projection for every flat, subject to the SRA-sanctioned plan; or, if no projection is permissible, removal of all existing projections within a fixed time.
    (b) Installation, at society cost, of a fixed privacy screen along my window on the passage side, and relocation of common shoe racks and other items away from my entrance.
    (c) Circulation of a monthly income and expenditure statement to all members on the society notice board and WhatsApp group, in line with the transparency directives under Sec. 79A of the MCS Act and my right under Sec. 32.
+   (d) Withdrawal of any demand for one month's rent or any amount beyond non-occupancy charges of 10% of service charges from members who let out their flats, as per the Government order dated 1 August 2001 under Sec. 79A, upheld in *Mont Blanc CHS v. State of Maharashtra* (Bombay High Court, 2007) and by the Supreme Court in 2010, and Model Bye-law 43. Any excess already collected to be refunded or adjusted.
 
 4. Please treat this as my written observation under Note 2 of the AGM notice, and as a request under Bye-law 48 for decision within the prescribed period. Kindly acknowledge receipt.
 
@@ -91,3 +111,4 @@ Encl.: photos and measurements of both passages; copy of earlier request dated _
 - [ ] Locate your earlier grill request and any reply
 - [ ] Get a copy of the SRA-sanctioned floor plan from the society or SRA (shows passage widths)
 - [ ] Keep a dated log of complaints and responses
+- [ ] Collect any bill, receipt or message showing the one-month-rent demand, and the SRA allotment date of the building
