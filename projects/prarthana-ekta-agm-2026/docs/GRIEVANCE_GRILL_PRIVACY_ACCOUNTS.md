@@ -10,7 +10,7 @@ Prepared: 03 Sep 2026 | For: AGM 27 Sep 2026, agenda item 4 (other issues) and i
 | # | Fact | Evidence to attach |
 |---|---|---|
 | F1 | My flat G-4 is on the ground floor; the only entry to the building and the lift lobby runs along my window/passage. | Site sketch, photos |
-| F2 | The passage on my side is narrower than the passage on the opposite side. | Measurements (metres) of both sides, photos |
+| F2 | The passage in front of the Chairman's flat is roughly 3 to 4 times wider than the passage on my side, which is the sole entry route to the lift. | Measurements in metres of both sides (before and after the Chairman's grill), photos with tape visible |
 | F3 | The flat opposite G-4 belongs to the **Chairman**, who has extended his own window grill into the passage. When I fitted my safety door grill and was about to extend the window grill, someone from the society told the welder to stop. No one told me directly and nothing was in writing. The Treasurer later declined informally. **No written request has been made yet.** | Welder's name and date of the stopped work; photo of Chairman's grill; my safety-door grill invoice |
 | F4 | The left-of-lift side serves one flat (G-6) and enjoys the wider common space. | Photos |
 | F5 | Residents and visitors pass directly along my window, affecting privacy and security. | Photos, timings |
@@ -32,9 +32,16 @@ A grill projecting beyond the flat's external wall sits on common area. Under th
 |---|---|---|---|
 | A. Society regularises grills for all ground-floor flats by general-body resolution, within a uniform limit (e.g. same projection for every flat, subject to SRA/BMC plan) | AGM resolution under item 4 | You get your grill legitimately | Needs majority; may still breach sanctioned plan; SRA/BMC can later order removal |
 | B. Society removes the opposite member's grill and keeps passages clear | Written complaint to committee, then Deputy Registrar | Restores parity, improves fire safety, strongest legally | You do not get a grill; creates conflict with neighbour |
-| C. Privacy solution instead of grill: society installs a fixed frosted/louvred screen or planter partition along your window at society cost, and moves common shoe racks away from your door | AGM resolution | Solves the real problem (privacy, security); easy to approve | Not a grill |
+| C. Privacy solution instead of grill: society installs a fixed frosted/louvred screen flush with your window (no projection into the passage), frosted film on the glass, and moves common shoe racks away from your door | AGM resolution | Solves the real problem (privacy, security); needs no projection so no width objection; easy to approve | Not a grill |
 
-**Recommended:** Ask for **A with C as the fallback**. Frame the demand as "uniform policy for all ground-floor flats plus a privacy screen", not "let me do what he did". If the committee refuses both, pursue B formally.
+**Reality check on the width ratio.** If the Chairman's side is 3 to 4 times wider, his grill takes a small slice of a wide passage while yours would narrow the only entry route to the lift. The committee then has a defensible, non-discriminatory reason to allow his and refuse yours: minimum clear passage width. DCPR 2034 and the National Building Code require a clear width of about 1.5 m for a residential common passage, and the fire-escape route cannot be reduced below that. So the parity argument works only if your passage stays at or above the minimum after the grill. Measure before you commit to it.
+
+| Your passage width after a grill | Position |
+|---|---|
+| 1.5 m or more | Parity argument holds. Press option A: same permission as the Chairman. |
+| Below 1.5 m | A grill projection will not be approved by any authority. Drop A. Press option C (flush privacy screen, frosted film, relocation of shoe racks) plus the accounts points. Keep the Chairman's grill in reserve as leverage, not as your model. |
+
+**Recommended:** Measure first. If the width allows, ask for **A with C as the fallback**. If it does not, go straight to **C** and do not stake your credibility on a grill the plan cannot support. Frame the demand as "uniform policy for all ground-floor flats plus a privacy screen", not "let me do what he did". If the committee refuses both, pursue B formally.
 
 ## 3. Provisions to cite
 
@@ -193,7 +200,7 @@ Encl.: photos and measurements of both passages; copy of earlier request dated _
 
 ## 6. Evidence checklist
 
-- [ ] Measure both passages (width, length) and photograph with a tape visible
+- [ ] Measure both passages in metres: clear width on your side now; clear width on the Chairman's side before and after his grill; photograph with a tape visible. Compare against the 1.5 m minimum
 - [ ] Photograph the opposite grill, the shoe racks near your door, and foot traffic past your window
 - [ ] Send the Bye-law 48 permission request (Step zero) and keep the acknowledgement
 - [ ] Note the welder's name, the date of the stopped work, and who spoke to him
