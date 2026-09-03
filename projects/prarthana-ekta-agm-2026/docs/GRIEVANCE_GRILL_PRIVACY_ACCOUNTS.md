@@ -14,6 +14,7 @@ Prepared: 03 Sep 2026 | For: AGM 27 Sep 2026, agenda item 4 (other issues) and i
 | F3 | The flat opposite G-4 belongs to the **Chairman**, who has extended his own window grill into the passage. When I fitted my safety door grill and was about to extend the window grill, someone from the society told the welder to stop. No one told me directly and nothing was in writing. The Treasurer later declined informally. **No written request has been made yet.** | Welder's name and date of the stopped work; photo of Chairman's grill; my safety-door grill invoice |
 | F4 | The left-of-lift side serves one flat (G-6) and enjoys the wider common space. | Photos |
 | F5 | Residents and visitors pass directly along my window, affecting privacy and security. | Photos, timings |
+| F5a | Because the passage at my door is too narrow, I cannot keep my own shoe rack outside my flat like other members do. My rack is now kept beyond the lift, next to the society office entrance, and I walk past the lift every time for shoes. | Photo of my rack at its current spot; photos of other members' racks outside their doors |
 | F6 | The Secretary lives directly above my flat and enjoys the wider side. I was a tenant in this building for 6 years before buying G-4, so the committee members know me personally. | – |
 | F7 | Monthly income/expense statements are not circulated to members. | Society group screenshots |
 | F8 | The society demands one month's rent (or similar) from owners who let out their flats. | Demand letter / bill / group message showing the demand |
@@ -33,7 +34,7 @@ A grill projecting beyond the flat's external wall sits on common area. Under th
 |---|---|---|---|
 | A. Society regularises grills for all ground-floor flats by general-body resolution, within a uniform limit (e.g. same projection for every flat, subject to SRA/BMC plan) | AGM resolution under item 4 | You get your grill legitimately | Needs majority; may still breach sanctioned plan; SRA/BMC can later order removal |
 | B. Society removes the opposite member's grill and keeps passages clear | Written complaint to committee, then Deputy Registrar | Restores parity, improves fire safety, strongest legally | You do not get a grill; creates conflict with neighbour |
-| C. Privacy solution instead of grill: society installs a fixed frosted/louvred screen flush with your window (no projection into the passage), frosted film on the glass, and moves common shoe racks away from your door | AGM resolution | Solves the real problem (privacy, security); needs no projection so no width objection; easy to approve | Not a grill |
+| C. Privacy solution instead of grill: society installs a fixed frosted/louvred screen flush with your window (no projection into the passage), frosted film on the glass, and provides a permitted spot for your shoe rack near your door or a wall-mounted shoe cabinet | AGM resolution | Solves the real problem (privacy, security, daily convenience); needs no projection so no width objection; easy to approve | Not a grill |
 
 **Reality check on the width ratio.** If the Chairman's side is 3 to 4 times wider, his grill takes a small slice of a wide passage while yours would narrow the only entry route to the lift. The committee then has a defensible, non-discriminatory reason to allow his and refuse yours: minimum clear passage width. DCPR 2034 and the National Building Code require a clear width of about 1.5 m for a residential common passage, and the fire-escape route cannot be reduced below that. So the parity argument works only if your passage stays at or above the minimum after the grill. Measure before you commit to it.
 
@@ -49,7 +50,7 @@ A grill projecting beyond the flat's external wall sits on common area. Under th
 3. Unless the SRA-sanctioned plan marks that area as parking, two-wheelers in a common passage obstruct the fire-escape route, the very ground the committee would use against you.
 4. The bikes are the real cause of your privacy problem: the wide route is blocked, so every resident and visitor is funnelled past your window.
 
-**The resolution to move at the AGM (item 4):** "The wide passage on the Chairman's side shall be kept as the main pedestrian route to the lift. Two-wheelers shall be relocated to the area designated by the general body, and parking shall be allotted and charged as per the bye-laws. A flush privacy screen shall be fitted along the window of G-4 at society cost." This gives you privacy without needing a grill, and it is hard to vote against because it is framed as fire safety and fairness, not as a personal demand.
+**The resolution to move at the AGM (item 4):** "The wide passage on the Chairman's side shall be kept as the main pedestrian route to the lift. Two-wheelers shall be relocated to the area designated by the general body, and parking shall be allotted and charged as per the bye-laws. A flush privacy screen shall be fitted along the window of G-4 at society cost, and a wall-mounted shoe cabinet or a marked space for the shoe rack of G-4 shall be provided near its door, as every other member keeps a rack outside their flat." This gives you privacy without needing a grill, and it is hard to vote against because it is framed as fire safety and fairness, not as a personal demand.
 
 **Recommended:** Measure first. If the width allows, ask for **A with C as the fallback**. If it does not, go straight to **C** and do not stake your credibility on a grill the plan cannot support. Frame the demand as "uniform policy for all ground-floor flats plus a privacy screen", not "let me do what he did". If the committee refuses both, pursue B formally.
 
@@ -124,7 +125,7 @@ Most members have known each other since the chawl days. You bought a saleable f
 
 | Tier | Ask | How to frame it | Who benefits (your allies) |
 |---|---|---|---|
-| 1. Ask now, low friction | Written grill request (Step zero); flush privacy screen at your window; monthly accounts on the group | "Small request for my family's privacy" and "everyone should see where the money goes" | Every member wants to see accounts; G-6 wants the same privacy |
+| 1. Ask now, low friction | Written grill request (Step zero); flush privacy screen at your window; a permitted spot or wall cabinet for your shoe rack near your door; monthly accounts on the group | "Small request for my family's privacy" and "everyone should see where the money goes" | Every member wants to see accounts; G-6 wants the same privacy |
 | 2. Frame as a gain for all | Organised two-wheeler parking with allotment and a fair monthly charge; the kids' recreation centre income shown in accounts and part of it spent on children | "Parking should be fair and bring income to the society" and "the children's centre was ours; the rent should benefit our children" | Parents; members without bikes; members who pay dues honestly |
 | 3. Hold in reserve | Chairman's conflict of interest; SRA change-of-use; Registrar; police | Use only if Tier 1 and 2 are refused in writing or you are obstructed | Nobody needs to know these exist until then |
 
@@ -215,7 +216,7 @@ Dear Sir/Madam,
 
 3. I therefore request the committee to place the following before the general body and record its decision in the minutes:
    (a) A uniform policy on window grills for all ground-floor flats, with the same maximum projection for every flat, subject to the SRA-sanctioned plan; or, if no projection is permissible, removal of all existing projections within a fixed time.
-   (b) Designation of the wider passage on the opposite side as the main pedestrian route to the lift, relocation of the two-wheelers presently parked there to an area approved by the general body with parking allotted and charged as per Bye-laws 78 to 84, installation at society cost of a flush privacy screen along my window on the passage side, and relocation of common shoe racks and other items away from my entrance.
+   (b) Designation of the wider passage on the opposite side as the main pedestrian route to the lift, relocation of the two-wheelers presently parked there to an area approved by the general body with parking allotted and charged as per Bye-laws 78 to 84, installation at society cost of a flush privacy screen along my window on the passage side, and a marked space or wall-mounted cabinet for my shoe rack near my door. At present, because of the narrow passage, my rack has to be kept beyond the lift next to the society office, while every other member keeps a rack outside their own flat.
    (c) Circulation of a monthly income and expenditure statement to all members on the society notice board and WhatsApp group, in line with the transparency directives under Sec. 79A of the MCS Act and my right under Sec. 32.
    (d) Withdrawal of any demand for one month's rent or any amount beyond non-occupancy charges of 10% of service charges from members who let out their flats, as per the Government order dated 1 August 2001 under Sec. 79A, upheld in *Mont Blanc CHS v. State of Maharashtra* (Bombay High Court, 2007) and by the Supreme Court in 2010, and Model Bye-law 43. Any excess already collected to be refunded or adjusted.
    (e) Under agenda item 1, disclosure of: the general-body resolutions approving the letting of G-3 (formerly the children's recreation centre) and the adjoining society premises; copies of the leave-and-licence agreements; the monthly rent and deposits; the ledger head and bank account in which this income is credited; SRA permission for change of use of the recreation centre; and the income-tax and GST treatment of this rental income. I request these documents under Sec. 32 of the MCS Act before the meeting.
@@ -231,7 +232,7 @@ Encl.: photos and measurements of both passages; copy of earlier request dated _
 ## 6. Evidence checklist
 
 - [ ] Measure both passages in metres: clear width on your side now; clear width on the Chairman's side before and after his grill; photograph with a tape visible. Compare against the 1.5 m minimum
-- [ ] Photograph the opposite grill, the shoe racks near your door, and foot traffic past your window
+- [ ] Photograph the opposite grill, your shoe rack at its current spot beside the society office, other members' racks outside their doors, and foot traffic past your window
 - [ ] Send the Bye-law 48 permission request (Step zero) and keep the acknowledgement
 - [ ] Note the welder's name, the date of the stopped work, and who spoke to him
 - [ ] Get a copy of the SRA-sanctioned floor plan from the society or SRA (shows passage widths)

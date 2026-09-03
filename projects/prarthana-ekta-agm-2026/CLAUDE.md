@@ -15,6 +15,7 @@ Track the Annual General Meeting of Prarthana-Ekta SRA Co-op. Hsg. Society Ltd. 
 - Chairman's passage is ~3-4x wider than user's. Caveat added: if user's side falls below ~1.5 m clear width after a grill, parity (option A) fails on fire-safety grounds; then push option C (flush privacy screen, no projection). Measurements pending.
 - Two-wheelers are parked in the wide passage below the Chairman's window: defeats any width-based refusal, needs bye-law 78-84 resolution/allotment/charges, and is the cause of foot traffic past G-4. Main AGM resolution now: wide side = pedestrian route, relocate bikes, flush privacy screen at society cost. Letter point (b) updated.
 - User fears social isolation from chawl-era members (they are a purchaser of a saleable flat). Added 3-tier community strategy: Tier 1 now (grill request, privacy screen, monthly accounts); Tier 2 framed as gain for all (organised paid parking, kids' centre income for children); Tier 3 in reserve (conflict of interest, SRA, Registrar, police). Never say 'remove bikes'; let a chawl-era member move the parking resolution.
+- Correction: no common shoe racks at G-4's door. User's OWN rack cannot fit in the narrow passage and is kept beyond the lift next to the society office. Ask is now a marked spot or wall-mounted shoe cabinet near G-4's door (fact F5a, option C, letter point (b), resolution wording all updated).
 
 ## Key deadlines
 - 25 Sep 2026 – written observations on accounts due to Secretary.
@@ -36,3 +37,4 @@ Track the Annual General Meeting of Prarthana-Ekta SRA Co-op. Hsg. Society Ltd. 
 - 2026-09-03: Width-ratio reality check and 1.5 m minimum-passage test added; option C reworded to flush screen (v1.7).
 - 2026-09-03: Bike-parking fact F12, width-argument reversal, AGM resolution wording, letter point (b) updated (v1.8).
 - 2026-09-03: Community strategy (three tiers, rules for chawl-era members) added (v1.9).
+- 2026-09-03: Shoe-rack facts corrected (own rack displaced beyond lift); option C, resolution, letter (b) updated (v1.10).
