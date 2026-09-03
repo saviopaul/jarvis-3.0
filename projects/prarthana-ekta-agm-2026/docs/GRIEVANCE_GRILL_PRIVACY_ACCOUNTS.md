@@ -11,10 +11,10 @@ Prepared: 03 Sep 2026 | For: AGM 27 Sep 2026, agenda item 4 (other issues) and i
 |---|---|---|
 | F1 | My flat G-4 is on the ground floor; the only entry to the building and the lift lobby runs along my window/passage. | Site sketch, photos |
 | F2 | The passage on my side is narrower than the passage on the opposite side. | Measurements (metres) of both sides, photos |
-| F3 | The flat opposite G-4 belongs to the **Chairman**, who has extended his own window grill into the passage. My request to do the same was refused / not answered. | Copy of my written request + date, any reply; photo of Chairman's grill |
+| F3 | The flat opposite G-4 belongs to the **Chairman**, who has extended his own window grill into the passage. When I fitted my safety door grill and was about to extend the window grill, someone from the society told the welder to stop. No one told me directly and nothing was in writing. The Treasurer later declined informally. **No written request has been made yet.** | Welder's name and date of the stopped work; photo of Chairman's grill; my safety-door grill invoice |
 | F4 | The left-of-lift side serves one flat (G-6) and enjoys the wider common space. | Photos |
 | F5 | Residents and visitors pass directly along my window, affecting privacy and security. | Photos, timings |
-| F6 | The Secretary lives directly above my flat and enjoys the wider side. | – |
+| F6 | The Secretary lives directly above my flat and enjoys the wider side. I was a tenant in this building for 6 years before buying G-4, so the committee members know me personally. | – |
 | F7 | Monthly income/expense statements are not circulated to members. | Society group screenshots |
 | F8 | The society demands one month's rent (or similar) from owners who let out their flats. | Demand letter / bill / group message showing the demand |
 | F9 | Ground floor: 3 saleable flats (G-4 mine, opposite = Chairman, G-6 member); 2 shops (G-1, G-2, ownership to confirm, possibly Chairman's side). | SRA-sanctioned ground-floor plan, share register |
@@ -57,6 +57,32 @@ The flat opposite G-4 is the Chairman's. That converts the grill issue from "une
 - An office bearer cannot grant himself a benefit on common property that he denies to another member. Committee members must not take part in any decision in which they have a personal interest (Model Bye-laws on disqualification for interest; MCS Act Sec. 78 for removal of an office bearer who acts against the interests of the society).
 - Ask in writing: did the committee pass a resolution permitting the Chairman's grill, when, and did the Chairman abstain? If there is no resolution, his grill is an unauthorised encroachment by the society's own Chairman. If there is one and he voted, it is void for interest.
 - Demand: either the same permission for G-4 and G-6 in writing, or removal of the Chairman's grill within 30 days. Put both options in the AGM resolution so the general body must choose.
+
+### Step zero: put the grill request in writing (do this first, this week)
+
+There is no written request and therefore no written refusal. Until that exists, the committee can say "he never asked" and the equal-treatment argument fails. A polite permission request under Bye-law 48 is neutral, fits the soft track with the Chairman, and starts the clock on the committee.
+
+**Permission request (submit by hand with acknowledgement, or Registered Post AD; also WhatsApp/email a copy)**
+
+To, The Hon. Secretary / Managing Committee, Prarthana-Ekta SRA Co-op. Hsg. Society Ltd.
+
+Date: ____ September 2026
+
+**Subject: Request for permission to extend window grill – Flat No. G-4 (Bye-law 48)**
+
+1. I am the member of Flat No. G-4. I request the committee's written permission to extend the window grill of my flat on the passage side, to the same projection and design as the grill fitted to the flat opposite mine.
+2. The work will be carried out at my cost by a licensed fabricator, without any change to the structure, and without obstructing the passage beyond the existing projection on the opposite side.
+3. In ________ 2026, while my safety-door grill was being fitted, the fabricator was verbally told by a person on behalf of the society not to proceed with the window grill. No written communication was given to me. I therefore make this formal request.
+4. Kindly place this before the committee and communicate its decision in writing within the period prescribed under Bye-law 48. If permission is not granted, kindly state the reason and the resolution under which the identical grill opposite was permitted.
+
+Yours faithfully, ______ (Name, G-4, mobile). Encl.: photo of the opposite grill and of my window.
+
+**What this achieves**
+- Written approval: you fit the grill.
+- Written refusal with reasons: you now have the discriminatory decision to take to the AGM and the Registrar.
+- Silence: after the prescribed period, non-response is itself a breach you can complain about.
+
+**Timing:** send it this week so the reply period runs before the AGM on 27 Sep. Mention it to the Chairman in your informal talk as "I have put in a simple request, please support it."
 
 ### Approach: test the Chairman before you file
 
@@ -148,7 +174,7 @@ Dear Sir/Madam,
 
 1. I am the member of Flat No. G-4 on the ground floor. The sole entry to the building and the lift lobby passes along my window. The passage on my side measures approx. ____ m, against approx. ____ m on the opposite side.
 
-2. The flat opposite mine, belonging to the Hon. Chairman, has a window grill extended into the common passage. My request dated ________ for a similar grill was refused / has not been answered. Under Bye-law 48 the committee must treat all members alike, and an office bearer may not participate in a decision in which he is personally interested. Kindly state the committee resolution under which the Chairman's grill was permitted and whether he abstained from that decision.
+2. The flat opposite mine, belonging to the Hon. Chairman, has a window grill extended into the common passage. My formal request dated ________ September 2026 for a similar grill is pending / has been refused. Earlier, in ________, my fabricator was verbally stopped by a person acting for the society, with nothing given to me in writing. Under Bye-law 48 the committee must treat all members alike, and an office bearer may not participate in a decision in which he is personally interested. Kindly state the committee resolution under which the Chairman's grill was permitted and whether he abstained from that decision.
 
 3. I therefore request the committee to place the following before the general body and record its decision in the minutes:
    (a) A uniform policy on window grills for all ground-floor flats, with the same maximum projection for every flat, subject to the SRA-sanctioned plan; or, if no projection is permissible, removal of all existing projections within a fixed time.
@@ -169,7 +195,8 @@ Encl.: photos and measurements of both passages; copy of earlier request dated _
 
 - [ ] Measure both passages (width, length) and photograph with a tape visible
 - [ ] Photograph the opposite grill, the shoe racks near your door, and foot traffic past your window
-- [ ] Locate your earlier grill request and any reply
+- [ ] Send the Bye-law 48 permission request (Step zero) and keep the acknowledgement
+- [ ] Note the welder's name, the date of the stopped work, and who spoke to him
 - [ ] Get a copy of the SRA-sanctioned floor plan from the society or SRA (shows passage widths)
 - [ ] Keep a dated log of complaints and responses
 - [ ] Collect any bill, receipt or message showing the one-month-rent demand

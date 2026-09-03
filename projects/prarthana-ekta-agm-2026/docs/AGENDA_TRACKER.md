@@ -20,6 +20,7 @@ Meeting: 27 Sep 2026, 10:30 a.m. | Status legend: ⬜ pending · 🟡 in progres
 | A2 | Review accounts and prepare written observations (see OBSERVATION_LETTER.md) | Member | 24 Sep 2026 | ⬜ |
 | A3 | Submit observations to the Secretary in writing | Member | 25 Sep 2026 | ⬜ |
 | A4 | Attend AGM, record decisions in MINUTES_TEMPLATE.md | Member | 27 Sep 2026 | ⬜ |
+| A0 | Submit written grill permission request under Bye-law 48 (grievance note Step zero); keep acknowledgement | Member | 06 Sep 2026 | ⬜ |
 | A5 | Measure/photograph both passages, collect evidence (grievance note Sec. 6) | Member | 15 Sep 2026 | ⬜ |
 | A6 | Submit grievance letter to committee, keep acknowledgement | Member | 20 Sep 2026 | ⬜ |
 
