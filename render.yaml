@@ -3,8 +3,13 @@ services:
     name: jarvis-3-telegram-bot
     env: docker
     region: oregon
-    plan: free
+    plan: starter            # free tier sleeps after 15 min idle and drops Telegram webhooks
+    healthCheckPath: /health # Render restarts the instance if this stops answering
     envVars:
+      - key: BOT_WORKER_THREADS
+        value: "8"
+      - key: KEEP_ALIVE_SECONDS
+        value: "600"
       - key: TELEGRAM_TOKEN
         sync: false
       - key: GEMINI_API_KEY
