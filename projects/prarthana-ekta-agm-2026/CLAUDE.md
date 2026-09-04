@@ -13,8 +13,8 @@ Track the Annual General Meeting of Prarthana-Ekta SRA Co-op. Hsg. Society Ltd. 
 - Chairman is cordial but intent unknown. Strategy: informal ask first, confirm on WhatsApp, judge follow-through by 15 Sep, then send soft letter (a-c) or full letter (a-e). Always file accounts observations by 25 Sep regardless.
 - Society members board photographed 03 Sep 2026 (assets/society-members-board.jpg). Confirmed identities:
   - Chairman: Mr. Magdoom Panchmahal (G-1, shop). Secretary: Mr. Chandrashekhar M. Naidu (104, directly above G-4). Treasurer: Mr. Vijay R. Nair (308).
-  - Ground floor: G-1 Magdoom Panchmahal (shop, chairman), G-2 Vijay Tiwari (shop tbc), G-3 Varsha R. Chogle on board but user says it's the ex-recreation centre now let to a company (reconcile), G-4 user, G-5 society office, G-6 Rizwana S. Shaikh, G-7/G-8 blank.
-  - The unit "opposite" G-4 is G-1, a shop, not a residence -> revised: ask for resolution behind Chairman's grill; do not assume parity is automatic; shop status makes it a fire-safety point held in reserve.
+  - Ground floor (revised 04-Sep-2026): G-1 SHOP (Chairman), G-2 SHOP (Vijay Tiwari), G-3 SHOP (ex-recreation centre now let to company; board still shows original allottee Chogle), G-4 FLAT (user), G-5 society office, G-6 FLAT (Rizwana S. Shaikh), G-7/G-8 blank. **Only 2 residential flats on ground floor: G-4 and G-6.**
+  - The whole opposite side is commercial (3 shops). Reframe: 'residents' passage must be treated as a residents' passage', not parity with a shop. G-3 change-of-use from children's recreation centre to commercial let is the sharpest lever (Tier 3). Only ground-floor ally is Mrs. Shaikh (G-6) - build majority upstairs, not downstairs.
 - Ground rule: names go only in working files, never in letters/WhatsApp/AGM/Registrar - use titles/flat numbers, never adjectives.
 - No written grill request ever made; refusal was informal (welder told to stop, Treasurer declined verbally). Step zero added: formal Bye-law 48 permission request to be sent by 06 Sep so the reply period runs before the AGM. User was a tenant in the building for 6 years before buying G-4.
 - Chairman's passage is ~3-4x wider than user's. Caveat added: if user's side falls below ~1.5 m clear width after a grill, parity (option A) fails on fire-safety grounds; then push option C (flush privacy screen, no projection). Measurements pending.
@@ -44,3 +44,4 @@ Track the Annual General Meeting of Prarthana-Ekta SRA Co-op. Hsg. Society Ltd. 
 - 2026-09-03: Community strategy (three tiers, rules for chawl-era members) added (v1.9).
 - 2026-09-03: Shoe-rack facts corrected (own rack displaced beyond lift); option C, resolution, letter (b) updated (v1.10).
 - 2026-09-04: Society members board photo added; office bearer + ground-floor identities recorded; opposite = G-1 shop reframing added; ground-rule on never-use-names-publicly reinforced (v1.11).
+- 2026-09-04: Corrected — G-1, G-2, G-3 are ALL shops; only G-4 and G-6 are ground-floor flats. Reframed strategy: residential-vs-commercial, not parity; G-3 change-of-use is sharpest lever; ally = Mrs. Shaikh only downstairs (v1.12).

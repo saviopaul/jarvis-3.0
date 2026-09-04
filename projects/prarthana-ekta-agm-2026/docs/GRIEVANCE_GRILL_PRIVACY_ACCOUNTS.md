@@ -15,18 +15,20 @@ Prepared: 03 Sep 2026 | For: AGM 27 Sep 2026, agenda item 4 (other issues) and i
 | Secretary | Mr. Chandrashekhar M. Naidu | 104 (directly above G-4) |
 | Treasurer | Mr. Vijay R. Nair | 308 |
 
-**Ground-floor units**
+**Ground-floor units** (revised 04-Sep-2026: G-1, G-2 and G-3 are all shops)
 
-| Unit | Occupant/Use (board) | Notes |
-|---|---|---|
-| G-1 | Mr. Magdoom Panchmahal | Chairman; shop with wider frontage; the unit whose window grill was extended into the passage |
-| G-2 | Mr. Vijay Tiwari | Shop (to confirm) |
-| G-3 | Mrs. Varsha R. Chogle (per board) | User's account: this was originally the children's recreation centre and is now let by the society to a company. Reconcile with the board name before writing |
-| G-4 | Mr. Savio V. Paul | **User's flat** |
-| G-5 | Society Office | – |
-| G-6 | Mrs. Rizwana S. Shaikh | Saleable flat on left of lift; wider common area on her side |
-| G-7 | (blank on board) | – |
-| G-8 | (blank on board) | – |
+| Unit | Type | Occupant/Use (board) | Notes |
+|---|---|---|---|
+| G-1 | Shop | Mr. Magdoom Panchmahal | Chairman's shop; wider passage frontage; window grill extended into passage |
+| G-2 | Shop | Mr. Vijay Tiwari | Confirmed shop |
+| G-3 | Shop | Mrs. Varsha R. Chogle on board | Originally the children's recreation centre (SRA amenity). Board still shows the original allottee's name; now let by the society to a company. **Change-of-use question sits here.** |
+| G-4 | Flat | Mr. Savio V. Paul | **User's flat — the ONLY residential unit on the shop-facing side** |
+| G-5 | Society office | Society Office | – |
+| G-6 | Flat | Mrs. Rizwana S. Shaikh | Second and only other residential flat on the ground floor; on the left of lift with the wider common area |
+| G-7 | (blank) | – | – |
+| G-8 | (blank) | – | – |
+
+**Consequence.** There are only **two residential flats on the ground floor: G-4 and G-6**. The wider "opposite" passage below the Chairman's window is a **commercial frontage for three shops (G-1, G-2, G-3)**, not a residents' passage. That reframes several things below and is now the single most important fact of this file.
 
 Board photo: `../assets/society-members-board.jpg`
 
@@ -38,17 +40,17 @@ Board photo: `../assets/society-members-board.jpg`
 |---|---|---|
 | F1 | My flat G-4 is on the ground floor; the only entry to the building and the lift lobby runs along my window/passage. | Site sketch, photos |
 | F2 | The passage in front of the Chairman's flat is roughly 3 to 4 times wider than the passage on my side, which is the sole entry route to the lift. | Measurements in metres of both sides (before and after the Chairman's grill), photos with tape visible |
-| F3 | The unit opposite G-4 is **G-1, held by the Chairman (Mr. Magdoom Panchmahal)** as a shop. Its window grill has been extended into the passage. When I fitted my safety door grill and was about to extend the window grill, someone from the society told the welder to stop. No one told me directly and nothing was in writing. The Treasurer later declined informally. **No written request has been made yet.** | Welder's name and date of the stopped work; photo of Chairman's grill; my safety-door grill invoice |
+| F3 | The unit opposite G-4 is **G-1, the Chairman's shop**. Its window grill has been extended into what is really the residents' entry passage. When I fitted my safety-door grill and was about to extend the window grill, someone from the society told the welder to stop. No one told me directly and nothing was in writing. The Treasurer later declined informally. **No written request has been made yet.** | Welder's name and date of the stopped work; photo of G-1 grill; my safety-door grill invoice |
 | F4 | The left-of-lift side serves one flat (G-6, Mrs. Rizwana S. Shaikh) and enjoys the wider common space. | Photos |
 | F5 | Residents and visitors pass directly along my window, affecting privacy and security. | Photos, timings |
 | F5a | Because the passage at my door is too narrow, I cannot keep my own shoe rack outside my flat like other members do. My rack is now kept beyond the lift, next to the society office entrance, and I walk past the lift every time for shoes. | Photo of my rack at its current spot; photos of other members' racks outside their doors |
 | F6 | The Secretary (Mr. Chandrashekhar M. Naidu, Flat 104) lives directly above G-4. I was a tenant in this building for 6 years before buying G-4, so the committee members know me personally. | – |
 | F7 | Monthly income/expense statements are not circulated to members. | Society group screenshots |
 | F8 | The society demands one month's rent (or similar) from owners who let out their flats. | Demand letter / bill / group message showing the demand |
-| F9 | Ground floor: 3 saleable flats (G-4 mine, opposite = Chairman, G-6 member); 2 shops (G-1, G-2, ownership to confirm, possibly Chairman's side). | SRA-sanctioned ground-floor plan, share register |
-| F10 | G-3 was the children's recreation centre (SRA amenity). It is now let to a company and the society collects rent. | Lease/leave-licence copy, AGM resolution (if any), rent receipts |
+| F9 | Ground floor: **only 2 residential flats (G-4 mine, G-6 Mrs. Shaikh)**; 3 shops (G-1 Chairman, G-2 Vijay Tiwari, G-3 originally recreation centre now let to a company); G-5 society office. | SRA-sanctioned ground-floor plan, share register |
+| F10 | G-3 was the children's recreation centre (SRA amenity) and is now let as a shop to a company. Society collects the rent. Board still carries the original allottee's name. | Lease/leave-licence copy, AGM resolution (if any), SRA change-of-use approval, rent receipts |
 | F12 | Members park two-wheelers in the wide passage below the Chairman's window. The wide side is therefore blocked, and foot traffic to the lift is pushed through my narrow side. | Photos of the parked bikes at different times; count of bikes; SRA plan showing whether that area is marked as parking |
-| F11 | A further unit next to G-3 is occupied by a former member (who sold his flat) and the society collects rent for it. | Allotment/lease papers, AGM resolution, rent receipts |
+| F11 | (Reconcile — user earlier mentioned an ex-member occupying a unit next to G-3; against the shops-first layout this may refer to G-2, or a first-floor unit. Confirm before citing.) | Ask committee in writing |
 
 ## 2. Legal position (honest summary)
 
@@ -129,12 +131,14 @@ Yours faithfully, ______ (Name, G-4, mobile). Encl.: photo of the opposite grill
 
 **Timing:** send it this week so the reply period runs before the AGM on 27 Sep. Mention it to the Chairman in your informal talk as "I have put in a simple request, please support it."
 
-### Reframing note: the "opposite flat" is actually a shop (G-1)
+### Reframing note: the whole "opposite" side is commercial
 
-The board confirms G-1 is held by the Chairman as a **shop**, not a residential flat. This changes tone in two ways:
+G-1, G-2 and G-3 are all shops. The wider passage below the Chairman's window is not a residents' passage at all — it is the commercial frontage of three shops. This reframes the strategy:
 
-- A shop with a wider passage frontage was probably approved at plan stage with different layout permissions (customer approach, display shutter). That gives the Chairman a technical answer to "why him and not me". Do not treat parity as automatic; ask for the resolution/approval that permitted his grill, and if none, still push for equal treatment.
-- Because it is a shop not a home, extending the residents-passage grill from a shop into the residents' entry is arguably worse in fire-safety terms, not better. Keep that angle for the reserve tier, not for the opening ask.
+- The parity argument ("give me what he has") is weakest here. A shop has different plan-stage permissions than a flat — display area, customer approach, shutter projection — so the committee will point to that. Ask for the resolution or approval behind the G-1 grill, but do not stake the ask on parity alone.
+- The stronger argument is **residential v. commercial**: the residents' only entry to their lift is squeezed into the G-4 side because the wider side has been surrendered to shop frontage, shop grills and bike parking, and (per fact F5) the sole entry to the building runs past G-4's window. Put the ask as "the residents' passage must be treated as a residents' passage".
+- Ally count on the ground floor is exactly **one: Mrs. Rizwana S. Shaikh (G-6)**. Bring her in early. The shop owners will not support you on the width issue — they benefit from the current layout — so build your majority upstairs, not downstairs.
+- The G-3 change-of-use question (from SRA-mandated children's recreation centre to a commercial let) is now the sharpest lever in the whole file. It converts the debate from "one member vs another" to "the society's commercial letting of an SRA amenity". Held for Tier 3.
 
 ### Approach: test the Chairman before you file
 
@@ -159,7 +163,7 @@ Most members have known each other since the chawl days. You bought a saleable f
 
 | Tier | Ask | How to frame it | Who benefits (your allies) |
 |---|---|---|---|
-| 1. Ask now, low friction | Written grill request (Step zero); flush privacy screen at your window; a permitted spot or wall cabinet for your shoe rack near your door; monthly accounts on the group | "Small request for my family's privacy" and "everyone should see where the money goes" | Every member wants to see accounts; Mrs. Rizwana S. Shaikh (G-6) shares the ground-floor privacy interest |
+| 1. Ask now, low friction | Written grill request (Step zero); flush privacy screen at your window; a permitted spot or wall cabinet for your shoe rack near your door; monthly accounts on the group | "Small request for my family's privacy" and "everyone should see where the money goes" | Every member wants monthly accounts; **Mrs. Rizwana S. Shaikh (G-6) is the only other ground-floor residential member — approach her first** |
 | 2. Frame as a gain for all | Organised two-wheeler parking with allotment and a fair monthly charge; the kids' recreation centre income shown in accounts and part of it spent on children | "Parking should be fair and bring income to the society" and "the children's centre was ours; the rent should benefit our children" | Parents; members without bikes; members who pay dues honestly |
 | 3. Hold in reserve | Chairman's conflict of interest; SRA change-of-use; Registrar; police | Use only if Tier 1 and 2 are refused in writing or you are obstructed | Nobody needs to know these exist until then |
 
