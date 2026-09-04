@@ -1,9 +1,36 @@
 # Grievance Note – Window Grill, Passage Privacy, Monthly Accounts, Non-Occupancy Charges
 
-Member: ______________________ Flat No. G-4 (Ground floor)
+Member: **Mr. Savio V. Paul, Flat G-4 (Ground floor)**
 Prepared: 03 Sep 2026 | For: AGM 27 Sep 2026, agenda item 4 (other issues) and item 1 (accounts)
 
 > This is a working note, not legal advice. Confirm section and bye-law numbers against the society's **registered bye-laws** and with an advocate or the Deputy Registrar before filing.
+
+## 0. Residents and office bearers (from society members board, photographed 03-Sep-2026)
+
+**Office bearers (2026)**
+
+| Role | Name | Flat |
+|---|---|---|
+| Chairman | Mr. Magdoom Panchmahal | G-1 (shop on ground floor) |
+| Secretary | Mr. Chandrashekhar M. Naidu | 104 (directly above G-4) |
+| Treasurer | Mr. Vijay R. Nair | 308 |
+
+**Ground-floor units**
+
+| Unit | Occupant/Use (board) | Notes |
+|---|---|---|
+| G-1 | Mr. Magdoom Panchmahal | Chairman; shop with wider frontage; the unit whose window grill was extended into the passage |
+| G-2 | Mr. Vijay Tiwari | Shop (to confirm) |
+| G-3 | Mrs. Varsha R. Chogle (per board) | User's account: this was originally the children's recreation centre and is now let by the society to a company. Reconcile with the board name before writing |
+| G-4 | Mr. Savio V. Paul | **User's flat** |
+| G-5 | Society Office | – |
+| G-6 | Mrs. Rizwana S. Shaikh | Saleable flat on left of lift; wider common area on her side |
+| G-7 | (blank on board) | – |
+| G-8 | (blank on board) | – |
+
+Board photo: `../assets/society-members-board.jpg`
+
+**Ground-rule reminder.** These names go into the working file only. In every letter, WhatsApp message, AGM speech, or Registrar complaint, refer to "the Hon. Chairman", "the Hon. Secretary", "the member of Flat G-1", "the licensee of G-3"; never by name and never with adjectives like "uneducated" or "goon". Naming and labelling a private person is defamation risk that reverses the case.
 
 ## 1. The facts (fill in / correct)
 
@@ -11,11 +38,11 @@ Prepared: 03 Sep 2026 | For: AGM 27 Sep 2026, agenda item 4 (other issues) and i
 |---|---|---|
 | F1 | My flat G-4 is on the ground floor; the only entry to the building and the lift lobby runs along my window/passage. | Site sketch, photos |
 | F2 | The passage in front of the Chairman's flat is roughly 3 to 4 times wider than the passage on my side, which is the sole entry route to the lift. | Measurements in metres of both sides (before and after the Chairman's grill), photos with tape visible |
-| F3 | The flat opposite G-4 belongs to the **Chairman**, who has extended his own window grill into the passage. When I fitted my safety door grill and was about to extend the window grill, someone from the society told the welder to stop. No one told me directly and nothing was in writing. The Treasurer later declined informally. **No written request has been made yet.** | Welder's name and date of the stopped work; photo of Chairman's grill; my safety-door grill invoice |
-| F4 | The left-of-lift side serves one flat (G-6) and enjoys the wider common space. | Photos |
+| F3 | The unit opposite G-4 is **G-1, held by the Chairman (Mr. Magdoom Panchmahal)** as a shop. Its window grill has been extended into the passage. When I fitted my safety door grill and was about to extend the window grill, someone from the society told the welder to stop. No one told me directly and nothing was in writing. The Treasurer later declined informally. **No written request has been made yet.** | Welder's name and date of the stopped work; photo of Chairman's grill; my safety-door grill invoice |
+| F4 | The left-of-lift side serves one flat (G-6, Mrs. Rizwana S. Shaikh) and enjoys the wider common space. | Photos |
 | F5 | Residents and visitors pass directly along my window, affecting privacy and security. | Photos, timings |
 | F5a | Because the passage at my door is too narrow, I cannot keep my own shoe rack outside my flat like other members do. My rack is now kept beyond the lift, next to the society office entrance, and I walk past the lift every time for shoes. | Photo of my rack at its current spot; photos of other members' racks outside their doors |
-| F6 | The Secretary lives directly above my flat and enjoys the wider side. I was a tenant in this building for 6 years before buying G-4, so the committee members know me personally. | – |
+| F6 | The Secretary (Mr. Chandrashekhar M. Naidu, Flat 104) lives directly above G-4. I was a tenant in this building for 6 years before buying G-4, so the committee members know me personally. | – |
 | F7 | Monthly income/expense statements are not circulated to members. | Society group screenshots |
 | F8 | The society demands one month's rent (or similar) from owners who let out their flats. | Demand letter / bill / group message showing the demand |
 | F9 | Ground floor: 3 saleable flats (G-4 mine, opposite = Chairman, G-6 member); 2 shops (G-1, G-2, ownership to confirm, possibly Chairman's side). | SRA-sanctioned ground-floor plan, share register |
@@ -102,6 +129,13 @@ Yours faithfully, ______ (Name, G-4, mobile). Encl.: photo of the opposite grill
 
 **Timing:** send it this week so the reply period runs before the AGM on 27 Sep. Mention it to the Chairman in your informal talk as "I have put in a simple request, please support it."
 
+### Reframing note: the "opposite flat" is actually a shop (G-1)
+
+The board confirms G-1 is held by the Chairman as a **shop**, not a residential flat. This changes tone in two ways:
+
+- A shop with a wider passage frontage was probably approved at plan stage with different layout permissions (customer approach, display shutter). That gives the Chairman a technical answer to "why him and not me". Do not treat parity as automatic; ask for the resolution/approval that permitted his grill, and if none, still push for equal treatment.
+- Because it is a shop not a home, extending the residents-passage grill from a shop into the residents' entry is arguably worse in fire-safety terms, not better. Keep that angle for the reserve tier, not for the opening ask.
+
 ### Approach: test the Chairman before you file
 
 The Chairman is cordial in person but his intent is unknown. Treat him as a possible ally and let his response decide the tone.
@@ -125,7 +159,7 @@ Most members have known each other since the chawl days. You bought a saleable f
 
 | Tier | Ask | How to frame it | Who benefits (your allies) |
 |---|---|---|---|
-| 1. Ask now, low friction | Written grill request (Step zero); flush privacy screen at your window; a permitted spot or wall cabinet for your shoe rack near your door; monthly accounts on the group | "Small request for my family's privacy" and "everyone should see where the money goes" | Every member wants to see accounts; G-6 wants the same privacy |
+| 1. Ask now, low friction | Written grill request (Step zero); flush privacy screen at your window; a permitted spot or wall cabinet for your shoe rack near your door; monthly accounts on the group | "Small request for my family's privacy" and "everyone should see where the money goes" | Every member wants to see accounts; Mrs. Rizwana S. Shaikh (G-6) shares the ground-floor privacy interest |
 | 2. Frame as a gain for all | Organised two-wheeler parking with allotment and a fair monthly charge; the kids' recreation centre income shown in accounts and part of it spent on children | "Parking should be fair and bring income to the society" and "the children's centre was ours; the rent should benefit our children" | Parents; members without bikes; members who pay dues honestly |
 | 3. Hold in reserve | Chairman's conflict of interest; SRA change-of-use; Registrar; police | Use only if Tier 1 and 2 are refused in writing or you are obstructed | Nobody needs to know these exist until then |
 
@@ -232,7 +266,7 @@ Encl.: photos and measurements of both passages; copy of earlier request dated _
 ## 6. Evidence checklist
 
 - [ ] Measure both passages in metres: clear width on your side now; clear width on the Chairman's side before and after his grill; photograph with a tape visible. Compare against the 1.5 m minimum
-- [ ] Photograph the opposite grill, your shoe rack at its current spot beside the society office, other members' racks outside their doors, and foot traffic past your window
+- [ ] Photograph the opposite grill (G-1 shop), your shoe rack at its current spot beside the society office (G-5), other members' racks outside their doors, and foot traffic past your window
 - [ ] Send the Bye-law 48 permission request (Step zero) and keep the acknowledgement
 - [ ] Note the welder's name, the date of the stopped work, and who spoke to him
 - [ ] Get a copy of the SRA-sanctioned floor plan from the society or SRA (shows passage widths)
