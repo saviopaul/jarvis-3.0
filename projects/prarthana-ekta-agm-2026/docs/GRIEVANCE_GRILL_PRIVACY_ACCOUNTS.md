@@ -23,12 +23,12 @@ Prepared: 03 Sep 2026 | For: AGM 27 Sep 2026, agenda item 4 (other issues) and i
 | G-2 | Shop | Mr. Vijay Tiwari | Confirmed shop |
 | G-3 | Shop | Mrs. Varsha R. Chogle on board | Originally the children's recreation centre (SRA amenity). Board still shows the original allottee's name; now let by the society to a company. **Change-of-use question sits here.** |
 | G-4 | Flat | Mr. Savio V. Paul | **User's flat — the ONLY residential unit on the shop-facing side** |
-| G-5 | Society office | Society Office | – |
+| G-5 | Society office | Society-held | Belongs to society; used as society office |
 | G-6 | Flat | Mrs. Rizwana S. Shaikh | Second and only other residential flat on the ground floor; on the left of lift with the wider common area |
-| G-7 | Society-held unit, let out | Blank on board | Society collects rent; allotment/tenant/purpose to confirm |
-| G-8 | Society-held unit, let to a company | Blank on board | Society collects rent from a commercial tenant
+| G-7 | Society-held, let to a family | Blank on board | Belongs to society; let residentially — non-member tenant; society collects rent |
+| G-8 | Society-held, let to a company | Blank on board | Belongs to society; let commercially — company tenant; society collects rent |
 
-**Consequence.** Ground floor: **3 residential flats (G-1 Chairman, G-4 user, G-6 Mrs. Shaikh)**, **4 commercial units** (G-2 shop, G-3 shop = ex-recreation centre let to a company, G-7 society-let, G-8 society-let to a company), and G-5 society office. The unit **opposite G-4 is the Chairman's flat G-1**, and he has extended a grill into the passage — so the primary frame reverts to **parity between two residential flats + conflict of interest of the office bearer**. G-3/G-7/G-8 stay as separate accounts questions.
+**Consequence.** Ground floor: **3 member-owned residential flats (G-1 Chairman, G-4 user, G-6 Mrs. Shaikh)**; **2 member-owned shops (G-2, G-3)** — G-3 originally the SRA children's recreation centre, now let commercially to a company; and **3 society-held units (G-5 society office, G-7 let to a family, G-8 let to a company)**. The unit **opposite G-4 is the Chairman's flat G-1**, and he has extended a grill into the passage — so the primary frame stays **parity between two residential flats + conflict of interest of the office bearer**. G-3/G-7/G-8 stay as separate accounts questions.
 
 Board photo: `../assets/society-members-board.jpg`
 
@@ -51,7 +51,7 @@ Board photo: `../assets/society-members-board.jpg`
 | F10 | G-3 was the children's recreation centre (SRA amenity) and is now let as a shop to a company. Society collects the rent. Board still carries the original allottee's name. | Lease/leave-licence copy, AGM resolution (if any), SRA change-of-use approval, rent receipts |
 | F12 | Members park two-wheelers in the wide passage below the Chairman's window. The wide side is therefore blocked, and foot traffic to the lift is pushed through my narrow side. | Photos of the parked bikes at different times; count of bikes; SRA plan showing whether that area is marked as parking |
 | F11 | (Reconcile — user earlier mentioned an ex-member occupying a unit next to G-3; against the shops-first layout this may refer to G-2, G-7 or G-8. Confirm before citing.) | Ask committee in writing |
-| F11a | **G-7 is let out by the society** (blank on board — no member allottee). Society collects the rent. | Copy of leave-and-licence, AGM resolution, ledger head, tenant identity, SRA use-permission |
+| F11a | **G-7 is society-held and let residentially to a family** (blank on board — no member allottee; the tenant is a non-member family). Society collects the rent. | Copy of leave-and-licence, AGM resolution, ledger head, tenant identity, SRA use-permission |
 | F11b | **G-8 is let out to a company by the society** (blank on board — no member allottee). Society collects the rent. | Copy of leave-and-licence, AGM resolution, ledger head, company name/GST, SRA change-of-use if applicable |
 
 ## 2. Legal position (honest summary)
@@ -189,8 +189,8 @@ Most members have known each other since the chawl days. You bought a saleable f
 | Which general-body meetings approved letting **G-3, G-7 and G-8**, and on what terms? | Bye-laws: letting society property needs general-body sanction |
 | Copies of the registered leave-and-licence agreements for G-3, G-7 and G-8; monthly rent, deposit, tenure, and tenant identity for each | Sec. 32 right to inspect and obtain copies |
 | Where does the rent from G-3, G-7 and G-8 appear in the audited FY 2025-26 accounts? Bank account and ledger heads | Unaccounted rent = misappropriation; Sec. 83 inquiry, Sec. 88 recovery from officers |
-| Was SRA permission obtained for change of use of the G-3 recreation centre and for the commercial use of G-7 and G-8? | Without it the lettings are irregular and the society is exposed to SRA notice |
-| Is TDS being deducted by the tenants and is the society filing income-tax returns on this rent? GST above threshold? | Tax exposure falls on the society, i.e. on all members |
+| Was SRA permission obtained for change of use of the G-3 recreation centre and for letting G-7 (residential to a family) and G-8 (commercial to a company)? | Without it the lettings are irregular and the society is exposed to SRA notice |
+| Is the society filing income-tax returns on the rent from G-3, G-7 and G-8? TDS by the company tenants (G-3, G-8)? GST above threshold? | Tax exposure falls on the society, i.e. on all members |
 | Are G-7 and G-8 shown in the share register as allotted to anyone? If not, on what authority does the committee let them? | Only allotted premises have an owner; unallotted society premises need a general-body letting resolution |
 | Why is a former member (no longer a member after selling) occupying society premises, and under what agreement? | Occupation by a non-member needs a licence approved by the general body |
 
