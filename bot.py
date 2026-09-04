@@ -16,8 +16,65 @@ if not token:
     logger.error("TELEGRAM_TOKEN not found.")
     exit(1)
 
-bot = telebot.TeleBot(token)
+class _LogExceptionHandler(telebot.ExceptionHandler):
+    """Log handler crashes instead of silently parking them in the worker pool."""
+    def handle(self, exception):
+        logger.exception(f"Unhandled error in message handler: {exception}")
+        return True
+
+
+# Default pool is 2 threads: two long jobs (video render, research) block every later message.
+WORKER_THREADS = int(os.environ.get("BOT_WORKER_THREADS", "8"))
+bot = telebot.TeleBot(token, num_threads=WORKER_THREADS, exception_handler=_LogExceptionHandler())
 app = Flask(__name__)
+
+
+def _public_base_url() -> str:
+    """Render may expose the URL with or without a scheme; Telegram requires https."""
+    url = os.environ.get("RENDER_EXTERNAL_URL", "").strip().rstrip("/")
+    if url and not url.startswith("http"):
+        url = f"https://{url}"
+    return url
+
+
+def setup_webhook():
+    """Register the Telegram webhook. Safe to call on every process start."""
+    base = _public_base_url()
+    if not base:
+        logger.warning("RENDER_EXTERNAL_URL not set; webhook not registered (local/polling mode).")
+        return
+    target = f"{base}/{token}"
+    try:
+        info = bot.get_webhook_info()
+        if info.url == target and not info.last_error_message:
+            logger.info(f"Webhook already registered: {target}")
+            return
+        bot.remove_webhook()
+        bot.set_webhook(url=target, drop_pending_updates=False)
+        logger.info(f"Webhook set to {target}")
+    except Exception as e:
+        logger.error(f"Failed to register webhook: {e}")
+
+
+def _keep_alive_loop(interval: int):
+    """Ping our own /health so a free-tier instance never spins down."""
+    import time
+    import requests
+    base = _public_base_url()
+    while True:
+        time.sleep(interval)
+        try:
+            requests.get(f"{base}/health", timeout=10)
+        except Exception as e:
+            logger.warning(f"Keep-alive ping failed: {e}")
+
+
+def start_keep_alive():
+    interval = int(os.environ.get("KEEP_ALIVE_SECONDS", "600"))
+    if interval > 0 and _public_base_url():
+        import threading
+        threading.Thread(target=_keep_alive_loop, args=(interval,), daemon=True).start()
+        logger.info(f"Keep-alive ping every {interval}s")
 
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
@@ -392,12 +449,32 @@ def webhook():
 def health():
     return "Jarvis 3.0 is alive!", 200
 
+
+@app.route("/status", methods=["GET"])
+def status():
+    """Diagnostics: is the webhook registered and are updates piling up?"""
+    try:
+        info = bot.get_webhook_info()
+        body = {
+            "webhook_registered": bool(info.url),
+            "pending_updates": info.pending_update_count,
+            "last_error": info.last_error_message or None,
+            "worker_threads": WORKER_THREADS,
+        }
+        return body, 200
+    except Exception as e:
+        return {"error": str(e)}, 500
+
+
+def on_startup():
+    """Runs once per process, whether started by gunicorn or `python bot.py`."""
+    setup_webhook()
+    start_keep_alive()
+
+
+if os.environ.get("BOT_SKIP_STARTUP") != "1":
+    on_startup()
+
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
-    # Set webhook on startup
-    webhook_url = os.environ.get("RENDER_EXTERNAL_URL", "")
-    if webhook_url:
-        bot.remove_webhook()
-        bot.set_webhook(url=f"{webhook_url}/{token}")
-        logger.info(f"Webhook set to {webhook_url}/{token}")
-    app.run(host="0.0.0.0", port=port)
+    app.run(host="0.0.0.0", port=port, threaded=True)
